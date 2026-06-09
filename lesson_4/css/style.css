@@ -1,0 +1,62 @@
+/* *, ::after, ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+} */
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.form {
+    max-width: 400px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.fieldset-group {
+    border: none;
+}
+
+.fieldset-header {
+    margin-block: 10px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-label-checkbox {
+    font-size: 14px;
+}
+
+.form-input, .form-textarea {
+    display: block;
+    margin-top: 3px;
+    padding-block: 4px;
+    padding-inline: 10px;
+    min-width: 80%;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.form-textarea {
+    resize: vertical;
+    max-height: 200px;
+}
+
+.form-checkbox {
+    cursor: pointer;
+    margin-inline: 5px;
+    margin-bottom: 5px;
+}
+
+.form-btn {
+    display: block;
+    padding-block: 3px;
+    padding-inline: 10px;
+    cursor: pointer;
+}
+
