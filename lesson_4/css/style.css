@@ -9,6 +9,10 @@ body {
 }
 
 .form {
+    margin-block: 20px;
+    margin-inline: 20px;
+    padding-block: 10px;
+    padding-inline: 10px;
     max-width: 400px;
     border: 1px solid black;
     border-radius: 7px;
@@ -19,16 +23,19 @@ body {
 }
 
 .fieldset-header {
-    margin-block: 10px;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 700;
 }
 
-.form-label {
+.form-label, .fieldset-header {
     display: block;
     margin-bottom: 10px;
 }
 
 .form-label-checkbox {
     font-size: 14px;
+    margin-bottom: 5px;
 }
 
 .form-input, .form-textarea {
@@ -49,12 +56,12 @@ body {
 
 .form-checkbox {
     cursor: pointer;
-    margin-inline: 5px;
-    margin-bottom: 5px;
+    margin: 0;
 }
 
 .form-btn {
     display: block;
+    margin-left: 15px;
     padding-block: 3px;
     padding-inline: 10px;
     cursor: pointer;
