@@ -62,8 +62,10 @@ body {
 .form-btn {
     display: block;
     margin-left: 15px;
-    padding-block: 3px;
+    padding-block: 5px;
     padding-inline: 10px;
+    border: 0;
+    border-radius: 3px;
     cursor: pointer;
 }
 
