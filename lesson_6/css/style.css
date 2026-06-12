@@ -16,13 +16,16 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
     border-bottom: 1.5px solid gray;
 }
 
 .header__logo {
-    width: 50px;
-    height: 50px;
+    width: 6vw;
+    max-width: 88px;
+    height: 6vw;
+    max-height: 88px;
     background-color: black;
 }
 
