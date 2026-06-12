@@ -29,6 +29,10 @@ html {
     background-color: black;
 }
 
+.header__phone {
+    text-wrap: nowrap;
+}
+
 ul.menu__list {
     display: flex;
     justify-content: center;
