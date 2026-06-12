@@ -1,8 +1,9 @@
 html {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.header {
+body * {
+    box-sizing: border-box;
 }
 
 .container {
@@ -12,37 +13,40 @@ html {
 }
 
 .header__container {
-    min-height: 88px;
     display: flex;
+
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+
+    padding-block: 15px;
+
     border-bottom: 1.5px solid gray;
 }
 
 .header__logo {
-    width: 6vw;
-    max-width: 88px;
-    height: 6vw;
-    max-height: 88px;
-    background-color: black;
-}
+    width: 50px;
+    height: 50px;
 
-.header__phone {
-    text-wrap: nowrap;
+    background-color: black;
 }
 
 ul.menu__list {
     display: flex;
+
     justify-content: center;
     align-items: center;
     gap: 25px;
+
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.menu__item {
-    text-wrap: nowrap;
+.header__phone {
+
+    font-weight: 700;
+    text-decoration: none;
 }
+
