@@ -39,11 +39,6 @@ body {
     margin-bottom: 20px;
 }
 
-.form-label-checkbox {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
 .form-input, .form-textarea {
     display: block;
     margin-top: 3px;
@@ -62,9 +57,35 @@ body {
     max-height: 200px;
 }
 
+.form-label-checkbox {
+    padding-left: 22px;
+}
+
 .form-checkbox {
+    position: absolute;
+    appearance: none;
     cursor: pointer;
-    margin: 0;
+    outline: none;
+}
+
+.form-checkbox::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-left: -22px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.checkbox-text {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-checkbox:checked::after {
+    background: url(../images/check-icon.svg) no-repeat center, #912fff;
 }
 
 .form-btn {
@@ -89,14 +110,17 @@ body {
 
 .form-input:focus-visible,
 .form-textarea:focus-visible,
-.form-btn:focus-visible {
+.form-btn:focus-visible,
+.form-checkbox:focus-visible::after {
     outline: 2px solid #912fff !important;
     outline-offset: 1px !important;
 }
 
 .form-btn:disabled,
 .form-input:disabled,
-.form-textarea:disabled {
+.form-textarea:disabled,
+.form-checkbox:disabled,
+.form-checkbox:disabled::after {
     opacity: 0.5;
-    cursor: not-allowed
+    cursor: not-allowed;
 }
