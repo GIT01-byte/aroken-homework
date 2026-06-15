@@ -1,0 +1,102 @@
+/* *, ::after, ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+} */
+/* TODO добавить градиент на фон формы */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.form {
+    margin-block: 20px;
+    margin-inline: 20px;
+    padding-block: 30px;
+    padding-inline: 30px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.fieldset-group {
+    border: none;
+}
+
+.fieldset-header {
+    padding: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.form-label, .fieldset-header {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-label-checkbox {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-input, .form-textarea {
+    display: block;
+    margin-top: 3px;
+    padding-block: 4px;
+    padding-inline: 10px;
+    width: 100%;
+    min-width: 80%;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 50px;
+    max-height: 200px;
+}
+
+.form-checkbox {
+    cursor: pointer;
+    margin: 0;
+}
+
+.form-btn {
+    margin-left: 15px;
+    padding-block: 6px;
+    padding-inline: 18px;
+    border: 0;
+    border-radius: 3px;
+    background-color: #912fff;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.form-btn:hover {
+    opacity: 0.85;
+}
+
+.form-btn:not(:disabled):active {
+    background-color: #5b1c8a;
+}
+
+.form-input:focus-visible,
+.form-textarea:focus-visible,
+.form-btn:focus-visible {
+    outline: 2px solid #912fff !important;
+    outline-offset: 1px !important;
+}
+
+.form-btn:disabled,
+.form-input:disabled,
+.form-textarea:disabled {
+    opacity: 0.5;
+    cursor: not-allowed
+}
