@@ -1,9 +1,3 @@
-/* *, ::after, ::before {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-} */
-/* TODO добавить градиент на фон формы */
 body {
     display: flex;
     justify-content: center;
@@ -11,6 +5,8 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     min-height: 100vh;
 }
+
+/* Основные стили для элементов */
 
 .form {
     margin-block: 20px;
@@ -45,7 +41,6 @@ body {
     padding-block: 4px;
     padding-inline: 10px;
     width: 100%;
-    min-width: 80%;
     border: 1px solid black;
     border-radius: 3px;
     font-size: 14px;
@@ -74,7 +69,7 @@ body {
     width: 16px;
     height: 16px;
     margin-left: -22px;
-    border: 1px solid gray;
+    border: 2px solid gray;
     border-radius: 6px;
     cursor: pointer;
 }
@@ -85,7 +80,7 @@ body {
 }
 
 .form-checkbox:checked::after {
-    background: url(../images/check-icon.svg) no-repeat center, #912fff;
+    background: url(../images/check-icon.svg) no-repeat center;
 }
 
 .form-btn {
@@ -94,19 +89,17 @@ body {
     padding-inline: 18px;
     border: 0;
     border-radius: 3px;
-    background-color: #912fff;
-    color: white;
     cursor: pointer;
     transition: opacity 0.2s;
 }
+
+/* Hover эффекты */
 
 .form-btn:hover {
     opacity: 0.85;
 }
 
-.form-btn:not(:disabled):active {
-    background-color: #5b1c8a;
-}
+/* Focus-visible эффекты */
 
 .form-input:focus-visible,
 .form-textarea:focus-visible,
@@ -116,6 +109,8 @@ body {
     outline-offset: 1px !important;
 }
 
+/* Disabled стили */
+
 .form-btn:disabled,
 .form-input:disabled,
 .form-textarea:disabled,
@@ -123,4 +118,32 @@ body {
 .form-checkbox:disabled::after {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+/* Цвета */
+
+.form {
+    background: linear-gradient(135deg, rgb(255, 200, 80) 0%, rgb(255, 140, 50) 40%, rgb(200, 80, 80) 100%);
+}
+
+.form-btn,
+.form-input,
+.form-textarea,
+.form-checkbox:checked::after {
+    background-color: #00264d;
+}
+
+.form-btn:not(:disabled):active {
+    background-color: #094888;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-btn,
+.form-input,
+.form-textarea {
+    color: #FFFFFF
 }
