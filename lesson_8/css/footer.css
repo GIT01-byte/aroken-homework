@@ -1,0 +1,8 @@
+.footer {
+    margin-top: auto;
+    padding-block: 40px;
+}
+
+.footer__link {
+    font-size: 1.2rem;
+}

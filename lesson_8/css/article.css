@@ -1,0 +1,98 @@
+.article {
+    margin-top: 80px;
+    margin-bottom: 120px;
+}
+
+.article__title {
+    max-width: 596px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    line-height: 115%;
+    text-transform: uppercase;
+    color: #2c332f;
+}
+
+.article__title--large {
+    font-size: 48px;
+}
+
+.article__title--medium {
+    font-size: 36px;
+}
+
+.text {
+    margin-bottom: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #535755;
+}
+
+.article__list {
+    margin-top: 0;
+    margin-bottom: 80px;
+    padding-left: 16px;
+    list-style: none;
+}
+
+.article__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.article__item::before {
+    content: "";
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: -15px;
+    background-color: #3596ED;
+    border-radius: 50%;
+}
+
+.article__decor_wrapper {
+    position: relative;
+}
+
+.article__decor_wrapper::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: url(../icons/decor_2.svg);
+    width: 528px;
+    height: 48px;
+}
+
+.article__decor_wrapper_1::before {
+    top: 100px;
+    left: -350px;
+}
+
+.article__decor_wrapper_2::before {
+    bottom: 136px;
+    right: -350px;
+}
+
+.article__img {
+    max-width: 100%;
+    max-height: 512px;
+}
+
+.article__play_btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #3596ED;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
