@@ -3,13 +3,11 @@
     justify-content: space-between;
     align-items: center;
     padding-block: 30px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #d3cbd9;
 }
 
 .phone {
     text-align: right;
-    font-family: "Ubuntu", sans-serif;
-
 }
 
 .phone__text {
@@ -26,9 +24,4 @@
     font-weight: 500;
     font-size: 18px;
     color: #2c332f;
-    transition: color 0.2s;
-}
-
-.phone__link:hover {
-    color: #3596ED;
 }

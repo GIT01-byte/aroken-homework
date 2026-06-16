@@ -1,12 +1,18 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
 html {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
 }
 
-*,
-*::after, 
-*::before {
-    box-sizing: border-box;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
@@ -15,12 +21,20 @@ html {
     padding: 0 15px;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
 }
 
 a {
     text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #3596ED;
 }
