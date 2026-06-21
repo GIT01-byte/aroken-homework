@@ -48,6 +48,7 @@
 
 .news__container {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -58,7 +59,6 @@
 .news__article {
     display: flex;
     flex-direction: column;
-    flex: 1 1 25%;
     max-width: 284px;
     background-color: #ffffff;
     border: 1px solid  rgba(211, 203, 217, 1);
@@ -150,12 +150,7 @@ summary::after {
     display: inline-block;
     width: 17px;
     height: 22px;
-    background: url("../icons/arrow-down.svg") no-repeat center;
-}
-
-summary > p {
-    margin: 0;
-    max-width: 90%;
+    background: url("../icons/arrow-down.svg");
 }
 
 details[open] summary::after {
@@ -169,10 +164,4 @@ details > p {
 
 summary::webkit-details-marker {
     display: none;
-}
-
-@media (width <= 900px) {
-    .faq__container {
-        flex-direction: column;
-    }
 }
