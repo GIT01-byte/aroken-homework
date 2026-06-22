@@ -175,6 +175,7 @@ summary {
     gap: 20px;
     list-style: none;
     padding: 20px;
+    cursor: pointer;
 }
 
 summary::after {
