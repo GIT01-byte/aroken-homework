@@ -199,6 +199,10 @@ summary::webkit-details-marker {
         margin-bottom: 40px;
     }
 
+    .hero__choose {
+        font-size: 14px;
+    }
+
     .news__container {
         flex-wrap: wrap;
         justify-content: center;
@@ -214,8 +218,13 @@ summary::webkit-details-marker {
         width: 100%;
     }
 
+    .faq::before {
+        display: none;
+    }
+
     .faq__container {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 }
 
