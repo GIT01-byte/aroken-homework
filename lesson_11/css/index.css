@@ -199,11 +199,30 @@ summary::webkit-details-marker {
         margin-bottom: 40px;
     }
 
+    .news__container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .news__article {
+        flex-basis: 50%;
+        max-width: 350px;
+        gap: 20px;
+    }
+
+    .news__article img {
+        width: 100%;
+    }
+
     .faq__container {
         flex-direction: column;
     }
 }
 
 @media (width <= 768px) {
-    
+    .news__article {
+        flex-basis: 100%;
+        max-width: 400px;
+        gap: 20px;
+    }
 }
