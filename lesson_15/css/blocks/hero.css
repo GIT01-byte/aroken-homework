@@ -55,6 +55,7 @@
 
 .hero__title {
   display: flex;
+  justify-content: center;
   gap: clamp(0.5rem, 0.09rem + 1.75vw, 2.1875rem);
   font-weight: 600;
   /* Min width 992px, max width 1920px */
