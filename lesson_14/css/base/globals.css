@@ -9,7 +9,21 @@
     background-color: var(--color-bg);
 }
 
+.page__body--no-scroll {
+    overflow-y: hidden;
+}
+
 .container {
-    width: min(var(--container-width), 100%);
+    width: min(var(--container-width), 100% - var(--container-padding) * 2);
     margin: 0 auto;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 1px solid var(--color-accent);
+    outline-offset: 1px;
+}
+
+svg {
+    stroke: currentColor
 }
