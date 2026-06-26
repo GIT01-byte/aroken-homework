@@ -21,8 +21,9 @@ try {
       PAGE_BODY_NO_SCROLL: "page__body--no-scroll",
       MENU_LINK: "menu__link",
       BREAKPOINT: 768,
+      MAIN: "main",
     },
-    headerFixed
+    headerFixed,
   );
 } catch (error) {
   console.error(error);
