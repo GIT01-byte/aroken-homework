@@ -16,15 +16,7 @@
     <symbol id="cross" viewBox="0 0 24 24" fill="none">
         <path d="M18 6L6 18M6 6L18 18" stroke="#C9C69B" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
-    <symbol id="arrow-right" viewBox="0 0 13.0605 11.0607" fill="none" customFrame="#000000">
-        <path id="Vector"
-            d="M0.530273 10.5303L5.53027 5.53033L0.530273 0.530334M7.53027 10.5303L12.5303 5.53033L7.53027 0.530334"
-            fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.000000" />
+    <symbol id="arrow-right" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 17L11 12L6 7M13 17L18 12L13 7" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
-    <symbol id="arrow-left" viewBox="0 0 22.1212 18.788" fill="none" customFrame="#000000">
-        <path id="Vector" d="M0 16.6667L8.33333 8.33333L0 0M11.6667 16.6667L20 8.33333L11.6667 0" fill-rule="evenodd"
-            stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000"
-            transform="matrix(-1,8.74228e-08,-8.74228e-08,-1,21.0607,17.7273)" />
-    </symbol>
-
 </svg>
