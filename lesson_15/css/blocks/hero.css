@@ -49,7 +49,6 @@
 @media (width <=768px) {
   .hero__header {
     flex-direction: column;
-    align-items: flex-start;
   }
 }
 
