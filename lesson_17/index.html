@@ -4,19 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/base/fonts.css">
-    <link rel="stylesheet" href="./css/base/vars.css">
-    <link rel="stylesheet" href="./css/base/normalize.css">
-    <link rel="stylesheet" href="./css/base/globals.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
     <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
     <script src="./js/index.js" type="module"></script>
     <title>Nike Air Mag</title>
 </head>
 
 <body class="page__body">
     <header class="header">
-        <!-- <header class="header header--fixed"> -->
         <div class="container header__container">
             <a href="/" class="logo header__logo">
                 <img src="./icons/logo.svg" alt="Логотип Nike" class="logo__img">
@@ -108,6 +105,54 @@
                         <li class="air-mag__info-item">высококачественные синтетические материалы для долговечности
                             и комфорта</li>
                     </ul>
+                </div>
+            </div>
+        </section>
+        <section id="sizes" class="sizes section">
+            <div class="container">
+                <h2 class="sizes__title title-md section-title">Размеры</h2>
+                <div class="sizes__slider-wrapper">
+                    <button class="sizes__slider-button sizes__slider-button--prev" aria-label="Предыдущий слайд">
+                        <svg width="40" height="40">
+                            <use class="sizes__slider-button-icon" href="./icons/main-sprite.svg#double-arrow"></use>
+                        </svg>
+                    </button>
+                    <div class="swiper sizes__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="sizes__slide-inner">
+                                    <picture>
+                                        <source srcset="./images/sizes-slide/sizes-slide-1.webp" type="image/webp">
+                                        <img class="sizes__slide-img" src="./images/sizes-slide/sizes-slide-1.png"
+                                            width="357" height="375" alt="Кроссовки Nike Air Mag, вид спереди">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="sizes__slide-inner">
+                                    <picture>
+                                        <source srcset="./images/sizes-slide/sizes-slide-2.webp" type="image/webp">
+                                        <img class="sizes__slide-img" src="./images/sizes-slide/sizes-slide-2.png"
+                                            width="408" height="375" alt="Кроссовки Nike Air Mag, вид сзади">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="sizes__slide-inner">
+                                    <picture>
+                                        <source srcset="./images/sizes-slide/sizes-slide-3.webp" type="image/webp">
+                                        <img class="sizes__slide-img" src="./images/sizes-slide/sizes-slide-3.png"
+                                            width="442" height="375" alt="Кроссовки Nike Air Mag, вид сбоку">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="sizes__slider-button sizes__slider-button--next" aria-label="Следующий слайд">
+                        <svg width="40" height="40">
+                            <use class="sizes__slider-button-icon" href="./icons/main-sprite.svg#double-arrow"></use>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </section>

@@ -48,7 +48,6 @@
 
 .air-mag__info-wrapper {
   display: flex;
-  gap: 40px;
 }
 
 @media (width >992px) {

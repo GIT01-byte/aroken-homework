@@ -118,7 +118,7 @@
   position: absolute;
   top: 88px;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   z-index: var(--layer-negative);
 }
 
