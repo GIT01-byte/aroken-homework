@@ -35,7 +35,7 @@ svg {
 }
 
 .text-light,
-.text-regular,
+.text-regular
 .title-sm,
 .title-md {
   color: var(--color-main);
