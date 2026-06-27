@@ -1,6 +1,7 @@
 import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
 import { sizesSlider } from "./product-slider.js";
+import { sizes } from "./sizes.js";
 
 try {
   const headerFixed = new HeaderFixed({
@@ -24,10 +25,11 @@ try {
       BREAKPOINT: 768,
       MAIN: "main",
     },
-    headerFixed
+    headerFixed,
   );
 
   sizesSlider();
+  sizes();
 } catch (error) {
   console.error(error);
 }
