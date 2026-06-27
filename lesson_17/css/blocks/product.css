@@ -94,6 +94,10 @@
   margin-bottom: 20px;
 }
 
+.product__title--accent {
+  color: var(--color-accent)
+}
+
 .product__description,
 .product__price {
   margin-bottom: 40px;
