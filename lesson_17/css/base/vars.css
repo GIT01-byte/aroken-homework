@@ -1,28 +1,35 @@
 :root {
-    /* Fonts */
-    --font-family: "Montserrat", sans-serif;
+  /* Fonts */
+  --font-family: "Montserrat", sans-serif;
 
-    /* Colors */
-    --color-main: #fff;
-    --color-accent: #ffea00;
-    --color-accent-glow: #ffea004d; 
-    --color-bg: #2a2a29;
-    --color-secondary: #c9c69b;
-    --color-disable: #5D5D56;
-    --color-shadow: #181817;
-    --color-outline: #9747FF;
+  /* Colors */
+  --color-main: #ffffff;
+  --color-main-glow: #ffffff4d;
+  --color-accent: #ffea00;
+  --color-accent-glow: #ffea004d;
+  --color-bg: #2a2a29;
+  --color-secondary: #c9c69b;
+  --color-disabled: #5d5d56;
+  --color-disabled-glow: #5d5d564d;
+  --color-shadow: #181817;
+  --color-outline: #9747ff;
 
-    /* Container */
-    --container-width: 1240px;
-    --container-padding: 15px;
+  /* Shadows */
+  --shadow-main-glow: 0 0 6px 2px var(--color-main-glow);
+  --shadow-accent-glow: 0 0 6px 2px var(--color-accent-glow);
+  --shadow-disabled-glow: 0 0 6px 2px var(--color-disabled-glow);
 
-    /* Transitions */
-    --transition-time: 0.2s;
+  /* Container */
+  --container-width: 1240px;
+  --container-padding: 15px;
 
-    /* Layers */
-    --layer-negative: -1;
-    --layer-0: 0;
-    --layer-1: 1;
-    --layer-2: 2;
-    --layer-3: 3;
+  /* Transitions */
+  --transition-time: 0.2s;
+
+  /* Layers */
+  --layer-negative: -1;
+  --layer-0: 0;
+  --layer-1: 1;
+  --layer-2: 2;
+  --layer-3: 3;
 }
