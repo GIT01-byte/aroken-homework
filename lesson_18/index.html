@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/swiper/swiper-bundle.min.css">
     <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
-    <script src="./js/swiper/swiper-bundle.min.js" defer></script>
+    <script src="./js/swiper-bundle.min.js" defer></script>
+    <script src="./js/fslightbox.js" type="module"></script>
     <script src="./js/index.js" type="module"></script>
     <title>Nike Air Mag</title>
 </head>
@@ -176,18 +177,18 @@
                         <section class="product__sizes">
                             <h4 class="product__sizes-title product__sizes-title--in-stock">Размеры в наличии</h4>
                             <div class="product__sizes-list" data-sizes="list">
-                                <button class="product__sizes-button" aria-label="Выбрать размер"
-                                    title="Выбрать размер" data-sizes="button">38</button>
-                                <button class="product__sizes-button" aria-label="Выбрать размер"
-                                    title="Выбрать размер" data-sizes="button">40</button>
-                                <button class="product__sizes-button" aria-label="Выбрать размер"
-                                    title="Выбрать размер" data-sizes="button">41</button>
+                                <button class="product__sizes-button" aria-label="Выбрать размер" title="Выбрать размер"
+                                    data-sizes="button">38</button>
+                                <button class="product__sizes-button" aria-label="Выбрать размер" title="Выбрать размер"
+                                    data-sizes="button">40</button>
+                                <button class="product__sizes-button" aria-label="Выбрать размер" title="Выбрать размер"
+                                    data-sizes="button">41</button>
                                 <button class="product__sizes-button product__sizes-button--active"
                                     aria-label="Выбрать размер" title="Выбрать размер" data-sizes="button">42</button>
-                                <button class="product__sizes-button" aria-label="Выбрать размер"
-                                    title="Выбрать размер" data-sizes="button">44</button>
-                                <button class="product__sizes-button" aria-label="Выбрать размер"
-                                    title="Выбрать размер" data-sizes="button">45</button>
+                                <button class="product__sizes-button" aria-label="Выбрать размер" title="Выбрать размер"
+                                    data-sizes="button">44</button>
+                                <button class="product__sizes-button" aria-label="Выбрать размер" title="Выбрать размер"
+                                    data-sizes="button">45</button>
                             </div>
                             <div class="product__sizes-buy-wrapper">
                                 <button class="product__sizes-buy-button">Купить в 1 клик</button>
@@ -224,11 +225,17 @@
                 <div class="characteristics__video">
                     <picture>
                         <source srcset="./images/characteristics-video-preview.webp" type="image/webp">
-                        <img src="./images/characteristics-video-preview.jpg" width="1240" height="600" alt="Кроссовки Nike Air Mage лежат на желтой коробке" loading="lazy">
+                        <img class="characteristics__video-preview" src="./images/characteristics-video-preview.jpg"
+                            width="1240" height="600" alt="Кроссовки Nike Air Mage лежат на желтой коробке"
+                            loading="lazy">
                     </picture>
-                    <a class="characteristics-video-play-link" href="" title="Запустить видео">
+                    <a data-fslightbox class="characteristics-video-play-link"
+                        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj48GrXCa4EhWjjtPvks1CbUfcFg0tsdtV8oFuanpVyw&s=10" title="Запустить видео">
                         <img class="characteristics-video-play-icon" src="./icons/play-icon.svg" alt="Запустить видео">
                     </a>
+                </div>
+                <div class="characteristics__benefits-wrapper">
+
                 </div>
             </div>
         </section>
