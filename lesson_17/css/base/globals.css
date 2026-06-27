@@ -35,10 +35,16 @@ svg {
 }
 
 .text-light,
+.text-regular,
+.title-sm,
+.title-md {
+  color: var(--color-main);
+}
+
+.text-light,
 .text-regular {
   font-size: 16px;
   line-height: 140%;
-  color: #fff;
 }
 
 .text-light {
@@ -49,13 +55,22 @@ svg {
   font-weight: 400;
 }
 
+.title-sm,
 .title-md {
-  font-weight: 600;
-  /* Min width 992px, max width 992px */
-  font-size: clamp(2rem, 0.94rem + 4.54vw, 3.75rem);
   text-transform: uppercase;
-  color: #fff;
+  font-weight: 600;
 }
+
+.title-md {
+  /* Min width 375px, max width 992px */
+  font-size: clamp(2rem, 0.94rem + 4.54vw, 3.75rem);
+}
+
+.title-sm {
+  /* Min width 375px, max width 768px */
+  font-size: clamp(1.5rem, 1.02rem + 2.04vw, 2rem);
+}
+
 
 @media (width >576px) {
   .section {

@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/swiper/swiper-bundle.min.css">
     <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
+    <script src="./js/swiper/swiper-bundle.min.js" defer></script>
     <script src="./js/index.js" type="module"></script>
     <title>Nike Air Mag</title>
 </head>
@@ -111,49 +111,77 @@
         <section id="sizes" class="sizes section">
             <div class="container">
                 <h2 class="sizes__title title-md section-title">Размеры</h2>
-                <div class="sizes__slider-wrapper">
-                    <button class="sizes__slider-button sizes__slider-button--prev" aria-label="Предыдущий слайд">
-                        <svg width="40" height="40">
-                            <use class="sizes__slider-button-icon" href="./icons/main-sprite.svg#double-arrow"></use>
-                        </svg>
-                    </button>
-                    <div class="swiper sizes__slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="sizes__slide-inner">
-                                    <picture>
-                                        <source srcset="./images/sizes-slide/sizes-slide-1.webp" type="image/webp">
-                                        <img class="sizes__slide-img" src="./images/sizes-slide/sizes-slide-1.png"
-                                            width="357" height="375" alt="Кроссовки Nike Air Mag, вид спереди">
-                                    </picture>
+                <section class="product">
+                    <div class="product__slider-wrapper">
+                        <button class="product__slider-button product__slider-button--prev"
+                            aria-label="Предыдущий слайд">
+                            <svg width="40" height="40">
+                                <use class="product__slider-button-icon" href="./icons/main-sprite.svg#double-arrow">
+                                </use>
+                            </svg>
+                        </button>
+                        <div class="swiper product__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="product__slide-inner">
+                                        <picture>
+                                            <source srcset="./images/product-slide/product-slide-1.webp"
+                                                type="image/webp">
+                                            <img class="product__slide-img"
+                                                src="./images/product-slide/product-slide-1.png" width="357"
+                                                height="375" alt="Кроссовки Nike Air Mag, вид спереди">
+                                        </picture>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="sizes__slide-inner">
-                                    <picture>
-                                        <source srcset="./images/sizes-slide/sizes-slide-2.webp" type="image/webp">
-                                        <img class="sizes__slide-img" src="./images/sizes-slide/sizes-slide-2.png"
-                                            width="408" height="375" alt="Кроссовки Nike Air Mag, вид сзади">
-                                    </picture>
+                                <div class="swiper-slide">
+                                    <div class="product__slide-inner">
+                                        <picture>
+                                            <source srcset="./images/product-slide/product-slide-2.webp"
+                                                type="image/webp">
+                                            <img class="product__slide-img"
+                                                src="./images/product-slide/product-slide-2.png" width="408"
+                                                height="375" alt="Кроссовки Nike Air Mag, вид сзади">
+                                        </picture>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="sizes__slide-inner">
-                                    <picture>
-                                        <source srcset="./images/sizes-slide/sizes-slide-3.webp" type="image/webp">
-                                        <img class="sizes__slide-img" src="./images/sizes-slide/sizes-slide-3.png"
-                                            width="442" height="375" alt="Кроссовки Nike Air Mag, вид сбоку">
-                                    </picture>
+                                <div class="swiper-slide">
+                                    <div class="product__slide-inner">
+                                        <picture>
+                                            <source srcset="./images/product-slide/product-slide-3.webp"
+                                                type="image/webp">
+                                            <img class="product__slide-img"
+                                                src="./images/product-slide/product-slide-3.png" width="442"
+                                                height="375" alt="Кроссовки Nike Air Mag, вид сбоку">
+                                        </picture>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <button class="product__slider-button product__slider-button--next"
+                            aria-label="Следующий слайд">
+                            <svg width="40" height="40">
+                                <use class="product__slider-button-icon" href="./icons/main-sprite.svg#double-arrow">
+                                </use>
+                            </svg>
+                        </button>
                     </div>
-                    <button class="sizes__slider-button sizes__slider-button--next" aria-label="Следующий слайд">
-                        <svg width="40" height="40">
-                            <use class="sizes__slider-button-icon" href="./icons/main-sprite.svg#double-arrow"></use>
-                        </svg>
-                    </button>
-                </div>
+                    <h3 class="product__title title-sm">
+                        Кроссовки <strong class="product__title--accent">Nike Air Mag</strong> Back To Future
+                    </h3>
+                    <p class="product__description text-light">Nike Air Mag — это кусочек киноистории и технологического
+                        прогресса. Если вы ищете уникальную пару кроссовок, которая станет не только стильным
+                        аксессуаром, но и ценным дополнением вашей коллекции, Nike Air Mag — идеальный выбор.</p>
+                    <p class="product__price title-sm">36 490 ₽</p>
+                    <div class="product__sizes-wrapper">
+                        <section class="product__sizes">
+                            <h4 class="product__sizes-title">Размеры в наличии</h4>
+                        </section>
+                        <section class="product__sizes">
+                            <h4 class="product__sizes-title">Размеры под заказ</h4>
+                        </section>
+
+                    </div>
+                </section>
             </div>
         </section>
     </main>

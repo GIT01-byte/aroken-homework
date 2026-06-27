@@ -1,6 +1,6 @@
 import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
-import { sizesSlider } from "./sizes-slider.js";
+import { sizesSlider } from "./product-slider.js";
 
 try {
   const headerFixed = new HeaderFixed({
