@@ -4,6 +4,7 @@
   color: var(--color-main);
   scroll-behavior: smooth;
   scroll-padding-top: 98px;
+  scrollbar-gutter: stable;
 }
 
 .page__body {
