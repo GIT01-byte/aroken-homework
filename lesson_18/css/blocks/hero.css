@@ -63,24 +63,6 @@
   color: var(--color-main);
 }
 
-
-.hero__title--accent {
-  color: transparent;
-  -webkit-text-stroke: 3px var(--color-accent);
-}
-
-@media (width >768px) {
-  .hero__title--accent {
-    -webkit-text-stroke: 3px var(--color-accent);
-  }
-}
-
-@media (width <=768px) {
-  .hero__title--accent {
-    -webkit-text-stroke: 1.5px var(--color-accent);
-  }
-}
-
 .hero__benefits-list {
   display: flex;
   flex-direction: column;

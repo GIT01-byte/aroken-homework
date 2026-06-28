@@ -35,8 +35,7 @@ svg {
 }
 
 .text-light,
-.text-regular
-.title-sm,
+.text-regular .title-sm,
 .title-md {
   color: var(--color-main);
 }
@@ -71,6 +70,25 @@ svg {
   font-size: clamp(1.5rem, 1.02rem + 2.04vw, 2rem);
 }
 
+.text--accent {
+  color: var(--color-accent);
+}
+
+.text-stroke--accent {
+  color: transparent;
+}
+
+@media (width >768px) {
+  .text-stroke--accent {
+    -webkit-text-stroke: 3px var(--color-accent);
+  }
+}
+
+@media (width <=768px) {
+  .text-stroke--accent {
+    -webkit-text-stroke: 1.5px var(--color-accent);
+  }
+}
 
 @media (width >576px) {
   .section {
