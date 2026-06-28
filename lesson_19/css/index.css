@@ -7,7 +7,6 @@
 /* Blocks */
 @import url("./blocks/header.css");
 @import url("./blocks/menu.css");
-@import url("./blocks/footer.css");
 @import url("./blocks/burger.css");
 @import url("./blocks/hero.css");
 @import url("./blocks/air-mag.css");
@@ -15,3 +14,7 @@
 @import url("./blocks/sizes.css");
 @import url("./blocks/features.css");
 @import url("./blocks/top-models.css");
+@import url("./blocks/footer.css");
+@import url("./blocks/modal.css");
+@import url("./blocks/modal-buy.css");
+@import url("./blocks/modal-cart.css");

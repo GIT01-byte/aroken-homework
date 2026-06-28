@@ -32,7 +32,7 @@
   align-items: center;
   border: 1px solid var(--color-main);
   border-radius: 50%;
-  background-color: rgba(42, 42, 41, 0.5);
+  background-color: var(--color-overlay);
   box-shadow: var(--shadow-main-glow);
 }
 

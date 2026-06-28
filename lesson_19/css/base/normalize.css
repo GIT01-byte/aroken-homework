@@ -65,6 +65,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+  -moz-appearance: button;
   appearance: button;
   -webkit-appearance: button;
 }
@@ -83,6 +84,7 @@ button::-moz-focus-inner,
 }
 
 [type="search"] {
+  -moz-appearance: textfield;
   appearance: textfield;
   -webkit-appearance: textfield;
   outline-offset: -2px;

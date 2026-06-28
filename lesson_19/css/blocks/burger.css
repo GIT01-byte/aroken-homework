@@ -4,6 +4,14 @@
     }
 }
 
+.burger__icon-menu {
+    stroke: var(--color-accent)
+}
+
+.burger__icon-cross {
+    stroke: var(--color-secondary)
+}
+
 @media (width <=768px) {
     .burger {
         position: relative;
