@@ -34,9 +34,11 @@ svg {
   stroke: currentColor;
 }
 
+.title-xs,
+.title-sm,
+.title-md,
 .text-light,
-.text-regular .title-sm,
-.title-md {
+.text-regular {
   color: var(--color-main);
 }
 
@@ -54,20 +56,25 @@ svg {
   font-weight: 400;
 }
 
+.title-xs,
 .title-sm,
 .title-md {
   text-transform: uppercase;
   font-weight: 600;
 }
 
-.title-md {
-  /* Min width 375px, max width 992px */
-  font-size: clamp(2rem, 0.94rem + 4.54vw, 3.75rem);
+.title-xs {
+  font-size: 18px;
 }
 
 .title-sm {
   /* Min width 375px, max width 768px */
   font-size: clamp(1.5rem, 1.02rem + 2.04vw, 2rem);
+}
+
+.title-md {
+  /* Min width 375px, max width 992px */
+  font-size: clamp(2rem, 0.94rem + 4.54vw, 3.75rem);
 }
 
 .text--accent {
