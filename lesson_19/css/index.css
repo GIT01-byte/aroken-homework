@@ -1,0 +1,17 @@
+/* Base */
+@import url("./base/normalize.css");
+@import url("./base/fonts.css");
+@import url("./base/vars.css");
+@import url("./base/globals.css");
+
+/* Blocks */
+@import url("./blocks/header.css");
+@import url("./blocks/menu.css");
+@import url("./blocks/footer.css");
+@import url("./blocks/burger.css");
+@import url("./blocks/hero.css");
+@import url("./blocks/air-mag.css");
+@import url("./blocks/product.css");
+@import url("./blocks/sizes.css");
+@import url("./blocks/features.css");
+@import url("./blocks/top-models.css");

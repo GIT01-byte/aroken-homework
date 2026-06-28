@@ -1,0 +1,118 @@
+.page {
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: var(--color-main);
+  scroll-behavior: smooth;
+  scroll-padding-top: 98px;
+}
+
+.page__body {
+  min-width: 375px;
+  background-color: var(--color-bg);
+}
+
+.page__body--no-scroll {
+  overflow-y: hidden;
+}
+
+.container {
+  width: min(var(--container-width), 100% - var(--container-padding) * 2);
+  margin: 0 auto;
+}
+
+img {
+  object-fit: cover;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+svg {
+  stroke: currentColor;
+}
+
+.title-xs,
+.title-sm,
+.title-md,
+.text-light,
+.text-regular {
+  color: var(--color-main);
+}
+
+.text-light,
+.text-regular {
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.title-xs,
+.title-sm,
+.title-md {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.title-xs {
+  font-size: 18px;
+}
+
+.title-sm {
+  /* Min width 375px, max width 768px */
+  font-size: clamp(1.5rem, 1.02rem + 2.04vw, 2rem);
+}
+
+.title-md {
+  /* Min width 375px, max width 992px */
+  font-size: clamp(2rem, 0.94rem + 4.54vw, 3.75rem);
+}
+
+.text--accent {
+  color: var(--color-accent);
+}
+
+.text-stroke--accent {
+  color: transparent;
+}
+
+@media (width >768px) {
+  .text-stroke--accent {
+    -webkit-text-stroke: 3px var(--color-accent);
+  }
+}
+
+@media (width <=768px) {
+  .text-stroke--accent {
+    -webkit-text-stroke: 1.5px var(--color-accent);
+  }
+}
+
+@media (width >576px) {
+  .section {
+    margin-bottom: 140px;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (width <=576px) {
+  .section {
+    margin-bottom: 80px;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+}
