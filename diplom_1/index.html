@@ -11,6 +11,7 @@
 <body class="page__body">
     <header class="header">
         <div class="container header__container">
+            <!-- < 768px другое лого, уменьшенное бургер меню и кнопки -->
             <div class="left-group">
                 <a class="logo header__logo">
                     <img src="./icons/logo.svg" alt="Логотип Leader Classic" class="logo__img">
@@ -19,20 +20,20 @@
                         <p class="logo__text logo__text-bottom">Classic</p>
                     </div>
                 </a>
-                <div class="header__lang-switcher lang-switcher">
-                    <details class="lang-switcher__control">
-                        <summary class="lang-switcher__current-lang">
-                            <img src="./icons/ru-lang.svg" alt="Иконка Русского флага"
-                                class="lang-switcher__current-lang-icon">
-                            <p class="text-md">RU</p>
-                        </summary>
-                        <ul>
-                            <li><a href="/en" class="lang-switcher__link text-md">EN</a></li>
-                            <li><a href="/kz" class="lang-switcher__link text-md">KZ</a></li>
-                        </ul>
-                    </details>
-                </div>
                 <nav class="header__menu menu">
+                    <div class="header__lang-switcher lang-switcher">
+                        <details class="lang-switcher__control">
+                            <summary class="lang-switcher__current-lang">
+                                <img src="./icons/ru-lang.svg" alt="Иконка Русского флага"
+                                    class="lang-switcher__current-lang-icon">
+                                <p class="text-md">RU</p>
+                            </summary>
+                            <ul>
+                                <li><a href="/en" class="lang-switcher__link text-md">EN</a></li>
+                                <li><a href="/kz" class="lang-switcher__link text-md">KZ</a></li>
+                            </ul>
+                        </details>
+                    </div>
                     <ul class="menu__list">
                         <li class="menu__item text-md">Тарифы</li>
                         <li class="menu__item text-md">Бонус</li>
@@ -40,6 +41,13 @@
                         <li class="menu__item text-md">Контакты ✨</li>
                     </ul>
                 </nav>
+                <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false"
+                    aria-controls="header__menu">
+                    <svg width="31" height="31">
+                        <use class="burger__icon-menu" href="./icons/sprite.svg#burger-menu"></use>
+                        <use class="burger__icon-cross" href="./icons/sprite.svg#cross"></use>
+                    </svg>
+                </button>
             </div>
             <div class="right-group">
                 <div class="header__controls">

@@ -50,7 +50,19 @@
 
 .header__menu {
     /* 1240px - 1920px */
-    margin-left: clamp(0rem, -3.42rem + 4.41vw, 1.875rem);
+}
+
+@media (width <=1120px) {
+    .header__menu {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        bottom: 0;
+        z-index: var(--layer-2);
+        overflow-y: auto;
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 .header__actions {
