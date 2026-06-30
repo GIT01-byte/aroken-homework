@@ -1,15 +1,13 @@
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* 1240px - 1920px */
-    gap: clamp(1.25rem, -4.68rem + 7.65vw, 4.5rem);
-}
-
 .menu__list {
     display: flex;
     justify-content: center;
     align-items: center;
     /* 1240px - 1920px */
-    gap: clamp(1.875rem, -15.18rem + 22.00vw, 6rem);
+    gap: clamp(1.25rem, -7.41rem + 11.18vw, 6rem);
+}
+
+@media (width <1240px) {
+  .menu__list {
+    gap: clamp(0.625rem, -0.39rem + 2.12vw, 1.25rem);
+  }
 }

@@ -23,7 +23,7 @@ try {
       PAGE_BODY: "page__body",
       PAGE_BODY_NO_SCROLL: "page__body--no-scroll",
       MENU_LINK: "menu__link",
-      BREAKPOINT: 1120,
+      BREAKPOINT: 1240,
       MAIN: "main",
     },
     // headerFixed,

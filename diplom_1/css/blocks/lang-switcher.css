@@ -1,35 +1,67 @@
 .lang-switcher {
-    display: inline-block;
+  display: inline-block;
 }
 
 .lang-switcher__current-lang {
-    position: relative;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
+  position: relative;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
 }
 
 .lang-switcher__current-lang::after {
-    content: "";
-    margin-left: 1.58px;
+  content: "";
+  margin-left: 1.58px;
+  background-image: url("../../icons/angle-small-down.svg");
+  color: var(--color-main)
+}
+
+@media (width >768px) {
+  .lang-switcher__current-lang::after {
     width: 13px;
     height: 7px;
-    background-image: url("../../icons/angle-small-down.svg");
-    color: var(--color-main)
+  }
+}
+
+@media (width <=768px) {
+
+
+  .lang-switcher__current-lang::after {
+    width: 7px;
+    height: 4.5px;
+  }
+}
+
+.lang__svg {
+  width: 23px;
+  height: 23px;
+}
+
+@media (width <=768px) {
+  .lang__svg {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 .lang-switcher__control {
-    position: relative;
+  position: relative;
 }
 
 .lang-switcher__control ul {
-    position: absolute;
-    top: 100%;
-    left: 29px; 
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  position: absolute;
+  top: 100%;
+  left: 29px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@media (width <=768px) {
+  .lang-switcher__control ul {
+    left: 21px;
+  }
 }
