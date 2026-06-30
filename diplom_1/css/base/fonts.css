@@ -15,17 +15,41 @@
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: local("Montserrat Medium"), local("Montserrat-Medium"), url('../../fonts/MontserratMedium.woff2') format('woff2');
+    font-family: 'GothamPro';
+    src: local("GothamPro Light"), local("GothamPro-Light"), url('../../fonts/GothamPro-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GothamPro';
+    src: local("GothamPro Regular"), local("GothamPro-Regular"), url('../../fonts/GothamPro.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GothamPro';
+    src: local("GothamPro Medium"), local("GothamPro-Medium"), url('../../fonts/GothamPro-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"), url('../../fonts/MontserratSemiBold.woff2') format('woff2');
-    font-weight: 600;
+    font-family: 'GothamPro';
+    src: local("GothamPro Bold"), local("GothamPro-Bold"), url('../../fonts/GothamPro-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Latin CT';
+    src: local("Latin CT"), local("Latin CT Wide"), url('../../fonts/LatinCT-Wide.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }

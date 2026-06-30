@@ -1,28 +1,26 @@
 :root {
   /* Fonts */
-  --font-family: "Montserrat", sans-serif;
+  --font-family: "Gotham Pro", sans-serif;
+  --second-family: "Montserrat", sans-serif;
 
   /* Colors */
   --color-main: #ffffff;
-  --color-main-glow: #ffffff4d;
-  --color-accent: #ffea00;
-  --color-accent-glow: #ffea004d;
-  --color-bg: #2a2a29;
-  --color-secondary: #c9c69b;
-  --color-disabled: #5d5d56;
-  --color-disabled-glow: #5d5d564d;
-  --color-shadow: #181817;
-  --color-outline: #9747ff;
-  --color-overlay: #2a2a2980;
-  --overlay-gradient: linear-gradient(rgba(30, 30, 30, .9), #000 1810%);
+  --color-black: #000000;
+  --color-light-gray: #eae9e9;
+  --color-gray: #2D3436;
+  --color-bg: #0E0E12;
+  --color-accent: #4BD879;
+  --color-secondary: #62BA7F;
+
+  /* Linear gradients */
+  --gradient-orange: linear-gradient(57deg, #dc6b30 0%, #e4864f 42.19%, #ffbe82 72.92%, #e49031 100%);
 
   /* Shadows */
-  --shadow-main-glow: 0 0 6px 2px var(--color-main-glow);
-  --shadow-accent-glow: 0 0 6px 2px var(--color-accent-glow);
-  --shadow-disabled-glow: 0 0 6px 2px var(--color-disabled-glow);
 
+  --border-radius: 20px;
+  
   /* Container */
-  --container-width: 1240px;
+  --container-width: 1560px;
   --container-padding: 15px;
 
   /* Transitions */

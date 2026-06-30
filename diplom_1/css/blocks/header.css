@@ -1,161 +1,69 @@
-.header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: var(--layer-2);
-    padding-block: 30px;
-    transition: box-shadow var(--transition-time);
-    background-color: var(--color-bg);
-}
-
-.header--fixed {
-    box-shadow: 0 0 20px 0 var(--color-shadow);
-    overflow: hidden;
-}
-
 .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 28px;
+}
+
+.left-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 1240px - 1920px */
+    gap: clamp(1.25rem, -1.03rem + 2.94vw, 2.5rem);
+}
+
+.right-group {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-@media (width >768px) {
-    .header__logo {
-        /* Min width 992px, max width 1440px */
-        margin-right: clamp(25px, -11.585rem + 21.21vw, 120px);
-    }
-
-    .header__menu {
-        flex-grow: 1;
-    }
-}
-
-@media (width <=768px) {
-    .header__menu {
-        position: fixed;
-        top: 0;
-        right: -100vw;
-        bottom: 0;
-        z-index: var(--layer-2);
-        padding: 144px 15px 20px 0;
-        min-width: 297px;
-        background-color: var(--color-bg);
-        box-shadow: -2px 0 20px var(--color-shadow);
-        overflow-y: auto;
-        opacity: 0;
-        visibility: hidden;
-        transition: right var(--transition-time), opacity var(--transition-time), visibility var(--transition-time);
-    }
-
-    .header__menu--open {
-        right: 0;
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .header__menu .menu__list {
-        flex-direction: column;
-        align-items: flex-end;
-        text-align: end;
-    }
-}
-
-.header__controls {
+.header__logo {
     display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 5px;
 }
 
-@media (width >=992px) {
-    .header__controls {
-        gap: 60px;
-    }
+.logo__text-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px;
 }
 
-@media (width <=992px) {
-    .header__controls {
-        gap: 30px;
-    }
-}
-
-.header__order {
-    position: relative;
-    border-bottom: 1px solid var(--color-accent);
-    padding: 0px 0px 5px;
-    width: 95px;
-    height: 22px;
+.logo__text {
+    font-family: "Latin CT", sans-serif;
     font-weight: 400;
-    font-size: 13px;
-    line-height: 130%;
-    color: var(--color-accent);
+    font-size: 12px;
+    line-height: 119%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-main);
 }
 
-.header__order::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    width: 90%;
-    min-height: 11px;
-    border-radius: 50%;
-    background-color: var(--color-accent);
-    fill: var(--color-accent);
-    -webkit-filter: blur(30px);
-    filter: blur(30px);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity var(--transition-time), visibility var(--transition-time);
+.header__lang-switcher {
+    flex-shrink: 0;
 }
 
-@media (any-hover: hover) {
-    .header__order:hover::before {
-        opacity: 1;
-        visibility: visible;
-    }
-}
-
-.header__order:active::before {
-    opacity: 1;
-    visibility: visible;
+.header__menu {
+    /* 1240px - 1920px */
+    margin-left: clamp(0rem, -3.42rem + 4.41vw, 1.875rem);
 }
 
 .header__actions {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-@media (width >=768px) {
-    .header__actions {
-        gap: 20px;
-    }
+.header__button-login {
+    padding: 22px 28px;
 }
 
-@media (width <=768px) {
-    .header__actions {
-        gap: 30px;
-    }
-}
-
-.header__actions-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    color: var(--color-main);
-    transition: color var(--transition-time);
-}
-
-
-@media (any-hover: hover) {
-    .header__actions-button:hover {
-        color: var(--color-accent);
-    }
-}
-
-.header__actions-button:active {
-    color: var(--color-accent);
+.header__button-create-acc {
+    padding: 25px 35px;
 }

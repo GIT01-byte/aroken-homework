@@ -1,26 +1,14 @@
+.header__menu {
+}
+.menu {
+
+}
 .menu__list {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
+    /* 1240px - 1920px */
+    gap: clamp(1.875rem, -15.18rem + 22.00vw, 6rem);
 }
-
-.menu__link {
-    font-family: var(--font-family);
-    font-weight: 300;
-    font-size: 13px;
-    line-height: 130%;
-    color: var(--color-main);
-    transition: color var(--transition-time);
+.menu__item {
 }
-
-@media (any-hover: hover) {
-    .menu__link:hover {
-        color: var(--color-accent)
-    }
-}
-
-.menu__link:active {
-    color: var(--color-accent)
-}
-
-@media (width <=992px) {}
