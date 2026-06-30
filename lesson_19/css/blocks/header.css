@@ -29,7 +29,7 @@
     .header__menu {
         flex-grow: 1;
     }
-}
+} 
 
 @media (width <=768px) {
     .header__menu {

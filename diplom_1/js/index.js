@@ -1,14 +1,14 @@
-import HeaderFixed from "./header.js";
+// import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
-import Modal from "./modal.js";
-import { sizesSlider } from "./product-slider.js";
-import { sizes } from "./sizes.js";
+// import Modal from "./modal.js";
+// import { sizesSlider } from "./product-slider.js";
+// import { sizes } from "./sizes.js";
 
 try {
-  const headerFixed = new HeaderFixed({
-    HEADER: "header",
-    HEADER_FIXED: "header--fixed",
-  });
+  // const headerFixed = new HeaderFixed({
+  //   HEADER: "header",
+  //   HEADER_FIXED: "header--fixed",
+  // });
 
   new BurgerMenu(
     {
@@ -23,19 +23,19 @@ try {
       PAGE_BODY: "page__body",
       PAGE_BODY_NO_SCROLL: "page__body--no-scroll",
       MENU_LINK: "menu__link",
-      BREAKPOINT: 768,
+      BREAKPOINT: 1120,
       MAIN: "main",
     },
-    headerFixed,
+    // headerFixed,
   );
 
-  new Modal ({
-    PAGE_BODY: "page__body",
-    PAGE_BODY_NO_SCROLL: "page__body--no-scroll",
-  })
+  // new Modal ({
+  //   PAGE_BODY: "page__body",
+  //   PAGE_BODY_NO_SCROLL: "page__body--no-scroll",
+  // })
 
-  sizesSlider();
-  sizes();
+  // sizesSlider();
+  // sizes();
 } catch (error) {
   console.error(error);
 }

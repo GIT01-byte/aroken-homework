@@ -50,6 +50,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: var(--layer-3);
     gap: 5px;
 }
 
@@ -89,9 +90,24 @@
         left: -100vw;
         bottom: 0;
         z-index: var(--layer-2);
+        min-width: 297px;
+        background-color: var(--color-bg);
         overflow-y: auto;
         opacity: 0;
         visibility: hidden;
+        transition: left var(--transition-time), opacity var(--transition-time), visibility var(--transition-time);
+    }
+
+    .header__menu--open {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header__menu .menu__list {
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: end;
     }
 }
 

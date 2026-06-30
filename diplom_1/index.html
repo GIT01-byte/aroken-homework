@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js" type="module"></script>
+    <link rel="shortcut icon" href="./icons/logo.svg" type="image/x-icon">
     <title>Leader Classic</title>
 </head>
 
@@ -21,24 +23,24 @@
                     </div>
                 </a>
                 <nav class="header__menu menu">
-                    <div class="header__lang-switcher lang-switcher">
-                        <details class="lang-switcher__control">
-                            <summary class="lang-switcher__current-lang">
-                                <img src="./icons/ru-lang.svg" alt="Иконка Русского флага"
-                                    class="lang-switcher__current-lang-icon">
-                                <p class="text-md">RU</p>
-                            </summary>
-                            <ul>
-                                <li><a href="/en" class="lang-switcher__link text-md">EN</a></li>
-                                <li><a href="/kz" class="lang-switcher__link text-md">KZ</a></li>
-                            </ul>
-                        </details>
-                    </div>
                     <ul class="menu__list">
-                        <li class="menu__item text-md">Тарифы</li>
-                        <li class="menu__item text-md">Бонус</li>
-                        <li class="menu__item text-md">Реферальная</li>
-                        <li class="menu__item text-md">Контакты ✨</li>
+                        <div class="header__lang-switcher lang-switcher">
+                            <details class="lang-switcher__control">
+                                <summary class="lang-switcher__current-lang">
+                                    <img src="./icons/ru-lang.svg" alt="Иконка Русского флага"
+                                        class="lang-switcher__current-lang-icon">
+                                    <p class="text-md">RU</p>
+                                </summary>
+                                <ul>
+                                    <li><a href="/en" class="lang-switcher__link text-md">EN</a></li>
+                                    <li><a href="/kz" class="lang-switcher__link text-md">KZ</a></li>
+                                </ul>
+                            </details>
+                        </div>
+                        <li class="menu__item"><a href="#" class="menu__link text-md">Тарифы</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link text-md">Бонус</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link text-md">Реферальная</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link text-md">Контакты</a> ✨</li>
                     </ul>
                 </nav>
                 <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false"
