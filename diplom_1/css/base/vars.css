@@ -14,6 +14,7 @@
 
   /* Linear gradients */
   --gradient-orange: linear-gradient(57deg, #dc6b30 0%, #e4864f 42.19%, #ffbe82 72.92%, #e49031 100%);
+  --gradient-hover: radial-gradient(circle, #e7aa19 0%, #cb6d9c 100%);
 
   /* Shadows */
 
@@ -26,7 +27,7 @@
   --container-padding: 15px;
 
   /* Transitions */
-  --transition-time: 0.2s;
+  --transition-time: 0.3s;
 
   /* Layers */
   --layer-negative: -1;

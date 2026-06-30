@@ -16,6 +16,8 @@
   content: "";
   margin-left: 1.58px;
   background-image: url("../../icons/angle-small-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
   color: var(--color-main)
 }
 

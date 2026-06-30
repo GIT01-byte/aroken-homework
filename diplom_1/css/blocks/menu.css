@@ -1,13 +1,28 @@
 .menu__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* 1240px - 1920px */
-    gap: clamp(1.25rem, -7.41rem + 11.18vw, 6rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 1240px - 1920px */
+  gap: clamp(1.25rem, -7.41rem + 11.18vw, 6rem);
 }
 
 @media (width <1240px) {
   .menu__list {
     gap: clamp(0.625rem, -0.39rem + 2.12vw, 1.25rem);
+  }
+}
+
+.menu__link {
+  position: relative;
+  color: var(--color-main);
+  transition: color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+  .menu__link:hover {
+    background: var(--gradient-hover);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent
   }
 }
