@@ -17,7 +17,9 @@
 
   /* Shadows */
 
-  --border-radius: 20px;
+  /* Border */
+  /* 375px - 1240px */
+  --border-radius: clamp(0.25rem, -0.18rem + 1.85vw, 1.25rem);
   
   /* Container */
   --container-width: 1560px;

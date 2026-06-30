@@ -2,16 +2,42 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 30px;
-    padding-bottom: 28px;
+
+}
+
+@media (width >768px) {
+    .header__container {
+        padding-top: 30px;
+        padding-bottom: 28px;
+    }
+}
+
+@media (width <=768px) {
+    .header__container {
+        padding-top: 15px;
+        padding-bottom: 14px;
+    }
 }
 
 .left-group {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* 1240px - 1920px */
-    gap: clamp(1.25rem, -1.03rem + 2.94vw, 2.5rem);
+
+}
+
+@media (width >992px) {
+    .left-group {
+        /* 375px - 1240px */
+        gap: clamp(2rem, -1.03rem + 2.94vw, 2.5rem);
+    }
+}
+
+@media (width <=992px) {
+    .left-group {
+        /* 1240px - 1920px */
+        gap: clamp(0.625rem, 0.41rem + 0.92vw, 2rem);
+    }
 }
 
 .right-group {
@@ -31,32 +57,36 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 15px;
+    /* 375px - 1240px */
+    margin-top: clamp(0.4375rem, 0.22rem + 0.92vw, 0.9375rem);
 }
 
 .logo__text {
     font-family: "Latin CT", sans-serif;
     font-weight: 400;
-    font-size: 12px;
+    /* 375px - 1240px */
+    font-size: clamp(0.4rem, 0.01rem + 1.27vw, 1rem);
     line-height: 119%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--color-main);
 }
 
-.header__lang-switcher {
-    flex-shrink: 0;
+.logo__img {
+    /* 375px - 1240px */
+    width: clamp(1.7rem, 0.54rem + 3.82vw, 3.5rem);
+    height: clamp(2rem, 0.90rem + 4.16vw, 4.125rem);
 }
 
-.header__menu {
-    /* 1240px - 1920px */
+.header__lang-switcher {
+    flex-shrink: 0;
 }
 
 @media (width <=1120px) {
     .header__menu {
         position: fixed;
         top: 0;
-        right: -100vw;
+        left: -100vw;
         bottom: 0;
         z-index: var(--layer-2);
         overflow-y: auto;
@@ -69,13 +99,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+}
+
+@media (width >768px) {
+    .header__actions {
+        gap: 20px;
+    }
+}
+
+@media (width <=768px) {
+    .header__actions {
+        gap: 10px;
+    }
 }
 
 .header__button-login {
-    padding: 22px 28px;
+    /* 375px - 1240px */
+    padding-block: clamp(0.5rem, 0.12rem + 1.62vw, 1.375rem);
+    padding-inline: clamp(0.8125rem, 0.41rem + 1.73vw, 1.75rem);
 }
 
 .header__button-create-acc {
-    padding: 25px 35px;
+    /* 375px - 1240px */
+    padding-block: clamp(0.7rem, 0.04rem + 1.97vw, 1.5625rem);
+    padding-inline: clamp(0.9375rem, 0.40rem + 2.31vw, 2.1875rem);
 }

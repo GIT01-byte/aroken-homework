@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-    <symbol id="cross" width="31" height="31" viewBox="0 0 31 31" fill="none">
-        <path d="M4 4 L27 27 M27 4 L4 27" stroke-width="2" stroke-linecap="round" />
+    <symbol id="cross" viewBox="0 0 16 16" fill="none">
+        <path d="M 4 4 L 27 27 M 27 4 L 4 27" stroke-width="2" stroke-linecap="round" />
     </symbol>
 
-    <symbol id="burger-menu" width="31" height="31" viewBox="0 0 16 16" fill="none">
+    <symbol id="burger-menu" viewBox="0 0 16 16" fill="none">
         <path d="M 1 3 h 12 M 1 6.5 h 8 M 1 10 h 12 M 1 13.5 h 8" stroke-width="1.5" stroke-linecap="round" />
     </symbol>
 </svg>

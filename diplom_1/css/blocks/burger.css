@@ -4,6 +4,11 @@
     }
 }
 
+.burger__svg {
+    width: clamp(1.5rem, 1.28rem + 0.94vw, 1.9375rem);
+    height: clamp(1.5rem, 1.28rem + 0.94vw, 1.9375rem);
+}
+
 .burger__icon-menu {
     stroke: var(--color-main)
 }
