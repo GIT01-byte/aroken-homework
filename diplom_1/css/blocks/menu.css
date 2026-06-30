@@ -18,11 +18,28 @@
   transition: color var(--transition-time);
 }
 
+.menu__link::after {
+  content: " ✨";
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  min-width: 20px;
+  color: initial;
+  transition: right var(--transition-time), opacity var(--transition-time), visibility var(--transition-time);
+}
+
 @media (any-hover: hover) {
   .menu__link:hover {
     background: var(--gradient-hover);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent
+  }
+
+  .menu__link:hover::after {
+    right: -27px;
+    opacity: 1;
+    visibility: visible;
   }
 }
