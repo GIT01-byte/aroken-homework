@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    /* 1120px - 1920px */
+    gap: clamp(1.125rem, -0.98rem + 3.00vw, 2.625rem);
 }
 
 @media (width >768px) {
@@ -19,28 +20,7 @@
     }
 }
 
-.left-group {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-@media (width >992px) {
-    .left-group {
-        /* 375px - 1240px */
-        gap: clamp(2rem, -1.03rem + 2.94vw, 2.5rem);
-    }
-}
-
-@media (width <=992px) {
-    .left-group {
-        /* 1240px - 1920px */
-        gap: clamp(0.625rem, 0.41rem + 0.92vw, 2rem);
-    }
-}
-
-.right-group {
+.header__left-group {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,19 +38,17 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    /* 375px - 1240px */
-    margin-top: clamp(0.4375rem, 0.22rem + 0.92vw, 0.9375rem);
 }
 
 .logo__text {
     font-family: "Latin CT", sans-serif;
     font-weight: 400;
-    /* 375px - 1240px */
-    font-size: clamp(0.4rem, 0.01rem + 1.27vw, 1rem);
     line-height: 119%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--color-main);
+    /* 375px - 1240px */
+    font-size: clamp(0.4rem, 0.01rem + 1.27vw, 1rem);
 }
 
 .logo__img {
@@ -79,19 +57,26 @@
     height: clamp(2rem, 0.90rem + 4.16vw, 4.125rem);
 }
 
-.header__lang-switcher {
-    flex-shrink: 0;
+.header__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 1120px - 1920px */
+    gap: clamp(0.4rem, -2.55rem + 5.88vw, 4.5rem);
 }
 
-@media (width <=1240px) {
+@media (width <=1120px) {
     .header__menu {
+        align-items: first baseline;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
         position: fixed;
         top: 0;
         left: -100vw;
         bottom: 0;
         z-index: var(--layer-2);
         min-width: 165px;
-        padding: 144px 0 20px 30px;
+        padding: 144px 20px 20px 30px;
         background-color: var(--color-bg);
         overflow-y: auto;
         opacity: 0;
@@ -124,8 +109,12 @@
 
 @media (width <=768px) {
     .header__menu {
-        padding: 100px 0 20px 30px;
+        padding: 100px 20px 20px 30px;
     }
+}
+
+.header__controls {
+    margin-left: auto;
 }
 
 .header__actions {

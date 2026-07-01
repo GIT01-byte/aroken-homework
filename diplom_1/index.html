@@ -13,52 +13,48 @@
 <body class="page__body">
     <header class="header">
         <div class="container header__container">
-            <div class="left-group">
-                <a href="/" class="logo header__logo">
-                    <img src="./icons/logo.svg" width="52" height="66" alt="Логотип Leader Classic" class="logo__img">
-                    <div class="logo__text-wrapper">
-                        <p class="logo__text logo__text-top">Leader</p>
-                        <p class="logo__text logo__text-bottom">Classic</p>
-                    </div>
-                </a>
-                <nav class="header__menu menu" aria-label="Основная навигация">
-                    <ul class="menu__list">
-                        <div class="header__lang-switcher lang-switcher" aria-label="Выбор языка">
-                            <details class="lang-switcher__control">
-                                <summary class="lang-switcher__current-lang">
-                                    <svg class="lang__svg">
-                                        <use class="lang__ru-icon" href="./icons/sprite.svg#ru-icon"></use>
-                                    </svg>
-                                    <p class="lang-switcher__current-lang-text text-md">RU</p>
-                                </summary>
-                                <ul>
-                                    <li><a href="/en" class="lang-switcher__link text-md">EN</a></li>
-                                    <li><a href="/kz" class="lang-switcher__link text-md">KZ</a></li>
-                                </ul>
-                            </details>
-                        </div>
-                        <li class="menu__item"><a href="#" class="menu__link text-md">Тарифы</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link text-md">Бонус</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link text-md">Реферальная</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link text-md">Контакты</a></li>
-                    </ul>
-                </nav>
-                <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false"
-                    aria-controls="header__menu">
-                    <svg class="burger__svg">
-                        <use class="burger__icon-menu" href="./icons/sprite.svg#burger-menu"></use>
-                        <use class="burger__icon-cross" href="./icons/sprite.svg#cross"></use>
-                    </svg>
-                </button>
-            </div>
-            <div class="right-group">
-                <div class="header__controls">
-                    <div class="header__actions">
-                        <a href="#" class="header__button-login button button--bordered text-md"
-                            aria-label="Войти">Войти</a>
-                        <a href="#" class="header__button-create-acc button button--gradient text-lg-black"
-                            aria-label="Открыть счет">Открыть счёт</a>
-                    </div>
+            <a href="/" class="logo header__logo">
+                <img src="./icons/logo.svg" width="52" height="66" alt="Логотип Leader Classic" class="logo__img">
+                <div class="logo__text-wrapper">
+                    <p class="logo__text logo__text-top">Leader</p>
+                    <p class="logo__text logo__text-bottom">Classic</p>
+                </div>
+            </a>
+            <nav class="header__menu menu" aria-label="Основная навигация">
+                <div class="header__lang-switcher lang-switcher" aria-label="Выбор языка">
+                    <details class="lang-switcher__control">
+                        <summary class="lang-switcher__current-lang">
+                            <svg class="lang__svg">
+                                <use class="lang__ru-icon" href="./icons/sprite.svg#ru-icon"></use>
+                            </svg>
+                            <p class="lang-switcher__current-lang-text text-md">RU</p>
+                        </summary>
+                        <ul>
+                            <li><a href="/en" class="lang-switcher__link text-md">EN</a></li>
+                            <li><a href="/kz" class="lang-switcher__link text-md">KZ</a></li>
+                        </ul>
+                    </details>
+                </div>
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="#" class="menu__link text-md">Тарифы</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link text-md">Бонус</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link text-md">Реферальная</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link text-md">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false"
+                aria-controls="header__menu">
+                <svg class="burger__svg">
+                    <use class="burger__icon-menu" href="./icons/sprite.svg#burger-menu"></use>
+                    <use class="burger__icon-cross" href="./icons/sprite.svg#cross"></use>
+                </svg>
+            </button>
+            <div class="header__controls">
+                <div class="header__actions">
+                    <a href="#" class="header__button-login button button--bordered text-md"
+                        aria-label="Войти">Войти</a>
+                    <a href="#" class="header__button-create-acc button button--gradient text-lg-black"
+                        aria-label="Открыть счет">Открыть счёт</a>
                 </div>
             </div>
         </div>
@@ -70,7 +66,8 @@
                     <img src="./images/gift.png" width="50" height="50" alt="Иконка подарка" class="hero__promo-img">
                     <div class="hero__promo-text-wrapper">
                         <p class="hero__promo-title">Станьте миллионером с Leader Classic</p>
-                        <p class="hero__promo-description">Откройте счет, инвестируйте в фонды Leader Classic и получите шанс выиграть один из 100 000 000 ₽</p>
+                        <p class="hero__promo-description">Откройте счет, инвестируйте в фонды Leader Classic и получите
+                            шанс выиграть один из 100 000 000 ₽</p>
                     </div>
                     <div class="hero__promo-timer">
                         <div class="timer">
