@@ -110,6 +110,10 @@
         align-items: flex-start;
         text-align: start;
     }
+
+    .header__lang-switcher {
+        margin-top: 10px;
+    }
 }
 
 @media (width >768px) {

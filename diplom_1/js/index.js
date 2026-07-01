@@ -1,5 +1,6 @@
 // import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
+import CountdownTimer from "./timer.js"
 // import Modal from "./modal.js";
 // import { sizesSlider } from "./product-slider.js";
 // import { sizes } from "./sizes.js";
@@ -28,6 +29,16 @@ try {
     },
     // headerFixed,
   );
+
+  new CountdownTimer(
+    {
+      DAY: "timer__day",
+      HRS: "timer__hrs",
+      MIN: "timer__min",
+      SEC: "timer__sec",
+      FINISH_DATE: "1 Sep 2026 00:00:00",
+    }
+  )
 
   // new Modal ({
   //   PAGE_BODY: "page__body",
