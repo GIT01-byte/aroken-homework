@@ -10,7 +10,7 @@
   line-height: 117%;
   color: var(--color-main);
   max-width: 1000px;
-  margin-bottom: 13px;
+  margin-bottom: 18px;
 }
 
 .hero__benefits-wrapper {
@@ -23,9 +23,8 @@
   content: "";
   position: absolute;
   top: 24px;
-  left: -53px;
-  width: 31px;
-  height: 154px;
+  left: -62px;
+  height: 161px;
   background-image: url("../../icons/Arrow-half-circle.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -37,6 +36,7 @@
   display: flex;
   flex-direction: column;
   z-index: var(--layer-1);
+  margin-left: 20px;
 }
 
 .hero__benefits-item {
@@ -59,8 +59,8 @@
 
 .hero__img-wrapper {
   position: absolute;
-  top: 150px;
-  right: 0;
+  top: -129px;
+  right: -197px;
 }
 
 .hero__img {
