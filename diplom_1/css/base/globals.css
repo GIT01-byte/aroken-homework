@@ -69,11 +69,3 @@ svg {
   font-size: clamp(0.75rem, 0.39rem + 1.53vw, 1.125rem);
   color: var(--color-main);
 }
-
-.text-lg-black {
-  font-weight: 700;
-  /* 375px - 768px */
-  font-size: clamp(0.75rem, 0.39rem + 1.53vw, 1.125rem);
-  text-align: center;
-  color: var(--color-black);
-}

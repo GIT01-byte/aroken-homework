@@ -148,6 +148,10 @@
 }
 
 .header__button-create-acc {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #000;
     /* 375px - 1240px */
     padding-top: clamp(0.7rem, 0.04rem + 1.97vw, 24px);
     padding-bottom: clamp(0.7rem, 0.04rem + 1.97vw, 22px);

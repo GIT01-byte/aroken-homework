@@ -16,7 +16,7 @@
 .hero__benefits-wrapper {
   position: relative;
   min-height: 154px;
-  
+  margin-bottom: 26px;
 }
 
 .hero__benefits-wrapper::before {
@@ -42,11 +42,12 @@
 .hero__benefits-item {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 17px;
   font-weight: 400;
   font-size: 30px;
-  line-height: 159%;
+  line-height: 161%;
   color: #eae9e9;
+  letter-spacing: -0.002em;
 }
 
 .hero__benefits-item::before {
@@ -57,10 +58,47 @@
   background-color: var(--color-main);
 }
 
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 775px;
+  margin-bottom: 49px;
+}
+
+.hero__button-download {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 159%;
+  color: #000;
+  position: relative;
+  padding-top: 36px;
+  padding-bottom: 38px;
+  padding-left: 44px;
+  padding-right: 90px;
+}
+
+.hero__button-download-img {
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+}
+
+.hero__button-create-acc {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 159%;
+  color: #fff;
+  padding-top: 31px;
+  padding-bottom: 30px;
+  padding-left: 111px;
+  padding-right: 112px;
+}
+
 .hero__img-wrapper {
   position: absolute;
   top: -129px;
-  right: -197px;
+  right: -198px;
 }
 
 .hero__img {
