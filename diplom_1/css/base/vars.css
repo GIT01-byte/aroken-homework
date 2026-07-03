@@ -1,44 +1,60 @@
 :root {
-  /* Fonts */
-  --font-family: "Gotham Pro", sans-serif;
-  --second-family: "Montserrat", sans-serif;
+    /* Fonts */
+    --font-family: "Gotham Pro", sans-serif;
+    --second-family: "Montserrat", sans-serif;
 
-  /* Colors */
-  --color-main: #ffffff;
-  --color-black: #000000;
-  --color-light-gray: #eae9e9;
-  --color-gray: #2d3436;
-  --color-bg: #0e0e12;
-  --color-accent: #4bd879;
-  --color-secondary: #62ba7f;
+    /* Colors */
+    --color-main: #ffffff;
+    --color-black: #000000;
+    --color-light-gray: #eae9e9;
+    --color-gray: #2d3436;
+    --color-bg: #0e0e12;
+    --color-accent: #4bd879;
+    --color-secondary: #62ba7f;
 
-  /* Linear gradients */
-  --gradient-orange: linear-gradient(
-    57deg,
-    #dc6b30 0%,
-    #e4864f 42.19%,
-    #ffbe82 72.92%,
-    #e49031 100%
-  );
-  --gradient-hover: radial-gradient(circle, #e7aa19 0%, #cb6d9c 100%);
+    /* Linear gradients */
+    --gradient-orange: linear-gradient(57deg,
+            #dc6b30 0%,
+            #e4864f 42.19%,
+            #ffbe82 72.92%,
+            #e49031 100%);
+    --gradient-hover: radial-gradient(circle, #e7aa19 0%, #cb6d9c 100%);
 
-  /* Shadows */
+    /* Shadows */
 
-  /* Border */
-  /* 375px - 1240px */
-  --border-radius: clamp(0.25rem, -0.18rem + 1.85vw, 1.25rem);
+    /* Border */
+    /* 375px - 1240px */
+    --border-radius: clamp(0.25rem, -0.18rem + 1.85vw, 1.25rem);
 
-  /* Container */
-  --container-width: 1566px;
-  --container-padding: 15px;
+    /* Container */
+    --container-width: 1566px;
+    --container-padding: 15px;
 
-  /* Transitions */
-  --transition-time: 0.3s;
+    /* Transitions */
+    --transition-time: 0.3s;
 
-  /* Layers */
-  --layer-negative: -1;
-  --layer-0: 0;
-  --layer-1: 1;
-  --layer-2: 2;
-  --layer-3: 3;
+    /* Layers */
+    --layer-negative: -1;
+    --layer-0: 0;
+    --layer-1: 1;
+    --layer-2: 2;
+    --layer-3: 3;
+}
+
+@media (width <=576px) {
+    :root {
+        --container-padding: 37px
+    }
+}
+
+@media (width <=768px) {
+    .class__name {
+        --container-padding: 27px
+    }
+}
+
+@media (width <=992px) {
+    .class__name {
+        --container-padding: 20px
+    }
 }
