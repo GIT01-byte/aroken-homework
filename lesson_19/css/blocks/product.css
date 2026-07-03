@@ -257,7 +257,6 @@
 }
 
 @media (any-hover: hover) {
-
   .product__sizes-buy-button:hover,
   .product__sizes-cart-button:hover {
     box-shadow: var(--shadow-accent-glow);

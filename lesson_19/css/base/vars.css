@@ -15,7 +15,7 @@
   /* TODO применить color-outline для focused состояний элементов */
   --color-outline: #9747ff;
   --color-overlay: #2a2a2980;
-  --overlay-gradient: linear-gradient(rgba(30, 30, 30, .9), #000 1810%);
+  --overlay-gradient: linear-gradient(rgba(30, 30, 30, 0.9), #000 1810%);
 
   /* Shadows */
   --shadow-main-glow: 0 0 6px 2px var(--color-main-glow);

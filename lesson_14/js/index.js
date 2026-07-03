@@ -22,7 +22,7 @@ try {
       MENU_LINK: "menu__link",
       BREAKPOINT: 768,
     },
-    headerFixed
+    headerFixed,
   );
 } catch (error) {
   console.error(error);

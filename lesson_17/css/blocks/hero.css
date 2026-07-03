@@ -63,7 +63,6 @@
   color: var(--color-main);
 }
 
-
 .hero__title--accent {
   color: transparent;
   -webkit-text-stroke: 3px var(--color-accent);

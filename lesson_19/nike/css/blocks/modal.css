@@ -12,11 +12,15 @@
   text-align: center;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity var(--transition-time),
+  -webkit-transition:
+    opacity var(--transition-time),
     visibility var(--transition-time);
-  -o-transition: opacity var(--transition-time),
+  -o-transition:
+    opacity var(--transition-time),
     visibility var(--transition-time);
-  transition: opacity var(--transition-time), visibility var(--transition-time);
+  transition:
+    opacity var(--transition-time),
+    visibility var(--transition-time);
 }
 
 .modal--open {

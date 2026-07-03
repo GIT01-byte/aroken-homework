@@ -29,10 +29,10 @@ try {
     headerFixed,
   );
 
-  new Modal ({
+  new Modal({
     PAGE_BODY: "page__body",
     PAGE_BODY_NO_SCROLL: "page__body--no-scroll",
-  })
+  });
 
   sizesSlider();
   sizes();

@@ -36,25 +36,35 @@
   border-radius: 50%;
   background-color: #2a2a2980;
   border: 1px solid var(--main-color);
-  -webkit-box-shadow: var(--shadow-glow), inset var(--shadow-glow);
-  box-shadow: var(--shadow-glow), inset var(--shadow-glow);
+  -webkit-box-shadow:
+    var(--shadow-glow),
+    inset var(--shadow-glow);
+  box-shadow:
+    var(--shadow-glow),
+    inset var(--shadow-glow);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  -webkit-transition: border-color var(--transition-time),
+  -webkit-transition:
+    border-color var(--transition-time),
     -webkit-box-shadow var(--transition-time);
-  transition: border-color var(--transition-time),
+  transition:
+    border-color var(--transition-time),
     -webkit-box-shadow var(--transition-time);
-  -o-transition: border-color var(--transition-time),
+  -o-transition:
+    border-color var(--transition-time),
     box-shadow var(--transition-time);
 }
 
 @media (any-hover: hover) {
   .characteristics__video-play-link:hover {
     border-color: var(--accent-color);
-    -webkit-box-shadow: var(--shadow-accent-glow),
+    -webkit-box-shadow:
+      var(--shadow-accent-glow),
       inset var(--shadow-accent-glow);
-    box-shadow: var(--shadow-accent-glow), inset var(--shadow-accent-glow);
+    box-shadow:
+      var(--shadow-accent-glow),
+      inset var(--shadow-accent-glow);
   }
 }
 

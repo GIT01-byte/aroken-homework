@@ -26,7 +26,10 @@
   visibility: hidden;
   min-width: 20px;
   color: initial;
-  transition: right var(--transition-time), opacity var(--transition-time), visibility var(--transition-time);
+  transition:
+    right var(--transition-time),
+    opacity var(--transition-time),
+    visibility var(--transition-time);
 }
 
 @media (any-hover: hover) {
@@ -34,7 +37,7 @@
     background: var(--gradient-hover);
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent
+    color: transparent;
   }
 
   .menu__link:hover::after {

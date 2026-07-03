@@ -3,9 +3,11 @@
   z-index: var(--layer-0);
   border: 2px solid var(--accent-color);
   border-radius: 12px;
-  -webkit-box-shadow: 0 0 30px 5px var(--accent-glow-color),
+  -webkit-box-shadow:
+    0 0 30px 5px var(--accent-glow-color),
     inset 0 0 30px 5px var(--accent-glow-color);
-  box-shadow: 0 0 30px 5px var(--accent-glow-color),
+  box-shadow:
+    0 0 30px 5px var(--accent-glow-color),
     inset 0 0 30px 5px var(--accent-glow-color);
 }
 
@@ -202,42 +204,62 @@
   color: var(--main-color);
   border: 1px solid var(--main-color);
   border-radius: 12px;
-  -webkit-box-shadow: var(--shadow-glow), inset var(--shadow-glow);
-  box-shadow: var(--shadow-glow), inset var(--shadow-glow);
-  -webkit-transition: border-color var(--transition-time),
+  -webkit-box-shadow:
+    var(--shadow-glow),
+    inset var(--shadow-glow);
+  box-shadow:
+    var(--shadow-glow),
+    inset var(--shadow-glow);
+  -webkit-transition:
+    border-color var(--transition-time),
     -webkit-box-shadow var(--transition-time);
-  transition: border-color var(--transition-time),
+  transition:
+    border-color var(--transition-time),
     -webkit-box-shadow var(--transition-time);
-  -o-transition: border-color var(--transition-time),
+  -o-transition:
+    border-color var(--transition-time),
     box-shadow var(--transition-time);
-  transition: border-color var(--transition-time),
+  transition:
+    border-color var(--transition-time),
     box-shadow var(--transition-time);
-  transition: border-color var(--transition-time),
-    box-shadow var(--transition-time), -webkit-box-shadow var(--transition-time);
+  transition:
+    border-color var(--transition-time),
+    box-shadow var(--transition-time),
+    -webkit-box-shadow var(--transition-time);
 }
 
 @media (any-hover: hover) {
   .product__sizes-button:hover {
     border-color: var(--accent-color);
-    -webkit-box-shadow: var(--shadow-accent-glow),
+    -webkit-box-shadow:
+      var(--shadow-accent-glow),
       inset var(--shadow-accent-glow);
-    box-shadow: var(--shadow-accent-glow), inset var(--shadow-accent-glow);
+    box-shadow:
+      var(--shadow-accent-glow),
+      inset var(--shadow-accent-glow);
   }
 }
 
 .product__sizes-button--active {
   color: var(--accent-color);
   border-color: var(--accent-color);
-  -webkit-box-shadow: var(--shadow-accent-glow), inset var(--shadow-accent-glow);
-  box-shadow: var(--shadow-accent-glow), inset var(--shadow-accent-glow);
+  -webkit-box-shadow:
+    var(--shadow-accent-glow),
+    inset var(--shadow-accent-glow);
+  box-shadow:
+    var(--shadow-accent-glow),
+    inset var(--shadow-accent-glow);
 }
 
 .product__sizes-button:disabled {
   color: var(--disabled-color);
   border-color: var(--disabled-color);
-  -webkit-box-shadow: var(--shadow-disabled-glow),
+  -webkit-box-shadow:
+    var(--shadow-disabled-glow),
     inset var(--shadow-disabled-glow);
-  box-shadow: var(--shadow-disabled-glow), inset var(--shadow-disabled-glow);
+  box-shadow:
+    var(--shadow-disabled-glow),
+    inset var(--shadow-disabled-glow);
   cursor: not-allowed;
 }
 
@@ -272,7 +294,8 @@
   transition: -webkit-box-shadow var(--transition-time);
   -o-transition: box-shadow var(--transition-time);
   transition: box-shadow var(--transition-time);
-  transition: box-shadow var(--transition-time),
+  transition:
+    box-shadow var(--transition-time),
     -webkit-box-shadow var(--transition-time);
 }
 
@@ -321,11 +344,15 @@
   line-height: 130%;
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
-  -webkit-transition: color var(--transition-time),
+  -webkit-transition:
+    color var(--transition-time),
     border-color var(--transition-time);
-  -o-transition: color var(--transition-time),
+  -o-transition:
+    color var(--transition-time),
     border-color var(--transition-time);
-  transition: color var(--transition-time), border-color var(--transition-time);
+  transition:
+    color var(--transition-time),
+    border-color var(--transition-time);
 }
 
 @media (any-hover: hover) {

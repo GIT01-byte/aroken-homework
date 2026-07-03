@@ -12,9 +12,11 @@
 .top-models__product {
   border: 2px solid var(--accent-color);
   border-radius: 12px;
-  -webkit-box-shadow: 0 0 32px 3px var(--accent-glow-color),
+  -webkit-box-shadow:
+    0 0 32px 3px var(--accent-glow-color),
     inset 0 0 32px 3px var(--accent-glow-color);
-  box-shadow: 0 0 32px 3px var(--accent-glow-color),
+  box-shadow:
+    0 0 32px 3px var(--accent-glow-color),
     inset 0 0 32px 3px var(--accent-glow-color);
 }
 

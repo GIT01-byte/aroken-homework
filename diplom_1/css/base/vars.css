@@ -7,13 +7,19 @@
   --color-main: #ffffff;
   --color-black: #000000;
   --color-light-gray: #eae9e9;
-  --color-gray: #2D3436;
-  --color-bg: #0E0E12;
-  --color-accent: #4BD879;
-  --color-secondary: #62BA7F;
+  --color-gray: #2d3436;
+  --color-bg: #0e0e12;
+  --color-accent: #4bd879;
+  --color-secondary: #62ba7f;
 
   /* Linear gradients */
-  --gradient-orange: linear-gradient(57deg, #dc6b30 0%, #e4864f 42.19%, #ffbe82 72.92%, #e49031 100%);
+  --gradient-orange: linear-gradient(
+    57deg,
+    #dc6b30 0%,
+    #e4864f 42.19%,
+    #ffbe82 72.92%,
+    #e49031 100%
+  );
   --gradient-hover: radial-gradient(circle, #e7aa19 0%, #cb6d9c 100%);
 
   /* Shadows */
@@ -21,7 +27,7 @@
   /* Border */
   /* 375px - 1240px */
   --border-radius: clamp(0.25rem, -0.18rem + 1.85vw, 1.25rem);
-  
+
   /* Container */
   --container-width: 1566px;
   --container-padding: 15px;

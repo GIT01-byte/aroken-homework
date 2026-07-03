@@ -95,7 +95,7 @@
 }
 
 .product__title--accent {
-  color: var(--color-accent)
+  color: var(--color-accent);
 }
 
 .product__description,

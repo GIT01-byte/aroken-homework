@@ -1,28 +1,28 @@
 .header__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-block: 30px;
-    border-bottom: 1px solid #d3cbd9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 30px;
+  border-bottom: 1px solid #d3cbd9;
 }
 
 .phone {
-    text-align: right;
+  text-align: right;
 }
 
 .phone__text {
-    font-weight: 300;
-    font-size: 14px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #858e8a;
-    margin: 0;
-    margin-bottom: 8px;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #858e8a;
+  margin: 0;
+  margin-bottom: 8px;
 }
 
 .phone__link {
-    font-weight: 500;
-    font-size: 18px;
-    letter-spacing: 0.04em;
-    color: #2c332f;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: #2c332f;
 }

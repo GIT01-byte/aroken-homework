@@ -1,20 +1,20 @@
 .timer {
-    display: flex;
-    align-items: center;
-    text-wrap: nowrap;
-    gap: 6.5px;
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
+  gap: 6.5px;
 }
 
 .timer__cell-number,
 .timer__cell-sep {
-    font-weight: 400;
-    /* 375px - 992px */
-    font-size: clamp(1.125rem, 0.67rem + 1.94vw, 1.875rem);
-    letter-spacing: -0.08em;
-    color: #fff;
-    text-wrap: nowrap;
+  font-weight: 400;
+  /* 375px - 992px */
+  font-size: clamp(1.125rem, 0.67rem + 1.94vw, 1.875rem);
+  letter-spacing: -0.08em;
+  color: #fff;
+  text-wrap: nowrap;
 }
 
 .timer__cell-text {
-    font-size: 20px;
+  font-size: 20px;
 }

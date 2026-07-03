@@ -1,26 +1,26 @@
 :root {
-    /* Fonts */
-    --font-family: "Montserrat", sans-serif;
+  /* Fonts */
+  --font-family: "Montserrat", sans-serif;
 
-    /* Colors */
-    --color-main: #fff;
-    --color-accent: #ffea00;
-    --color-bg: #2a2a29;
-    --color-secondary: #c9c69b;
-    --color-disable: #5D5D56;
-    --color-shadow: #181817;
-    --color-outline: #9747FF;
+  /* Colors */
+  --color-main: #fff;
+  --color-accent: #ffea00;
+  --color-bg: #2a2a29;
+  --color-secondary: #c9c69b;
+  --color-disable: #5d5d56;
+  --color-shadow: #181817;
+  --color-outline: #9747ff;
 
-    /* Container */
-    --container-width: 1240px;
-    --container-padding: 15px;
+  /* Container */
+  --container-width: 1240px;
+  --container-padding: 15px;
 
-    /* Transitions */
-    --transition-time: 0.2s;
+  /* Transitions */
+  --transition-time: 0.2s;
 
-    /* Layers */
-    --layer-negative: -1;
-    --layer-1: 1;
-    --layer-2: 2;
-    --layer-3: 3;
+  /* Layers */
+  --layer-negative: -1;
+  --layer-1: 1;
+  --layer-2: 2;
+  --layer-3: 3;
 }

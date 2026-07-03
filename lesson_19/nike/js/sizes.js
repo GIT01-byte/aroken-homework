@@ -8,7 +8,7 @@ export const sizes = () => {
     if (!target?.classList.contains("product__sizes-button")) return;
 
     sizesButtons.forEach((button) =>
-      button.classList.remove("product__sizes-button--active")
+      button.classList.remove("product__sizes-button--active"),
     );
     target.classList.add("product__sizes-button--active");
   };

@@ -52,7 +52,7 @@ export default class Modal {
       this.lastActiveElement = document.activeElement;
       this.speed = speed ? parseInt(speed) : 300;
       this.modalWindow = document.querySelector(
-        `[data-modal-window="${target}"]`
+        `[data-modal-window="${target}"]`,
       );
 
       return this.open();
@@ -115,7 +115,7 @@ export default class Modal {
 
   catchFocus(event) {
     const focusableElements = this.modalWindow.querySelectorAll(
-      this.focusElements
+      this.focusElements,
     );
     const focusArray = Array.prototype.slice.call(focusableElements);
     const focusIndex = focusArray.indexOf(document.activeElement);
@@ -133,7 +133,7 @@ export default class Modal {
 
   trapFocus() {
     const focusableElements = this.modalWindow.querySelectorAll(
-      this.focusElements
+      this.focusElements,
     );
 
     if (this.isOpen) {

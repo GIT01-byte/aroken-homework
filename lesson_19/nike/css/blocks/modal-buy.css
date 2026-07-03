@@ -105,7 +105,8 @@
   transition: -webkit-box-shadow var(--transition-time);
   -o-transition: box-shadow var(--transition-time);
   transition: box-shadow var(--transition-time);
-  transition: box-shadow var(--transition-time),
+  transition:
+    box-shadow var(--transition-time),
     -webkit-box-shadow var(--transition-time);
 }
 
