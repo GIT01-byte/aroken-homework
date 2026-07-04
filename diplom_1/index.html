@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <script src="./js/index.js" type="module"></script>
     <link rel="shortcut icon" href="./icons/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/swiper-bundle.min.js" defer></script>
+    <script src="./js/index.js" type="module"></script>
     <title>Leader Classic</title>
 </head>
 
@@ -160,6 +162,100 @@
                         alt="Деревянная рука держит телефон, на котором открыто приложение для инвестиций"
                         class="hero__img" loading="eager" />
                 </div>
+            </div>
+        </section>
+        <section class="cases">
+            <div class="container cases__container">
+                <div class="cases__text-wrapper">
+                    <h2 class="cases__title">Ваши деньги способны на большее</h2>
+                    <h3 class="cases__description">Сколько бы вы заработали, инвестируй <strong class="text--italic">
+                            100 000 ₽</strong> год назад?</h3>
+                </div>
+                <div class="swiper cases__companies-slider">
+                    <div class="swiper-wrapper cases__companies-slider-wrapper">
+                        <div class="swiper-slide cases__companies-slide">
+                            <div class="cases__company">
+                                <div class="company__logo-box">
+                                    <img src="./images/tesla.png" width="125" height="41" alt="Логотип компании Tesla"
+                                        class="company__logo" loading="lazy">
+                                </div>
+                                <p class="company__percent">+83.97%</p>
+                                <div class="company__value">
+                                    <p class="company__value-text">+72.000₽</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide cases__companies-slide">
+                            <div class="cases__company">
+                                <div class="company__logo-box">
+                                    <img src="./images/amazon.png" width="92" height="69" alt="Логотип компании Amazon"
+                                        class="company__logo" loading="lazy">
+                                </div>
+                                <p class="company__percent">+4.11%</p>
+                                <div class="company__value">
+                                    <p class="company__value-text">+72.000₽</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide cases__companies-slide">
+                            <div class="cases__company">
+                                <div class="company__logo-box">
+                                    <img src="./images/apple.png" width="61" height="61" alt="Логотип компании Apple"
+                                        class="company__logo" loading="lazy">
+                                </div>
+                                <p class="company__percent">+26.36%</p>
+                                <div class="company__value">
+                                    <p class="company__value-text">+72.000₽</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide cases__companies-slide">
+                            <div class="cases__company">
+                                <div class="company__logo-box">
+                                    <img src="./images/yandex.png" width="93" height="36" alt="Логотип компании Yandex"
+                                        class="company__logo" loading="lazy">
+                                </div>
+                                <p class="company__percent">+17.19%</p>
+                                <div class="company__value">
+                                    <p class="company__value-text">+72.000₽</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide cases__companies-slide">
+                            <div class="cases__company">
+                                <div class="company__logo-box">
+                                    <img src="./images/facebook.png" width="123" height="67"
+                                        alt="Логотип компании Facebook" class="company__logo" loading="lazy">
+                                </div>
+                                <p class="company__percent">+31.32%</p>
+                                <div class="company__value">
+                                    <p class="company__value-text">+72.000₽</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide cases__companies-slide">
+                            <div class="cases__company">
+                                <div class="company__logo-box">
+                                    <img src="./images/microsoft.png" width="122" height="28"
+                                        alt="Логотип компании Microsoft" class="company__logo" loading="lazy">
+                                </div>
+                                <p class="company__percent">+38.99%</p>
+                                <div class="company__value">
+                                    <p class="company__value-text">+72.000₽</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="cases__catalogue-wrapper">
+                <div class="cases__catalogue-text">
+                    И еще более 10 000 других ценных бумаг доступно <strong class="text--italic">в каталоге</strong>
+                </div>
+                <a class="cases__catalogue-button button button--gradient text-lg-black">Получить
+                    каталог</a>
+            </div>
             </div>
         </section>
     </main>

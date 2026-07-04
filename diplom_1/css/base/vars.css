@@ -34,7 +34,8 @@
     --transition-time: 0.3s;
 
     /* Layers */
-    --layer-negative: -1;
+    --layer-negative-2: -2;
+    --layer-negative-1: -1;
     --layer-0: 0;
     --layer-1: 1;
     --layer-2: 2;

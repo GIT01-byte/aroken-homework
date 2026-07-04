@@ -5,6 +5,7 @@
     scroll-behavior: smooth;
     scroll-padding-top: 98px;
     scrollbar-gutter: stable;
+    overflow-x: hidden;
 }
 
 .page__body {
@@ -68,6 +69,10 @@ svg {
             #e4864f 42.19%,
             #ffbe82 72.92%,
             #e49031 100%);
+}
+
+.text--italic {
+    font-weight: 700;
 }
 
 .text-md {
