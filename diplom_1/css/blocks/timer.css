@@ -16,5 +16,5 @@
 }
 
 .timer__cell-text {
-    font-size: 20px;
+    font-size: clamp(0.625rem, 0.47rem + 0.65vw, 1.25rem);
 }
