@@ -16,6 +16,10 @@
     overflow-y: hidden;
 }
 
+.main {
+    overflow-x: hidden;
+}
+
 .container {
     width: min(var(--container-width), 100% - var(--container-padding) * 2);
     margin: 0 auto;
