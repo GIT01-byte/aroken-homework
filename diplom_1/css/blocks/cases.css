@@ -171,12 +171,14 @@
 }
 
 .cases__catalogue-button {
+    width: clamp(6.8125rem, 2.76rem + 17.28vw, 24rem);
+    height: clamp(1.9375rem, 0.80rem + 4.85vw, 6.625rem);
+}
+
+.cases__catalogue-button-link {
     font-weight: 700;
     /* 375px - 1920px */
     font-size: clamp(0.5rem, 0.29rem + 0.91vw, 1.375rem);
     line-height: 159%;
     color: #000;
-    width: clamp(6.8125rem, 2.76rem + 17.28vw, 23.5rem);
-    height: clamp(1.9375rem, 0.80rem + 4.85vw, 6.625rem);
-    padding: 35px 88px 36px 83px;
 }

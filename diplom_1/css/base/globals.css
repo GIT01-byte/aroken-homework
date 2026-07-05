@@ -5,7 +5,6 @@
     scroll-behavior: smooth;
     scroll-padding-top: 98px;
     scrollbar-gutter: stable;
-    overflow-x: hidden;
 }
 
 .page__body {
@@ -39,45 +38,78 @@ svg {
 }
 
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: var(--border-radius);
     text-wrap: nowrap;
     cursor: pointer;
 }
 
-/* TODO add hove to button--gradient + box shadow move */
 .button--bordered {
     border: 1px solid #ff8924;
+}
+
+.button--bordered a {
     color: var(--color-main);
     transition: color var(--transition-time);
 }
 
 @media (any-hover: hover) {
-    .button--bordered:hover {
+    .button--bordered a:hover {
         background: var(--gradient-hover);
-        background-clip: text;
         -webkit-background-clip: text;
-        color: transparent;
+        background-clip: text;
+        color: transparent
     }
 }
 
+.button__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 .button--gradient {
+    /* 375px - 1240px */
     box-shadow:
-        inset 0 -4px 0 0 #8f4119,
-        0 3px 49px -3px rgba(226, 128, 72, 0.76);
+        inset 0 calc(clamp(0.0625rem, 0.01rem + 0.23vw, 0.1875rem) * -1) 0 0 #8f4119,
+        0 3px clamp(1.8125rem, 1.24rem + 2.42vw, 3.0625rem) -3px rgba(226, 128, 72, 0.76);
     background: linear-gradient(57deg,
             #dc6b30 0%,
             #e4864f 42.19%,
             #ffbe82 72.92%,
             #e49031 100%);
+    transition: box-shadow var(--transition-time) margin-top var(--transition-time);
+}
+
+@media (any-hover: hover) {
+    .button--gradient:hover {
+        box-shadow:
+            inset 0 0 0 0 #8f4119,
+            0 clamp(0.0625rem, 0.01rem + 0.23vw, 0.1875rem) clamp(1.8125rem, 1.24rem + 2.42vw, 3.0625rem) -3px rgba(226, 128, 72, 0.76);
+        transform: translateY(clamp(0.0625rem, 0.01rem + 0.23vw, 0.1875rem));
+    }
+}
+
+.text-lg-black {
+    color: #000
+}
+
+@media (width >576px) {
+    .text-lg-black {
+        font-weight: 700;
+    }
+}
+
+@media (width <=576px) {
+    .text-lg-black {
+        font-weight: 500;
+    }
 }
 
 .text--italic {
     font-weight: 700;
-}
-
-.text-md {
-    font-weight: 400;
-    /* 375px - 768px */
-    font-size: clamp(0.65rem, 0.39rem + 1.53vw, 1.125rem);
-    color: var(--color-main);
 }
