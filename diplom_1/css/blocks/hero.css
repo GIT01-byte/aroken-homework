@@ -44,16 +44,30 @@
     margin-bottom: clamp(1.25rem, 1.16rem + 0.39vw, 2rem);
 }
 
+/* ТЕХ ДОЛГ */
 .hero__benefits-wrapper::before {
     content: "";
     position: absolute;
-    top: 24px;
-    left: -62px;
-    height: 161px;
-    background-image: url("../../icons/Arrow-half-circle.svg");
+    top: clamp(1.5rem, 5.69rem + -3.50vw, 4.875rem);
+    left: calc(clamp(1.75rem, 1.23rem + 2.20vw, 3.875rem) * -1);
+    height: clamp(4.125rem, 2.81rem + 5.63vw, 9.5625rem);
+    width: 42px;
+    background-image: url("../../icons/arrow-down-half-circle.svg");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: var(--layer-negative);
+}
+
+@media (width >500px) and (width <=714px) {
+    .hero__benefits-wrapper::before {
+        top: clamp(3.75rem, 2.87rem + 2.80vw, 4.125rem)
+    }
+}
+
+@media (width >=770px) {
+    .hero__benefits-wrapper::before {
+        top: clamp(1.6875rem, 404.44rem + -900.00vw, 2.8125rem)
+    }
 }
 
 .hero__benefits-list {

@@ -28,7 +28,7 @@
 
     /* Container */
     --container-width: 1566px;
-    --container-padding: 15px;
+    --container-padding: 50px;
 
     /* Transitions */
     --transition-time: 0.3s;
@@ -40,22 +40,4 @@
     --layer-1: 1;
     --layer-2: 2;
     --layer-3: 3;
-}
-
-@media (width <=576px) {
-    :root {
-        --container-padding: 37px
-    }
-}
-
-@media (width <=768px) {
-    .class__name {
-        --container-padding: 27px
-    }
-}
-
-@media (width <=992px) {
-    .class__name {
-        --container-padding: 20px
-    }
 }

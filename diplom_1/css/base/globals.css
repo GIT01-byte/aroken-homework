@@ -21,9 +21,11 @@
 }
 
 .container {
-    width: min(var(--container-width), 100% - var(--container-padding) * 2);
+    max-width: var(--container-width);
+    padding-inline: var(--container-padding);
     margin: 0 auto;
 }
+
 
 img {
     -o-object-fit: cover;
@@ -35,10 +37,6 @@ button:focus-visible,
 input:focus-visible {
     outline: 1px solid var(--color-accent);
     outline-offset: 1px;
-}
-
-svg {
-    stroke: currentColor;
 }
 
 .button {

@@ -1,76 +1,152 @@
 <!doctype html>
-<html class="page" lang="ru">
+<html
+    class="page"
+    lang="ru"
+>
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./icons/logo.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <script src="./js/swiper-bundle.min.js" defer></script>
-    <script src="./js/index.js" type="module"></script>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+    <link
+        rel="shortcut icon"
+        href="./icons/logo.svg"
+        type="image/x-icon"
+    />
+    <link
+        rel="stylesheet"
+        href="./css/swiper/swiper-bundle.min.css"
+    />
+    <link
+        rel="stylesheet"
+        href="./css/index.css"
+    />
+    <script
+        src="./js/swiper-bundle.min.js"
+        defer
+    ></script>
+    <script
+        src="./js/index.js"
+        type="module"
+    ></script>
     <title>Leader Classic</title>
 </head>
 
 <body class="page__body">
     <header class="header">
         <div class="container header__container">
-            <a href="/" class="logo header__logo">
-                <img src="./icons/logo.svg" width="52" height="66" alt="Логотип Leader Classic" class="logo__img" />
+            <a
+                href="/"
+                class="logo header__logo"
+            >
+                <img
+                    src="./icons/logo.svg"
+                    width="52"
+                    height="66"
+                    alt="Логотип Leader Classic"
+                    class="logo__img"
+                />
                 <div class="logo__text-wrapper">
                     <p class="logo__text logo__text-top">Leader</p>
                     <p class="logo__text logo__text-bottom">Classic</p>
                 </div>
             </a>
-            <nav class="header__menu menu" id="header__menu" aria-label="Основная навигация">
-                <div class="header__lang-switcher lang-switcher" aria-label="Выбор языка">
+            <nav
+                class="header__menu menu"
+                id="header__menu"
+                aria-label="Основная навигация"
+            >
+                <div
+                    class="header__lang-switcher lang-switcher"
+                    aria-label="Выбор языка"
+                >
                     <details class="lang-switcher__control">
                         <summary class="lang-switcher__current-lang">
                             <svg class="lang__svg">
-                                <use class="lang__ru-icon" href="./icons/header-sprite.svg#ru-icon"></use>
+                                <use
+                                    class="lang__ru-icon"
+                                    href="./icons/header-sprite.svg#ru-icon"
+                                ></use>
                             </svg>
                             <p class="lang-switcher__current-lang-text text-md">RU</p>
                         </summary>
                         <ul>
                             <li>
-                                <a href="/en" class="lang-switcher__link text-md">EN</a>
+                                <a
+                                    href="/en"
+                                    class="lang-switcher__link text-md"
+                                >EN</a>
                             </li>
                             <li>
-                                <a href="/kz" class="lang-switcher__link text-md">KZ</a>
+                                <a
+                                    href="/kz"
+                                    class="lang-switcher__link text-md"
+                                >KZ</a>
                             </li>
                         </ul>
                     </details>
                 </div>
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a href="#" class="menu__link text-md">Тарифы</a>
+                        <a
+                            href="#"
+                            class="menu__link text-md"
+                        >Тарифы</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link text-md">Бонус</a>
+                        <a
+                            href="#"
+                            class="menu__link text-md"
+                        >Бонус</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link text-md">Реферальная</a>
+                        <a
+                            href="#"
+                            class="menu__link text-md"
+                        >Реферальная</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link text-md">Контакты</a>
+                        <a
+                            href="#"
+                            class="menu__link text-md"
+                        >Контакты</a>
                     </li>
                 </ul>
             </nav>
-            <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false"
-                aria-controls="header__menu">
+            <button
+                class="header__burger burger"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+                aria-controls="header__menu"
+            >
                 <svg class="burger__svg">
-                    <use class="burger__icon-menu" href="./icons/header-sprite.svg#burger-menu"></use>
-                    <use class="burger__icon-cross" href="./icons/header-sprite.svg#cross"></use>
+                    <use
+                        class="burger__icon-menu"
+                        href="./icons/header-sprite.svg#burger-menu"
+                    ></use>
+                    <use
+                        class="burger__icon-cross"
+                        href="./icons/header-sprite.svg#cross"
+                    ></use>
                 </svg>
             </button>
             <div class="header__controls">
                 <div class="header__actions">
                     <div class="header__button-login button button--bordered">
-                        <a href="#" class="header__button-login-link button__link" aria-label="Войти">Войти</a>
+                        <a
+                            href="#"
+                            class="header__button-login-link button__link"
+                            aria-label="Войти"
+                        >Войти</a>
                     </div>
                     <div class="header__button-create-acc button button--gradient">
-                        <a href="#" class="header__button-create-acc-link button__link text-lg-black"
-                            aria-label="Открыть счет">Открыть счёт</a>
+                        <a
+                            href="#"
+                            class="header__button-create-acc-link button__link text-lg-black"
+                            aria-label="Открыть счет"
+                        >Открыть счёт</a>
                     </div>
                 </div>
             </div>
@@ -88,8 +164,13 @@
                                 шанс выиграть один из <span>100 000 000 ₽</span>
                             </p>
                         </div>
-                        <img src="./images/gift.png" width="50" height="50" alt="Иконка подарка"
-                            class="promo__gift promo__content-gift" />
+                        <img
+                            src="./images/gift.png"
+                            width="50"
+                            height="50"
+                            alt="Иконка подарка"
+                            class="promo__gift promo__content-gift"
+                        />
                     </div>
                     <div class="promo__timer">
                         <div class="timer">
@@ -113,8 +194,13 @@
                                 <span class="timer__cell-text">с</span>
                             </div>
                         </div>
-                        <img src="./images/gift.png" width="50" height="50" alt="Иконка подарка"
-                            class="promo__gift promo__timer-gift" />
+                        <img
+                            src="./images/gift.png"
+                            width="50"
+                            height="50"
+                            alt="Иконка подарка"
+                            class="promo__gift promo__timer-gift"
+                        />
                     </div>
                 </div>
             </div>
@@ -134,30 +220,57 @@
                         <li class="hero__benefits-item">
                             Доступ к ценным бумагам с любого устройства
                         </li>
-                        <li class="hero__benefits-item">Поддержка в чате 24/7</li>
+                        <li class="hero__benefits-item">
+                            Поддержка в чате 24/7
+                        </li>
                     </ul>
                 </div>
                 <div class="hero__controls">
                     <div class="hero__actions">
                         <div class="hero__button-download button button--gradient">
-                            <a href="#" class="hero__button-download-link button__link text-lg-black"
-                                aria-label="Скачать ТОП-5 акций">
+                            <a
+                                href="#"
+                                class="hero__button-download-link button__link text-lg-black"
+                                aria-label="Скачать ТОП-5 акций"
+                            >
                                 Скачать ТОП-5 акций
-                                <img src="./images/check-list.png" width="123" height="118" alt="Чек лист эффективности"
-                                    class="hero__button-download-img" />
+                                <img
+                                    src="./images/check-list.png"
+                                    width="123"
+                                    height="118"
+                                    alt="Чек лист эффективности"
+                                    class="hero__button-download-img"
+                                />
                             </a>
                         </div>
                         <div class="hero__button-create-acc button button--bordered">
-                            <a href="#" class="hero__button-create-acc-link button__link"
-                                aria-label="Открыть счёт">Открыть счёт</a>
+                            <a
+                                href="#"
+                                class="hero__button-create-acc-link button__link"
+                                aria-label="Открыть счёт"
+                            >
+                                Открыть счёт
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="hero__investor-stats">
                     <div class="hero__investor-stats-user-avatars">
-                        <img src="./images/avatar-user-1.png" alt="Аватар пользователя" class="user-avatar-icon" />
-                        <img src="./images/avatar-user-2.png" alt="Аватар пользователя" class="user-avatar-icon" />
-                        <img src="./images/avatar-user-3.png" alt="Аватар пользователя" class="user-avatar-icon" />
+                        <img
+                            src="./images/avatar-user-1.png"
+                            alt="Аватар пользователя"
+                            class="user-avatar-icon"
+                        />
+                        <img
+                            src="./images/avatar-user-2.png"
+                            alt="Аватар пользователя"
+                            class="user-avatar-icon"
+                        />
+                        <img
+                            src="./images/avatar-user-3.png"
+                            alt="Аватар пользователя"
+                            class="user-avatar-icon"
+                        />
                     </div>
                     <div class="hero__investor-stats-text">
                         <span class="hero__investor-stats-text-line">Сейчас инвестируют</span>
@@ -165,9 +278,14 @@
                     </div>
                 </div>
                 <div class="hero__img-wrapper">
-                    <img src="./images/hero-1.png" width="1204" height="987"
+                    <img
+                        src="./images/hero-1.png"
+                        width="1204"
+                        height="987"
                         alt="Деревянная рука держит телефон, на котором открыто приложение для инвестиций"
-                        class="hero__img" loading="eager" />
+                        class="hero__img"
+                        loading="eager"
+                    />
                 </div>
             </div>
         </section>
@@ -179,9 +297,15 @@
                             100 000 ₽</strong> год назад?</h3>
                 </div>
                 <div class="nav__wrapper">
-                    <button class="cases__slider-button cases__slider-button--next" aria-label="Следующий слайд">
+                    <button
+                        class="cases__slider-button cases__slider-button--next"
+                        aria-label="Следующий слайд"
+                    >
                     </button>
-                    <button class="cases__slider-button cases__slider-button--prev" aria-label="Предыдущий слайд">
+                    <button
+                        class="cases__slider-button cases__slider-button--prev"
+                        aria-label="Предыдущий слайд"
+                    >
                     </button>
                 </div>
                 <div class="swiper cases__companies-slider">
@@ -189,8 +313,14 @@
                         <div class="swiper-slide cases__companies-slide">
                             <div class="cases__company">
                                 <div class="company__logo-box">
-                                    <img src="./images/tesla.png" width="125" height="41" alt="Логотип компании Tesla"
-                                        class="company__logo" loading="lazy">
+                                    <img
+                                        src="./images/tesla.png"
+                                        width="125"
+                                        height="41"
+                                        alt="Логотип компании Tesla"
+                                        class="company__logo"
+                                        loading="lazy"
+                                    >
                                 </div>
                                 <p class="company__percent">+83.97%</p>
                                 <div class="company__value">
@@ -201,8 +331,14 @@
                         <div class="swiper-slide cases__companies-slide">
                             <div class="cases__company">
                                 <div class="company__logo-box">
-                                    <img src="./images/amazon.png" width="92" height="69" alt="Логотип компании Amazon"
-                                        class="company__logo" loading="lazy">
+                                    <img
+                                        src="./images/amazon.png"
+                                        width="92"
+                                        height="69"
+                                        alt="Логотип компании Amazon"
+                                        class="company__logo"
+                                        loading="lazy"
+                                    >
                                 </div>
                                 <p class="company__percent">+4.11%</p>
                                 <div class="company__value">
@@ -213,8 +349,14 @@
                         <div class="swiper-slide cases__companies-slide">
                             <div class="cases__company">
                                 <div class="company__logo-box">
-                                    <img src="./images/apple.png" width="61" height="61" alt="Логотип компании Apple"
-                                        class="company__logo" loading="lazy">
+                                    <img
+                                        src="./images/apple.png"
+                                        width="61"
+                                        height="61"
+                                        alt="Логотип компании Apple"
+                                        class="company__logo"
+                                        loading="lazy"
+                                    >
                                 </div>
                                 <p class="company__percent">+26.36%</p>
                                 <div class="company__value">
@@ -225,8 +367,14 @@
                         <div class="swiper-slide cases__companies-slide">
                             <div class="cases__company">
                                 <div class="company__logo-box">
-                                    <img src="./images/yandex.png" width="93" height="36" alt="Логотип компании Yandex"
-                                        class="company__logo" loading="lazy">
+                                    <img
+                                        src="./images/yandex.png"
+                                        width="93"
+                                        height="36"
+                                        alt="Логотип компании Yandex"
+                                        class="company__logo"
+                                        loading="lazy"
+                                    >
                                 </div>
                                 <p class="company__percent">+17.19%</p>
                                 <div class="company__value">
@@ -237,8 +385,14 @@
                         <div class="swiper-slide cases__companies-slide">
                             <div class="cases__company">
                                 <div class="company__logo-box">
-                                    <img src="./images/facebook.png" width="123" height="67"
-                                        alt="Логотип компании Facebook" class="company__logo" loading="lazy">
+                                    <img
+                                        src="./images/facebook.png"
+                                        width="123"
+                                        height="67"
+                                        alt="Логотип компании Facebook"
+                                        class="company__logo"
+                                        loading="lazy"
+                                    >
                                 </div>
                                 <p class="company__percent">+31.32%</p>
                                 <div class="company__value">
@@ -249,8 +403,14 @@
                         <div class="swiper-slide cases__companies-slide">
                             <div class="cases__company">
                                 <div class="company__logo-box">
-                                    <img src="./images/microsoft.png" width="122" height="28"
-                                        alt="Логотип компании Microsoft" class="company__logo" loading="lazy">
+                                    <img
+                                        src="./images/microsoft.png"
+                                        width="122"
+                                        height="28"
+                                        alt="Логотип компании Microsoft"
+                                        class="company__logo"
+                                        loading="lazy"
+                                    >
                                 </div>
                                 <p class="company__percent">+38.99%</p>
                                 <div class="company__value">
@@ -265,8 +425,13 @@
                         И еще более 10 000 других ценных бумаг доступно <strong class="text--italic">в каталоге</strong>
                     </div>
                     <div class="cases__catalogue-button button button--gradient">
-                        <a class="cases__catalogue-button-link text-lg-black" href="#">Получить
-                            каталог</a>
+                        <a
+                            class="cases__catalogue-button-link text-lg-black"
+                            href="#"
+                        >
+                            Получить
+                            каталог
+                        </a>
                     </div>
                 </div>
             </div>
@@ -274,6 +439,13 @@
         <section class="tools">
             <div class="container tools__containerr">
                 <h2 class="tools__title">Большой выбор инструментов</h2>
+                <div class="tools__list">
+                    <article class="tools__card">
+                        <svg class="tools__card-icon">
+                            <use href="./icons/tools-sprite.svg#"></use>
+                        </svg>
+                    </article>
+                </div>
             </div>
         </section>
         <section class="investments">

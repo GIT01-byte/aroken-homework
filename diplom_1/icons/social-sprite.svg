@@ -1,7 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-    <symbol id="1" viewBox="0 0 175 175" preserveAspectRatio="xMidYMid meet">
-        <g transform="translate(0.000000,175.000000) scale(0.100000,-0.100000)" fill="currentColor"
-            stroke="currentColor">
+    <symbol
+        id="1"
+        viewBox="0 0 175 175"
+        preserveAspectRatio="xMidYMid meet"
+    >
+        <g
+            transform="translate(0.000000,175.000000) scale(0.100000,-0.100000)"
+            fill="currentColor"
+            stroke="currentColor"
+        >
             <path d="M603 1731 c-6 -10 -27 -21 -46 -25 -38 -7 -142 -57 -194 -92 -137
 -92 -251 -238 -327 -416 -8 -21 -20 -38 -26 -38 -6 0 -10 -93 -10 -266 l0
 -266 25 -30 c14 -16 25 -35 25 -43 0 -15 49 -111 77 -150 141 -201 325 -326
@@ -18,9 +25,16 @@ c41 -12 51 -24 51 -68 0 -26 -5 -34 -26 -42 -14 -6 -36 -10 -49 -10 -14 0 -39
         </g>
     </symbol>
 
-    <symbol id="2" viewBox="0 0 175.000000 175.000000" preserveAspectRatio="xMidYMid meet">
-        <g transform="translate(0.000000,175.000000) scale(0.100000,-0.100000)" fill="currentColor"
-            stroke="currentColor">
+    <symbol
+        id="2"
+        viewBox="0 0 175.000000 175.000000"
+        preserveAspectRatio="xMidYMid meet"
+    >
+        <g
+            transform="translate(0.000000,175.000000) scale(0.100000,-0.100000)"
+            fill="currentColor"
+            stroke="currentColor"
+        >
             <path d="M636 1731 c-10 -11 -32 -23 -50 -27 -30 -6 -123 -52 -199 -98 -135
 -82 -306 -325 -346 -493 -7 -28 -19 -60 -26 -70 -21 -26 -21 -290 -1 -312 8
 -9 22 -45 31 -80 17 -67 87 -211 127 -261 13 -16 39 -50 58 -75 89 -117 305
@@ -40,9 +54,16 @@ c41 -12 51 -24 51 -68 0 -26 -5 -34 -26 -42 -14 -6 -36 -10 -49 -10 -14 0 -39
     </symbol>
 
 
-    <symbol id="3" viewBox="0 0 175.000000 175.000000" preserveAspectRatio="xMidYMid meet">
-        <g transform="translate(0.000000,175.000000) scale(0.100000,-0.100000)" fill="currentColor"
-            stroke="currentColor">
+    <symbol
+        id="3"
+        viewBox="0 0 175.000000 175.000000"
+        preserveAspectRatio="xMidYMid meet"
+    >
+        <g
+            transform="translate(0.000000,175.000000) scale(0.100000,-0.100000)"
+            fill="currentColor"
+            stroke="currentColor"
+        >
             <path d="M727 1734 c-16 -8 -61 -22 -100 -30 -98 -21 -259 -108 -342 -186 -84
 -78 -174 -206 -220 -310 -20 -46 -43 -90 -51 -99 -11 -12 -14 -61 -14 -246 0
 -217 1 -231 20 -248 11 -10 20 -23 20 -29 0 -19 56 -128 93 -183 94 -140 133
@@ -64,9 +85,16 @@ m400 -521 c44 -22 60 -39 85 -82 l32 -55 0 -205 c0 -203 0 -207 -26 -257 -15
 99 26 142 -11z" />
         </g>
     </symbol>
-    <symbol id="4" viewBox="0 0 175.000000 175.000000" preserveAspectRatio="xMidYMid meet">
-        <g transform="translate(0.000000,175.000000) scale(0.100000,-0.100000)" fill="currentColor"
-            stroke="currentColor">
+    <symbol
+        id="4"
+        viewBox="0 0 175.000000 175.000000"
+        preserveAspectRatio="xMidYMid meet"
+    >
+        <g
+            transform="translate(0.000000,175.000000) scale(0.100000,-0.100000)"
+            fill="currentColor"
+            stroke="currentColor"
+        >
             <path d="M616 1731 c-10 -11 -30 -22 -44 -26 -41 -10 -131 -53 -192 -93 -132
 -86 -284 -286 -335 -440 -9 -29 -23 -56 -31 -59 -21 -8 -21 -435 0 -453 8 -6
 27 -42 41 -80 54 -141 166 -292 285 -384 71 -55 253 -146 294 -146 41 -1 146
