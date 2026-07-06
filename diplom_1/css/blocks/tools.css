@@ -1,0 +1,60 @@
+.tools {}
+
+.tools__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tools__title {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 117.2%;
+    color: #FFFFFF;
+    padding-bottom: 71px;
+}
+
+.tools__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    max-width: 100%;
+    background-color: white;
+}
+
+.tools__card {
+    padding-block: 50px;
+    padding-inline: 100px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tools__card-icon {
+    flex-shrink: 0;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+.tools__card-title {
+    font-family: var(--second-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 117.2%;
+    color: #000000;
+    margin-bottom: 28px;
+}
+
+.tools__card-description {
+    font-family: var(--second-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    color: #000000;
+    text-align: center;
+}
