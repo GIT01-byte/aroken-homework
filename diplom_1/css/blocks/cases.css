@@ -1,5 +1,6 @@
 .cases {
-    padding-bottom: 162px;
+    /* 375px - 1920px */
+    padding-bottom: clamp(8.125rem, 7.65rem + 2.01vw, 10.0625rem);
 }
 
 .cases__container {

@@ -1,4 +1,7 @@
-.tools {}
+.tools {
+    /* 375px - 1920px */
+    padding-bottom: clamp(8.125rem, 7.65rem + 2.01vw, 10.0625rem);
+}
 
 .tools__container {
     display: flex;
@@ -16,7 +19,6 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-    gap: 10px;
     max-width: 100%;
     /* 576px - 1920px */
     padding-top: clamp(2rem, -1.34rem + 3.72vw, 3.125rem);
@@ -25,6 +27,12 @@
     /* 576px - 1920px */
     padding-left: clamp(0.625rem, -1.34rem + 3.72vw, 3.125rem);
     background-color: white;
+}
+
+@media (width <=756px) {
+    .tools__list {
+        gap: 30px
+    }
 }
 
 @media (width >576px) and (width <=1450px) {
@@ -65,7 +73,8 @@
     height: clamp(2.875rem, 1.77rem + 4.72vw, 7.4375rem);
     flex-shrink: 0;
     color: #000000;
-    margin-bottom: 16px;
+    /* 375px - 1920px */
+    margin-bottom: clamp(0.625rem, 0.53rem + 0.39vw, 1rem);
 }
 
 .tools__card-title {
@@ -76,7 +85,8 @@
     font-size: clamp(1.125rem, 0.94rem + 0.78vw, 1.875rem);
     line-height: 117.2%;
     color: #000000;
-    margin-bottom: 28px;
+    /* 375px - 1920px */
+    margin-bottom: clamp(0.875rem, 0.66rem + 0.91vw, 1.75rem);
 }
 
 .tools__card-description {
@@ -95,6 +105,14 @@
     /* 375px - 1920px */
     width: clamp(1.875rem, 0.81rem + 4.53vw, 6.25rem);
     height: clamp(1.875rem, 0.81rem + 4.53vw, 6.25rem);
+    color: #303135;
+    transition: color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+    .tools__support-link:hover {
+        color: #242528;
+    }
 }
 
 @media (width >1450px) {
@@ -117,7 +135,6 @@
     /* 375px - 1920px */
     width: clamp(1.875rem, 0.81rem + 4.53vw, 6.25rem);
     height: clamp(1.875rem, 0.81rem + 4.53vw, 6.25rem);
-    color: #303135;
 }
 
 .tools__arrow-top-link {
@@ -126,6 +143,14 @@
     width: 49px;
     height: 49px;
     transform: translate(-50%, -50%);
+    color: #D9DFE1;
+    transition: color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+    .tools__arrow-top-link:hover {
+        color: #818d91;
+    }
 }
 
 @media (width >720px) {
@@ -143,5 +168,4 @@
 .tools__arrow-top-icon {
     width: 49px;
     height: 49px;
-    color: #D9DFE1;
 }
