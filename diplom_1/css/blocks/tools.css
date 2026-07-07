@@ -8,7 +8,8 @@
 }
 
 .tools__title {
-    padding-bottom: 71px;
+    /* 375px - 1920px */
+    padding-bottom: clamp(1.3125rem, 0.55rem + 3.24vw, 4.4375rem);
 }
 
 .tools__list {
@@ -21,6 +22,7 @@
     padding-top: clamp(2rem, -1.34rem + 3.72vw, 3.125rem);
     padding-right: 0.625rem;
     padding-bottom: 65px;
+    /* 576px - 1920px */
     padding-left: clamp(0.625rem, -1.34rem + 3.72vw, 3.125rem);
     background-color: white;
 }
@@ -58,6 +60,7 @@
 }
 
 .tools__card-icon {
+    /* 375px - 1920px */
     width: clamp(2.875rem, 1.77rem + 4.72vw, 7.4375rem);
     height: clamp(2.875rem, 1.77rem + 4.72vw, 7.4375rem);
     flex-shrink: 0;
