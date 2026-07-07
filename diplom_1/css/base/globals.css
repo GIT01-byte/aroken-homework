@@ -115,3 +115,12 @@ input:focus-visible {
 .text--italic {
     font-weight: 700;
 }
+
+.title-large {
+    font-weight: 700;
+    /* 375px - 1920px */
+    font-size: clamp(1.5625rem, 0.88rem + 2.91vw, 4.375rem);
+    line-height: 117%;
+    text-align: center;
+    color: var(--color-main);
+}
