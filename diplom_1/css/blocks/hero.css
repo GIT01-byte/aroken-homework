@@ -40,34 +40,7 @@
 
 .hero__benefits-wrapper {
     /* 375px - 1920px */
-    position: relative;
     margin-bottom: clamp(1.25rem, 1.16rem + 0.39vw, 2rem);
-}
-
-/* ТЕХ ДОЛГ */
-.hero__benefits-wrapper::before {
-    content: "";
-    position: absolute;
-    top: clamp(1.5rem, 5.69rem + -3.50vw, 4.875rem);
-    left: calc(clamp(1.75rem, 1rem + 1.75vw, 4rem) * -1);
-    height: clamp(4.125rem, 2.81rem + 5.63vw, 9.5625rem);
-    width: 42px;
-    background-image: url("../../icons/arrow-down-half-circle.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: var(--layer-negative);
-}
-
-@media (width >500px) and (width <=714px) {
-    .hero__benefits-wrapper::before {
-        top: clamp(3.75rem, 2.87rem + 2.80vw, 4.125rem)
-    }
-}
-
-@media (width >=770px) {
-    .hero__benefits-wrapper::before {
-        top: clamp(1.6875rem, 404.44rem + -900.00vw, 2.8125rem)
-    }
 }
 
 .hero__benefits-list {
@@ -123,7 +96,41 @@
 
 .hero__controls {
     /* 375px - 1920px */
+    position: relative;
     margin-bottom: clamp(0.9375rem, 0.42rem + 2.20vw, 3.4rem);
+}
+
+.hero__controls::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../icons/arrow-down-half-circle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: var(--layer-negative);
+}
+
+@media (width >768px) and (width <=1660px) {
+    .hero__controls::before {
+        display: none;
+    }
+}
+
+@media (width <=768px) {
+    .hero__controls::before {
+        top: -58px;
+        left: -18px;
+        height: 80px;
+        width: 16px;
+    }
+}
+
+@media (width >1660px) {
+    .hero__controls::before {
+        top: -126px;
+        left: -40px;
+        height: 153px;
+        width: 30px;
+    }
 }
 
 .hero__actions {
