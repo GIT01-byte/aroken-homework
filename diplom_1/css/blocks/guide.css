@@ -1,6 +1,6 @@
 .guide {
     /* 375px - 1920px */
-    padding-bottom: clamp(11.25rem, 9.40rem + 7.90vw, 18.875rem);
+    padding-bottom: 143px;
 }
 
 .guide__container {
@@ -30,14 +30,13 @@
 @media (width >576px) {
     .guide__checklist {
         grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-
     }
 }
 
+/* Ширина каждого контейнера */
 @media (width <=576px) {
     .guide__checklist {
-        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-
+        grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
     }
 }
 

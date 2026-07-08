@@ -117,7 +117,7 @@
 
 @media (width <=768px) {
     .hero__controls::before {
-        top: -58px;
+        top: -67px;
         left: -18px;
         height: 80px;
         width: 16px;

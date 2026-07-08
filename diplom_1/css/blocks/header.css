@@ -146,6 +146,7 @@
 }
 
 .header__button-login {
+    border: 1px solid #ff8924;
     /* 375px - 1240px */
     width: clamp(3.125rem, 1.42rem + 7.28vw, 7.0625rem);
     height: clamp(1.3125rem, 0.17rem + 4.62vw, 4.125rem);
