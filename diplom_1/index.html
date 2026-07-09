@@ -164,13 +164,20 @@
                                 шанс выиграть один из <span>100 000 000 ₽</span>
                             </p>
                         </div>
-                        <img
-                            src="./images/gift.png"
-                            width="50"
-                            height="50"
-                            alt="Иконка подарка"
-                            class="promo__gift promo__content-gift"
-                        />
+                        <picture>
+                            <source
+                                src="./images/gift.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                src="./images/gift.png"
+                                width="50"
+                                height="50"
+                                alt="Иконка подарка"
+                                class="promo__gift promo__content-gift"
+                                loading="lazy"
+                            />
+                        </picture>
                     </div>
                     <div class="promo__timer">
                         <div class="timer">
@@ -194,13 +201,21 @@
                                 <span class="timer__cell-text">с</span>
                             </div>
                         </div>
-                        <img
-                            src="./images/gift.png"
-                            width="50"
-                            height="50"
-                            alt="Иконка подарка"
-                            class="promo__gift promo__timer-gift"
-                        />
+
+                        <picture>
+                            <source
+                                src="./images/gift.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                src="./images/gift.png"
+                                width="50"
+                                height="50"
+                                alt="Иконка подарка"
+                                class="promo__gift promo__timer-gift"
+                                loading="lazy"
+                            />
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -234,13 +249,20 @@
                                 aria-label="Скачать ТОП-5 акций"
                             >
                                 Скачать ТОП-5 акций
-                                <img
-                                    src="./images/check-list.png"
-                                    width="123"
-                                    height="118"
-                                    alt="Чек лист эффективности"
-                                    class="hero__button-download-img"
-                                />
+                                <picture>
+                                    <source
+                                        src="./images/check-list.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./images/check-list.png"
+                                        width="123"
+                                        height="118"
+                                        alt="Чек лист эффективности"
+                                        class="hero__button-download-img"
+                                        loading="lazy"
+                                    />
+                                </picture>
                             </a>
                         </div>
                         <div class="hero__button-create-acc button button--bordered">
@@ -256,21 +278,42 @@
                 </div>
                 <div class="hero__investor-stats">
                     <div class="hero__investor-stats-user-avatars">
-                        <img
-                            src="./images/avatar-user-1.png"
-                            alt="Аватар пользователя"
-                            class="user-avatar-icon"
-                        />
-                        <img
-                            src="./images/avatar-user-2.png"
-                            alt="Аватар пользователя"
-                            class="user-avatar-icon"
-                        />
-                        <img
-                            src="./images/avatar-user-3.png"
-                            alt="Аватар пользователя"
-                            class="user-avatar-icon"
-                        />
+                        <picture>
+                            <source
+                                src="./images/avatar-user-1.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                src="./images/avatar-user-1.png"
+                                alt="Аватар пользователя"
+                                class="user-avatar-icon"
+                                loading="lazy"
+                            />
+                        </picture>
+                        <picture>
+                            <source
+                                src="./images/avatar-user-2.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                src="./images/avatar-user-2.png"
+                                alt="Аватар пользователя"
+                                class="user-avatar-icon"
+                                loading="lazy"
+                            />
+                        </picture>
+                        <picture>
+                            <source
+                                src="./images/avatar-user-3.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                src="./images/avatar-user-3.png"
+                                alt="Аватар пользователя"
+                                class="user-avatar-icon"
+                                loading="lazy"
+                            />
+                        </picture>
                     </div>
                     <div class="hero__investor-stats-text">
                         <span class="hero__investor-stats-text-line">Сейчас инвестируют</span>
@@ -278,14 +321,20 @@
                     </div>
                 </div>
                 <div class="hero__img-wrapper">
-                    <img
-                        src="./images/hero-1.png"
-                        width="1204"
-                        height="987"
-                        alt="Деревянная рука держит телефон, на котором открыто приложение для инвестиций"
-                        class="hero__img"
-                        loading="eager"
-                    />
+                    <picture>
+                        <source
+                            src="./images/hero-1.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            src="./images/hero-1.png"
+                            width="1204"
+                            height="987"
+                            alt="Деревянная рука держит телефон, на котором открыто приложение для инвестиций"
+                            class="hero__img"
+                            loading="eager"
+                        />
+                    </picture>
                 </div>
             </div>
         </section>
@@ -304,27 +353,31 @@
                     <button
                         class="cases__slider-button cases__slider-button--next"
                         aria-label="Следующий слайд"
-                    >
-                    </button>
+                    ></button>
                     <button
                         class="cases__slider-button cases__slider-button--prev"
                         aria-label="Предыдущий слайд"
-                    >
-                    </button>
+                    ></button>
                 </div>
                 <div class="swiper cases__companies-slider">
                     <div class="swiper-wrapper cases__companies-slider-wrapper">
                         <div class="swiper-slide cases__companies-slide">
                             <div class="cases__company">
                                 <div class="company__logo-box">
-                                    <img
-                                        src="./images/tesla.png"
-                                        width="125"
-                                        height="41"
-                                        alt="Логотип компании Tesla"
-                                        class="company__logo"
-                                        loading="lazy"
-                                    >
+                                    <picture>
+                                        <source
+                                            src="./images/tesla.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./images/tesla.png"
+                                            width="125"
+                                            height="41"
+                                            alt="Логотип компании Tesla"
+                                            class="company__logo"
+                                            loading="lazy"
+                                        />
+                                    </picture>
                                 </div>
                                 <p class="company__percent">+83.97%</p>
                                 <div class="company__value">
@@ -335,14 +388,20 @@
                         <div class="swiper-slide cases__companies-slide">
                             <div class="cases__company">
                                 <div class="company__logo-box">
-                                    <img
-                                        src="./images/amazon.png"
-                                        width="92"
-                                        height="69"
-                                        alt="Логотип компании Amazon"
-                                        class="company__logo"
-                                        loading="lazy"
-                                    >
+                                    <picture>
+                                        <source
+                                            src="./images/amazon.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./images/amazon.png"
+                                            width="92"
+                                            height="69"
+                                            alt="Логотип компании Amazon"
+                                            class="company__logo"
+                                            loading="lazy"
+                                        />
+                                    </picture>
                                 </div>
                                 <p class="company__percent">+4.11%</p>
                                 <div class="company__value">
@@ -353,14 +412,20 @@
                         <div class="swiper-slide cases__companies-slide">
                             <div class="cases__company">
                                 <div class="company__logo-box">
-                                    <img
-                                        src="./images/apple.png"
-                                        width="61"
-                                        height="61"
-                                        alt="Логотип компании Apple"
-                                        class="company__logo"
-                                        loading="lazy"
-                                    >
+                                    <picture>
+                                        <source
+                                            src="./images/apple.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./images/apple.png"
+                                            width="61"
+                                            height="61"
+                                            alt="Логотип компании Apple"
+                                            class="company__logo"
+                                            loading="lazy"
+                                        />
+                                    </picture>
                                 </div>
                                 <p class="company__percent">+26.36%</p>
                                 <div class="company__value">
@@ -371,14 +436,20 @@
                         <div class="swiper-slide cases__companies-slide">
                             <div class="cases__company">
                                 <div class="company__logo-box">
-                                    <img
-                                        src="./images/yandex.png"
-                                        width="93"
-                                        height="36"
-                                        alt="Логотип компании Yandex"
-                                        class="company__logo"
-                                        loading="lazy"
-                                    >
+                                    <picture>
+                                        <source
+                                            src="./images/yandex.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./images/yandex.png"
+                                            width="93"
+                                            height="36"
+                                            alt="Логотип компании Yandex"
+                                            class="company__logo"
+                                            loading="lazy"
+                                        />
+                                    </picture>
                                 </div>
                                 <p class="company__percent">+17.19%</p>
                                 <div class="company__value">
@@ -389,14 +460,20 @@
                         <div class="swiper-slide cases__companies-slide">
                             <div class="cases__company">
                                 <div class="company__logo-box">
-                                    <img
-                                        src="./images/facebook.png"
-                                        width="123"
-                                        height="67"
-                                        alt="Логотип компании Facebook"
-                                        class="company__logo"
-                                        loading="lazy"
-                                    >
+                                    <picture>
+                                        <source
+                                            src="./images/facebook.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./images/facebook.png"
+                                            width="123"
+                                            height="67"
+                                            alt="Логотип компании Facebook"
+                                            class="company__logo"
+                                            loading="lazy"
+                                        />
+                                    </picture>
                                 </div>
                                 <p class="company__percent">+31.32%</p>
                                 <div class="company__value">
@@ -629,19 +706,25 @@
         <section class="bonus">
             <div class="container bonus__container">
                 <div class="bonus__background-image-left-position-wrapper">
-                    <img
-                        src="./images/gifts-background-1.png"
-                        width="700"
-                        height="994"
-                        alt="Изображения подарков на заднем фоне"
-                        class="bonus__background-image bonus__background-image-left"
-                    >
+                    <picture class="bonus__background-picture">
+                        <source
+                            srcset="./images/gifts-background-1.webp"
+                            type="image/webp"
+                        >
+                        <img
+                            src="./images/gifts-background-1.png"
+                            width="700"
+                            height="994"
+                            alt="Изображения подарков на заднем фоне"
+                            class="bonus__background-image bonus__background-image-left"
+                        >
+                    </picture>
                     <div class="bonus__background-image-blur bonus__background-image-blur-left"></div>
                 </div>
-                <h2 class="bonus__title">
+                <h2 class="bonus__title title-large">
                     Каждый достоин второго шанса
                 </h2>
-                <h3 class="bonus__description">
+                <h3 class="bonus__description text-desc">
                     Купите свои первые акции без риска, мы вернем
                     вам 100$ на счет в случае проигрыша
                 </h3>
@@ -666,13 +749,19 @@
                     </div>
                 </div>
                 <div class="bonus__background-image-right-position-wrapper">
-                    <img
-                        src="./images/gifts-background-2.png"
-                        width="1767"
-                        height="1299"
-                        alt="Изображения подарков на заднем фоне"
-                        class="bonus__background-image bonus__background-image-right"
-                    >
+                    <picture class="bonus__background-picture">
+                        <source
+                            srcset="./images/gifts-background-2.webp"
+                            type="image/webp"
+                        >
+                        <img
+                            src="./images/gifts-background-2.png"
+                            width="1767"
+                            height="1299"
+                            alt="Изображения подарков на заднем фоне"
+                            class="bonus__background-image bonus__background-image-right"
+                        >
+                    </picture>
                     <div class="bonus__background-image-blur bonus__background-image-blur-right"></div>
                 </div>
             </div>
