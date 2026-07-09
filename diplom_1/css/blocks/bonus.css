@@ -1,6 +1,6 @@
 .bonus {
     /* 375px - 1920px */
-    padding-top: clamp(11.25rem, 9.43rem + 7.77vw, 18.75rem);
+    padding-top: clamp(0rem, -4.55rem + 19.42vw, 18.75rem);
     padding-bottom: clamp(7.8125rem, 6.14rem + 7.12vw, 14.6875rem);
     position: relative;
 }
@@ -94,7 +94,6 @@
     margin-bottom: -0.418em;
 }
 
-/*  */
 .bonus__title {
     position: relative;
     display: flex;
@@ -106,194 +105,41 @@
 }
 
 .bonus__description {
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 158%;
-    text-align: center;
-    color: #fff;
     max-width: 642px;
-    padding-bottom: 57px;
+    /* 375px - 1920px */
+    padding-bottom: clamp(0.75rem, 0.07rem + 2.91vw, 3.5625rem);
 }
 
 .bonus__actions {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    /* 375px - 1920px */
+    gap: clamp(0.5rem, 0.47rem + 0.13vw, 0.625rem);
 }
 
 .bonus__button-get-bonus {
     /* 375px - 1920px */
-    width: 376px;
-    height: 106px;
+    width: clamp(8.25rem, 4.49rem + 16.05vw, 23.75rem);
+    height: clamp(2.5rem, 1.45rem + 4.47vw, 6.8125rem);
 }
 
 .bonus__button-get-bonus-link {
     font-weight: 700;
-    font-size: 22px;
+    font-size: clamp(0.4375rem, 0.21rem + 0.97vw, 1.375rem);
     line-height: 159%;
     text-align: center;
 }
 
 .bonus__button-create-demo {
     /* 375px - 1920px */
-    width: 376px;
-    height: 106px;
+    width: clamp(7.125rem, 3.06rem + 17.35vw, 23.875rem);
+    height: clamp(2.5rem, 1.14rem + 4.47vw, 6.8125rem);
 }
 
 .bonus__button-create-demo-link {
     font-weight: 400;
-    font-size: 22px;
-    line-height: 159%;
-    color: #e7e7e7;
-}
-
-.bonus {
-    /* 375px - 1920px */
-    padding-top: clamp(11.25rem, 9.43rem + 7.77vw, 18.75rem);
-    padding-bottom: clamp(7.8125rem, 6.14rem + 7.12vw, 14.6875rem);
-    position: relative;
-}
-
-.bonus__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.bonus__background-image-blur {
-    background-image: url("../../icons/blur/hero-blur.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    fill: linear-gradient(180deg, #98c269 0%, #9edfb6 100%);
-    -webkit-filter: blur(500px);
-    filter: blur(500px);
-    width: 413px;
-    height: 418px;
-}
-
-@media (width <1380px) {
-    .bonus__background-image-blur {
-        display: none;
-    }
-}
-
-.bonus__background-image-left-position-wrapper {
-    position: absolute;
-    top: 15%;
-    bottom: 0;
-    left: 0;
-}
-
-
-@media (width <1380px) {
-    .bonus__background-image-left-position-wrapper {
-        display: none;
-    }
-}
-
-.bonus__background-image-left {
-    width: 700px;
-    height: 994px;
-    transform: rotate(-7deg);
-}
-
-.bonus__background-image-blur-left {
-    position: absolute;
-    top: 34%;
-    left: -21%;
-}
-
-.bonus__background-image-right-position-wrapper {
-    position: absolute;
-    top: 15%;
-    bottom: 0;
-    right: 0;
-}
-
-
-@media (width <1380px) {
-    .bonus__background-image-right-position-wrapper {
-        display: none;
-    }
-}
-
-.bonus__background-image-right {
-    width: 606px;
-    height: 1299px;
-}
-
-.bonus__background-image-blur-right {
-    position: absolute;
-    top: 40%;
-    left: 51%;
-}
-
-.bonus__title::before {
-    content: "БОНУС";
-    font-weight: 700;
-    font-size: 2.8em;
-    line-height: 117%;
-    text-align: center;
-    background: linear-gradient(180deg, #4b5951 0%, rgba(61, 82, 70, 0.1) 98.9%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: -0.418em;
-}
-
-/* add global class */
-.bonus__title {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 642px;
-    padding-bottom: 33px;
-}
-
-.bonus__description {
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 158%;
-    text-align: center;
-    color: #fff;
-    max-width: 642px;
-    padding-bottom: 57px;
-}
-
-.bonus__actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.bonus__button-get-bonus {
-    /* 375px - 1920px */
-    width: 376px;
-    height: 106px;
-}
-
-.bonus__button-get-bonus-link {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 159%;
-    text-align: center;
-}
-
-.bonus__button-create-demo {
-    /* 375px - 1920px */
-    width: 376px;
-    height: 106px;
-}
-
-.bonus__button-create-demo-link {
-    font-weight: 400;
-    font-size: 22px;
+    font-size: clamp(0.4375rem, 0.21rem + 0.97vw, 1.375rem);
     line-height: 159%;
     color: #e7e7e7;
 }
