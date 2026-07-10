@@ -27,6 +27,21 @@
     grid-row: span 4;
     padding: 13% 5% 8% 11%;
     background-color: #1B1B1C;
+    transition: background-color var(--transition-time)
+}
+
+@media (any-hover: hover) {
+    .features__card:hover {
+        background-color: #232323;
+    }
+
+    .features__card:hover .card__link {
+        color: var(--color-secondary);
+    }
+
+    .features__card:hover .card__link-wrapper::after {
+        transform: translateX(6px);
+    }
 }
 
 .card__icon {
@@ -46,7 +61,7 @@
 }
 
 .card__icon {
-    color: #62BA7F;
+    color: var(--color-secondary);
     max-width: 50px;
     max-height: 50px;
     margin-bottom: 6%;
@@ -72,6 +87,13 @@
     color: #FFFFFF;
 }
 
+.card__link-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2px;
+}
+
 .card__link {
     font-family: 'Gotham Pro';
     font-style: normal;
@@ -83,5 +105,13 @@
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
     color: #FFFFFF;
+    justify-self: end;
     margin-top: auto;
+    transition: color var(--transition-time);
+}
+
+.card__link-wrapper::after {
+    justify-self: end;
+    content: "→";
+    transition: transform var(--transition-time);
 }
