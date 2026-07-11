@@ -112,6 +112,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     border-radius: clamp(0.625rem, 0.41rem + 0.91vw, 1.5rem);
     width: clamp(4.375rem, 3.25rem + 4.79vw, 9rem);
     height: clamp(4.375rem, 3.25rem + 4.79vw, 9rem);

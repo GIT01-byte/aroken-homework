@@ -1,0 +1,44 @@
+.portfolio {
+    padding-bottom: 213px;
+}
+
+.portfolio__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+}
+
+.portfolio__title {
+    font-weight: 500;
+    font-size: 65px;
+    line-height: 117%;
+    color: #fff;
+}
+
+.portfolio__description {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 158%;
+    color: #fff;
+}
+
+.portfolio__button-get-portfolio {
+    width: 378px;
+    height: 108px;
+}
+
+.portfolio__button-get-portfolio-link {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 159%;
+    text-align: center;
+    color: #000;
+}
