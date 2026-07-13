@@ -935,23 +935,71 @@
                                 class="calculator__indicator-icon"
                                 width="100%"
                                 height="100%"
-                                viewBox="0 0 800 400"
+                                viewBox="0 0 900 450"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <defs>
-                                    <!-- градиент -->
+                                    <!-- Нейтральный градиент -->
+                                    <linearGradient
+                                        id="null-gradient"
+                                        x1="50.267822"
+                                        y1="296.889"
+                                        x2="228.768"
+                                        y2="21.31"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stop-color="#6f7e8c" />
+                                        <stop
+                                            offset="1"
+                                            stop-color="#405548"
+                                        />
+                                    </linearGradient>
+
+                                    <!-- Зеленый градиент -->
                                     <linearGradient
                                         id="accent-gradient"
-                                        x1="0.267822"
-                                        y1="271.889"
-                                        x2="178.768"
-                                        y2="-3.61083"
+                                        x1="50.267822"
+                                        y1="296.889"
+                                        x2="228.768"
+                                        y2="21.31"
                                         gradientUnits="userSpaceOnUse"
                                     >
                                         <stop stop-color="#405548" />
                                         <stop
                                             offset="1"
                                             stop-color="#6ADB83"
+                                        />
+                                    </linearGradient>
+
+                                    <!-- Желтый градиент -->
+                                    <linearGradient
+                                        id="yellow-gradient"
+                                        x1="50.267822"
+                                        y1="296.889"
+                                        x2="228.768"
+                                        y2="21.31"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stop-color="#555140" />
+                                        <stop
+                                            offset="1"
+                                            stop-color="#DCD06A"
+                                        />
+                                    </linearGradient>
+
+                                    <!-- Красный градиент -->
+                                    <linearGradient
+                                        id="red-gradient"
+                                        x1="50.267822"
+                                        y1="296.889"
+                                        x2="228.768"
+                                        y2="21.31"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stop-color="#554040" />
+                                        <stop
+                                            offset="1"
+                                            stop-color="#DB6A6A"
                                         />
                                     </linearGradient>
 
@@ -966,11 +1014,11 @@
                                         <feGaussianBlur stdDeviation="15" />
                                     </filter>
 
-                                    <!-- Единый шаблон дуги -->
+                                    <!-- Единый шаблон дуги (Сдвинут на +50px по X и +25px по Y для центровки) -->
                                     <path
                                         id="arc-path"
                                         class="indicator-arc-path"
-                                        d="M 68,366 A 332,332 0 0,1 732,366"
+                                        d="M 118,391 A 332,332 0 0,1 782,391"
                                         fill="none"
                                         stroke-width="26"
                                         stroke-linecap="round"
@@ -981,7 +1029,6 @@
                                 <use
                                     class="indicator-background-line"
                                     href="#arc-path"
-                                    class="line"
                                     stroke="#303030"
                                 />
 
@@ -989,8 +1036,6 @@
                                 <use
                                     class="indicator-progress-line-glow"
                                     href="#arc-path"
-                                    stroke="url(#accent-gradient)"
-                                    stroke-dasharray="250 1043"
                                     filter="url(#glow-filter)"
                                 />
 
@@ -998,21 +1043,16 @@
                                 <use
                                     class="indicator-progress-line"
                                     href="#arc-path"
-                                    class="line--accent"
-                                    stroke="url(#accent-gradient)"
-                                    stroke-dasharray="250 1043"
                                 />
                             </svg>
+
                             <div class="calculator__content-wrapper">
                                 <p class="calculator__indicator-label">Доходность</p>
                                 <div class="calculator__indicator-result">
-                                    <span class="calculator__indicator-result">
+                                    <span class="calculator__indicator-result calculator__indicator-result-text">
                                         До
                                     </span>
-                                    <span
-                                        id="calculator__indicator-result-value"
-                                        class="calculator__indicator-result"
-                                    >
+                                    <span class="calculator__indicator-result calculator__indicator-result-value">
                                         5%
                                     </span>
                                 </div>
