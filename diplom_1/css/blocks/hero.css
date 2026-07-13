@@ -140,25 +140,25 @@
 }
 
 .hero__button-download-link {
-    justify-content: end;
+    position: relative;
     /* 375px - 1920px */
     gap: clamp(0.3125rem, 0.04rem + 0.74vw, 0.9375rem);
-    font-size: clamp(0.4375rem, 0.21rem + 0.97vw, 1.375rem);
+}
+
+.hero__button-download-link-text {
+    /* 576px - 1920px */
+    margin-right: clamp(0rem, -0.62rem + 1.71vw, 1.4375rem);
 }
 
 .hero__button-download-img {
+    position: absolute;
+    top: 58%;
     /* 375px - 1920px */
-    width: clamp(1.875rem, 1.25rem + 2.65vw, 4.4375rem);
-    height: clamp(1.875rem, 0.90rem + 4.14vw, 5.875rem);
-    transform: rotate(15.5deg);
-}
+    right: calc(clamp(1rem, 0.82rem + 0.78vw, 1.75rem) * -1);
+    transform: rotate(15.5deg) translate(-50%, -50%);
+    width: clamp(1.625rem, 0.94rem + 2.91vw, 4.4375rem);
+    height: clamp(1.625rem, 0.94rem + 2.91vw, 4.4375rem);
 
-.hero__button-create-acc-link {
-    /* 375px - 1920px */
-    font-weight: 400;
-    font-size: clamp(0.4375rem, 0.21rem + 0.97vw, 1.375rem);
-    line-height: 159%;
-    color: var(--color-main);
 }
 
 .hero__investor-stats {
