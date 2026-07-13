@@ -54,7 +54,7 @@ try {
       'calculator__indicator-badge-wrapper--medium',
     INDICATOR_BADGE_WRAPPER_HIGH_GRADIENT:
       'calculator__indicator-badge-wrapper--high',
-    RADIO_INPUT: 'calculator__radio-checkbox',
+    RADIO_INPUTs: 'calculator__radio-checkbox',
     RESULT_VALUE: 'calculator__indicator-result-value',
   });
 

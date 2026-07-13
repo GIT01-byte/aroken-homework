@@ -24,7 +24,9 @@ export default class PortfolioCalculator {
     this.indicatorBadgeWrapperMediumGradient = `${this.config.INDICATOR_BADGE_WRAPPER_MEDIUM_GRADIENT}`;
     this.indicatorBadgeWrapperHighGradient = `${this.config.INDICATOR_BADGE_WRAPPER_HIGH_GRADIENT}`;
 
-    this.radioInputs = document.querySelectorAll(`.${this.config.RADIO_INPUT}`);
+    this.radioInputs = document.querySelectorAll(
+      `.${this.config.RADIO_INPUTs}`,
+    );
 
     this.resultValue = document.querySelector(`.${this.config.RESULT_VALUE}`);
 
