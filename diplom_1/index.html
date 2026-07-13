@@ -928,14 +928,139 @@
                         </a>
                     </button>
                 </div>
-                <div class="portfolio__progress-bar">
-                    <div class="progress-bar__indicator"></div>
-                    <div class="progress-bar__label"></div>
-                    <div class="progress-bar__title"></div>
-                    <div class="progress-bar__badge"></div>
-                    <div class="progress-bar__radio-buttons"></div>
+                <div class="portfolio__calculator">
+                    <div class="calculator__container">
+                        <div class="calculator__indicator">
+                            <svg
+                                class="calculator__indicator-icon"
+                                width="100%"
+                                height="100%"
+                                viewBox="0 0 800 400"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <defs>
+                                    <!-- градиент -->
+                                    <linearGradient
+                                        id="accent-gradient"
+                                        x1="0.267822"
+                                        y1="271.889"
+                                        x2="178.768"
+                                        y2="-3.61083"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stop-color="#405548" />
+                                        <stop
+                                            offset="1"
+                                            stop-color="#6ADB83"
+                                        />
+                                    </linearGradient>
+
+                                    <!-- Фильтр размытия -->
+                                    <filter
+                                        id="glow-filter"
+                                        x="-50%"
+                                        y="-50%"
+                                        width="200%"
+                                        height="200%"
+                                    >
+                                        <feGaussianBlur stdDeviation="15" />
+                                    </filter>
+
+                                    <!-- Единый шаблон дуги -->
+                                    <path
+                                        id="arc-path"
+                                        class="indicator-arc-path"
+                                        d="M 68,366 A 332,332 0 0,1 732,366"
+                                        fill="none"
+                                        stroke-width="26"
+                                        stroke-linecap="round"
+                                    />
+                                </defs>
+
+                                <!-- СЛОЙ 1: Фоновый серый полукруг -->
+                                <use
+                                    class="indicator-background-line"
+                                    href="#arc-path"
+                                    class="line"
+                                    stroke="#303030"
+                                />
+
+                                <!-- СЛОЙ 2: Свечение -->
+                                <use
+                                    class="indicator-progress-line-glow"
+                                    href="#arc-path"
+                                    stroke="url(#accent-gradient)"
+                                    stroke-dasharray="250 1043"
+                                    filter="url(#glow-filter)"
+                                />
+
+                                <!-- СЛОЙ 3: Зеленый индикатор прогресса -->
+                                <use
+                                    class="indicator-progress-line"
+                                    href="#arc-path"
+                                    class="line--accent"
+                                    stroke="url(#accent-gradient)"
+                                    stroke-dasharray="250 1043"
+                                />
+                            </svg>
+                            <div class="calculator__content-wrapper">
+                                <p class="calculator__indicator-label">Доходность</p>
+                                <div class="calculator__indicator-result">
+                                    <span class="calculator__indicator-result">
+                                        До
+                                    </span>
+                                    <span
+                                        id="calculator__indicator-result-value"
+                                        class="calculator__indicator-result"
+                                    >
+                                        5%
+                                    </span>
+                                </div>
+                                <div class="calculator__indicator-badge-wrapper">
+                                    <p class="calculator__indicator-badge">
+                                        Низкий риск
+                                    </p>
+                                </div>
+                                <div class="calculator__range-group">
+                                    <label class="calculator__range-wrapper">
+                                        <input
+                                            type="range"
+                                            class="calculator__range-slider"
+                                            name="calculator__range-slider"
+                                            min="0"
+                                            max="100"
+                                            value="25"
+                                        >
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calculator__radio-group">
+                            <label class="calculator__radio-wrapper">
+                                <input
+                                    class="calculator__radio-checkbox"
+                                    type="radio"
+                                    name="calculator__radio-checkbox"
+                                    checked
+                                >
+                                <span class="calculator__radio-text">
+                                    Управляю деньгами сам
+                                </span>
+                            </label>
+
+                            <label class="calculator__radio-wrapper">
+                                <input
+                                    class="calculator__radio-checkbox"
+                                    type="radio"
+                                    name="calculator__radio-checkbox"
+                                >
+                                <span class="calculator__radio-text">
+                                    Доверяю управление
+                                </span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </section>
         <section class="mobile">
             <div class="container mobile__container">

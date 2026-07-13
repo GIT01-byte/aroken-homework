@@ -1,5 +1,5 @@
 .features {
-    padding-bottom: 143px;
+    padding-bottom: clamp(5.625rem, 4.82rem + 3.43vw, 8.9375rem);
 }
 
 .features__container {
