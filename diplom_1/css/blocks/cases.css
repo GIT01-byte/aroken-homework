@@ -164,11 +164,6 @@
     gap: clamp(0.625rem, 0.26rem + 1.55vw, 2.125rem);
 }
 
-.cases__catalogue-button {
-    width: clamp(6.8125rem, 2.76rem + 17.28vw, 24rem);
-    height: clamp(1.9375rem, 0.80rem + 4.85vw, 6.625rem);
-}
-
 .cases__catalogue-button-link {
     /* 375px - 1920px */
     font-weight: 700;
