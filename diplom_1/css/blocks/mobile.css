@@ -1,0 +1,57 @@
+.mobile {}
+
+.container {}
+
+.mobile__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 110px;
+}
+
+.mobile__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile__card:nth-child(odd) {}
+
+.mobile__card:nth-child(even) {
+    flex-direction: row-reverse;
+
+}
+
+.mobile__card-content {}
+
+.mobile__card-title {}
+
+.mobile__card-description {}
+
+.mobile__card-img-wrapper {
+    position: relative;
+}
+
+.mobile__card-img-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../icons/blur/hero-blur.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    fill: linear-gradient(180deg, #98c269 0%, #9edfb6 100%);
+    -webkit-filter: blur(500px);
+    filter: blur(500px);
+    z-index: var(--layer-negative-1);
+}
+
+.mobile__card-img {
+    width: 100%;
+    height: 100%;
+}
