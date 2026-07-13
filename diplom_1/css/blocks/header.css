@@ -161,7 +161,7 @@
     height: 100%;
     font-weight: 400;
     font-size: clamp(0.4375rem, 0.27rem + 0.71vw, 1.125rem);
-    color: #fff;
+    color: var(--color-main);
 }
 
 .header__button-create-acc {
@@ -173,7 +173,7 @@
 .header__button-create-acc-link {
     /* 375px - 1920px */
     font-size: clamp(0.625rem, 0.50rem + 0.52vw, 1.125rem);
-    color: #000;
+    color: var(--color-black);
 }
 
 @media (width >576px) {

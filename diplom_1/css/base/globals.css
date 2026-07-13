@@ -106,7 +106,7 @@ input:focus-visible {
 }
 
 .text-lg-black {
-    color: #000
+    color: var(--color-black)
 }
 
 @media (width >576px) {

@@ -78,7 +78,7 @@
     width: clamp(2.875rem, 1.77rem + 4.72vw, 7.4375rem);
     height: clamp(2.875rem, 1.77rem + 4.72vw, 7.4375rem);
     flex-shrink: 0;
-    color: #000000;
+    color: var(--color-black);
     /* 375px - 1920px */
     margin-bottom: clamp(0.625rem, 0.53rem + 0.39vw, 1rem);
 }
@@ -90,7 +90,7 @@
     /* 375px - 1920px */
     font-size: clamp(1.125rem, 0.94rem + 0.78vw, 1.875rem);
     line-height: 117.2%;
-    color: #000000;
+    color: var(--color-black);
     /* 375px - 1920px */
     margin-bottom: clamp(0.875rem, 0.66rem + 0.91vw, 1.75rem);
 }
@@ -102,7 +102,7 @@
     /* 375px - 1920px */
     font-size: clamp(0.75rem, 0.63rem + 0.52vw, 1.25rem);
     line-height: 130%;
-    color: #000000;
+    color: var(--color-black);
     text-align: center;
 }
 

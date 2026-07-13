@@ -56,7 +56,7 @@
     /* 375px - 1920px */
     font-size: clamp(1.125rem, 1.00rem + 0.52vw, 1.625rem);
     line-height: 125.2%;
-    color: #FFFFFF;
+    color: var(--color-main);
     margin-bottom: 0.75rem;
 }
 
@@ -68,7 +68,7 @@
     /* 375px - 1920px */
     font-size: clamp(1rem, 0.91rem + 0.39vw, 1.375rem);
     line-height: 156.7%;
-    color: #FFFFFF;
+    color: var(--color-main);
 }
 
 .card__link-wrapper {
@@ -90,7 +90,7 @@
     line-height: 156.7%;
     text-align: right;
     text-decoration: underline;
-    color: #FFFFFF;
+    color: var(--color-main);
     transition: color var(--transition-time);
 }
 
