@@ -166,7 +166,6 @@
     -webkit-transition: background var(--transition-time);
     transition: background var(--transition-time);
     cursor: pointer;
-    margin-top: calc(clamp(0.1875rem, 0.16rem + 0.13vw, 0.3125rem) * -1);
     /* Центрируем кружок относительно полосы: (высота полосы 8px - высота кружка 16px) / 2 */
 }
 
