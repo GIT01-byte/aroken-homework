@@ -25,12 +25,6 @@
 }
 
 .cases__description {
-    font-weight: 400;
-    /* 375px - 1920px */
-    font-size: clamp(0.75rem, 0.55rem + 0.84vw, 1.5625rem);
-    line-height: 158%;
-    text-align: center;
-    color: var(--color-main);
     max-width: 653px;
 }
 
@@ -62,7 +56,7 @@
 
 .cases__slider-button {
     /* 375px - 1920px */
-    height: clamp(7rem, 5.88rem + 13.33vw, 21.875rem);
+    height: clamp(7.1875rem, 4.38rem + 11.97vw, 18.75rem);
     width: 70vw;
     z-index: var(--layer-2);
     background: linear-gradient(90deg, #0e0e12 0%, rgba(0, 0, 0, 0) 100%);
