@@ -147,7 +147,7 @@
     height: clamp(2.8125rem, 2.43rem + 1.62vw, 4.375rem);
     border: 2px solid #9F9FA0;
     border-radius: 35px;
-    color: #fff;
+    color: var(--color-main);
     transition: color var(--transition-time), border-color var(--transition-time);
 }
 
@@ -166,6 +166,6 @@
     /* 375px - 1920px */
     font-size: clamp(0.75rem, 0.58rem + 0.35vw, 1rem);
     line-height: 126%;
-    color: #fff;
+    color: var(--color-main);
     text-wrap: nowrap;
 }

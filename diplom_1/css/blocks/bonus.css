@@ -100,7 +100,7 @@
 }
 
 .bonus__title {
-    color: #62BA7F;
+    color: var(--color-secondary);
     position: relative;
     display: flex;
     justify-content: center;
