@@ -1,0 +1,173 @@
+.bid {
+    padding-bottom: 138px;
+}
+
+.bid__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bid__title {
+    margin-bottom: 84px;
+}
+
+.bid__list {
+    display: flex;
+    gap: 150px;
+    margin-bottom: 132px;
+}
+
+.bid__card {
+    width: 377px;
+}
+
+.bid__card:last-child {
+    width: 426px;
+}
+
+.bid__card-icon-wrapper::after {
+    content: "";
+    position: absolute;
+    left: calc(100% + 37px);
+    width: 303px;
+    height: 20px;
+    background-image: url(../../icons/arrow-dashed-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 303px 20px;
+}
+
+.bid__card-icon-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    height: 135px;
+    border-radius: 24px;
+    margin-bottom: 35px;
+}
+
+.bid__card:last-child .bid__card-icon-wrapper::after {
+    display: none;
+}
+
+.bid__card-icon-wrapper--dark-blue {
+    background: linear-gradient(135deg, #16373a 0%, #0a1f24 29%, #0b1b23 49%, #122b31 100%);
+}
+
+.bid__card-icon-wrapper--green {
+    background: linear-gradient(322deg, #82c36d 0%, #25523e 100%);
+    color: var(--color-black);
+}
+
+.bid__card-icon-number {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: var(--color-main);
+    color: var(--color-black);
+}
+
+.bid__card-icon {}
+
+.bid__card-title {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    color: #fff;
+    text-wrap: balance;
+    margin-bottom: 23px;
+}
+
+.bid__card-description {
+    max-width: 377px;
+}
+
+.bid__fieldset-group {
+    display: flex;
+    gap: 20px;
+    border: none;
+}
+
+.bid__form {
+    display: flex;
+    gap: 21px;
+}
+
+.bid__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 376px;
+    height: 106px;
+    border: 4px solid rgba(255, 255, 255, 0.29);
+    border-radius: 20px;
+    background: #202020;
+}
+
+.bid__label-name {
+    width: 383px;
+}
+
+.bid__input {
+    width: 82%;
+    height: 35px;
+    border: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 159%;
+    color: var(--color-main);
+}
+
+.bid__input::-webkit-input-placeholder {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 159%;
+    color: #fff;
+}
+
+.bid__input::-moz-placeholder {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 159%;
+    color: #fff;
+}
+
+.bid__input:-ms-input-placeholder {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 159%;
+    color: #fff;
+}
+
+.bid__input::-ms-input-placeholder {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 159%;
+    color: #fff;
+}
+
+.bid__input::placeholder {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 159%;
+    color: #fff;
+}
+
+
+
+.bid__label-phone {}
+
+.bid__label-email {}
+
+.bid__submit-bth {}

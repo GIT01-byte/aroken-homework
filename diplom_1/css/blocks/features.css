@@ -60,15 +60,8 @@
     margin-bottom: 0.75rem;
 }
 
-.card__text {
+.card__desc {
     flex-grow: 1;
-    font-family: 'Gotham Pro';
-    font-style: normal;
-    font-weight: 300;
-    /* 375px - 1920px */
-    font-size: clamp(1rem, 0.91rem + 0.39vw, 1.375rem);
-    line-height: 156.7%;
-    color: var(--color-main);
 }
 
 .card__link-wrapper {
