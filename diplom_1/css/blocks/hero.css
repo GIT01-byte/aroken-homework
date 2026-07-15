@@ -167,6 +167,10 @@
     gap: clamp(0.4375rem, 0.27rem + 0.71vw, 1.125rem);
 }
 
+.hero__investor-stats-user-avatars {
+    padding-left: clamp(0.875rem, 0.56rem + 1.36vw, 2.1875rem);
+}
+
 .user-avatar-icon:nth-child(1) {
     margin-left: 0;
 }

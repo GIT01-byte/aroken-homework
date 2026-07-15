@@ -148,15 +148,17 @@
     border: 2px solid #9F9FA0;
     border-radius: 35px;
     color: #fff;
-    transition: color var(--transition-time);
+    transition: color var(--transition-time), border-color var(--transition-time);
 }
 
 .mobile__card-btn--ios:hover {
-    color: #007aff
+    color: #007aff;
+    border-color: #007aff
 }
 
 .mobile__card-btn--android:hover {
-    color: #3ddc84
+    color: #3ddc84;
+    border-color: #3ddc84
 }
 
 .mobile__card-btn-text {

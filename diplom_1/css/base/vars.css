@@ -27,7 +27,7 @@
     --border-radius: clamp(0.25rem, -0.18rem + 1.85vw, 1.25rem);
 
     /* Container */
-    --container-width: 1605px;
+    --container-width: 1609px;
     --container-padding: 20px;
 
     /* Transitions */
