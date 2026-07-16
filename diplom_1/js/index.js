@@ -67,12 +67,11 @@ try {
   casesSlider();
   // sizes();
 
-  // Imask
   // Маска для инпута телефона
   var phoneInput = document.getElementById('bid-phone-input');
   var phoneMask = IMask(phoneInput, {
     mask: '+{7} 000 000 00 00',
-    lazy: false, // Маска отображается сразу, а не только при фокусе
+    lazy: false,
     placeholderChar: '-',
   });
 } catch (error) {
