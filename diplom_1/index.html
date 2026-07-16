@@ -1517,6 +1517,7 @@
                         <label class="bid__label bid__label-name">
                             <input
                                 class="bid__input"
+                                id="bid-name-input"
                                 type="text"
                                 name="name"
                                 placeholder="Ваше имя:"
@@ -1525,22 +1526,24 @@
                         <label class="bid__label bid__label-phone">
                             <input
                                 class="bid__input"
-                                type="text"
+                                id="bid-phone-input"
+                                type="tel"
                                 name="phone"
-                                placeholder="Ваше имя:"
+                                placeholder="+7 --- --- -- --"
                             >
                         </label>
                         <label class="bid__label bid__label-email">
                             <input
                                 class="bid__input"
-                                type="text"
+                                id="bid-email-input"
+                                type="email"
                                 name="email"
                                 placeholder="Email:"
                             >
                         </label>
                     </fieldset>
                     <button class="bid__submit-bth button button--gradient">
-                        <span class="button__link text-lg-black">
+                        <span class="bid__submit-bth-text button__link text-lg-black">
                             Оставить заявку
                         </span>
                     </button>

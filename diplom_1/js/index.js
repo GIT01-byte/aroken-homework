@@ -2,6 +2,7 @@
 import BurgerMenu from './burger.js';
 import CountdownTimer from './timer.js';
 import PortfolioCalculator from './portfolio-calculator.js';
+import IMask from '../node_modules/imask/esm/index.js';
 // import Modal from "./modal.js";
 import { casesSlider } from './cases-slider.js';
 // import { sizes } from "./sizes.js";
@@ -65,6 +66,15 @@ try {
 
   casesSlider();
   // sizes();
+
+  // Imask
+  // Маска для инпута телефона
+  var phoneInput = document.getElementById('bid-phone-input');
+  var phoneMask = IMask(phoneInput, {
+    mask: '+{7} 000 000 00 00',
+    lazy: false, // Маска отображается сразу, а не только при фокусе
+    placeholderChar: '-',
+  });
 } catch (error) {
   console.error(error);
 }
