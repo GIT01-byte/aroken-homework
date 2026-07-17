@@ -1,36 +1,26 @@
-// import HeaderFixed from "./header.js";
 import BurgerMenu from './burger.js';
 import CountdownTimer from './timer.js';
 import PortfolioCalculator from './portfolio-calculator.js';
 import IMask from '../node_modules/imask/esm/index.js';
-// import Modal from "./modal.js";
 import { casesSlider } from './cases-slider.js';
-// import { sizes } from "./sizes.js";
+// import Modal from "./modal.js";
 
 try {
-  // const headerFixed = new HeaderFixed({
-  //   HEADER: "header",
-  //   HEADER_FIXED: "header--fixed",
-  // });
-
-  new BurgerMenu(
-    {
-      BURGER: 'burger',
-      BURGER_OPEN: 'burger--open',
-      HEADER_MENU: 'header__menu',
-      HEADER_MENU_OPEN: 'header__menu--open',
-      lABEL: {
-        OPEN: 'Открыть меню',
-        CLOSE: 'Закрыть меню',
-      },
-      PAGE_BODY: 'page__body',
-      PAGE_BODY_NO_SCROLL: 'page__body--no-scroll',
-      MENU_LINK: 'menu__link',
-      BREAKPOINT: 1120,
-      MAIN: 'main',
+  new BurgerMenu({
+    BURGER: 'burger',
+    BURGER_OPEN: 'burger--open',
+    HEADER_MENU: 'header__menu',
+    HEADER_MENU_OPEN: 'header__menu--open',
+    lABEL: {
+      OPEN: 'Открыть меню',
+      CLOSE: 'Закрыть меню',
     },
-    // headerFixed,
-  );
+    PAGE_BODY: 'page__body',
+    PAGE_BODY_NO_SCROLL: 'page__body--no-scroll',
+    MENU_LINK: 'menu__link',
+    BREAKPOINT: 1120,
+    MAIN: 'main',
+  });
 
   new CountdownTimer({
     DAY: 'timer__day',
@@ -65,7 +55,6 @@ try {
   // })
 
   casesSlider();
-  // sizes();
 
   // Маска для инпута телефона
   var phoneInput = document.getElementById('bid-phone-input');
