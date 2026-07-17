@@ -8,32 +8,16 @@
 
 .footer__blur {
     position: absolute;
-
+    top: -2%;
     bottom: 0;
     left: 0;
     z-index: var(--layer-negative-1);
+    border-radius: 100%;
+    background: linear-gradient(180deg, #98c269 0%, #9edfb6 100%);
+    -webkit-filter: blur(500px);
+    filter: blur(500px);
     width: 100%;
-}
-
-@media (width >1920px) and (width <=3000px) {
-    .footer__blur {
-        /* 1920px - 3000px */
-        top: calc(clamp(43.25rem, 2.58rem + 33.89vw, 66.125rem) *-1);
-    }
-}
-
-@media (width >1600px) and (width <=1920px) {
-    .footer__blur {
-        /* 1600px - 1920px */
-        top: calc(clamp(33.4375rem, -15.63rem + 49.06vw, 43.25rem) * -1);
-    }
-}
-
-@media (width <=1600px) {
-    .footer__blur {
-        /* 375px - 1600px */
-        top: calc(clamp(6.875rem, -1.26rem + 34.69vw, 33.4375rem) * -1);
-    }
+    height: 100%;
 }
 
 .footer__container {
@@ -71,7 +55,14 @@
     /* 375px - 768px */
     width: clamp(1.6875rem, 0.97rem + 3.05vw, 2.4375rem);
     height: clamp(1.875rem, 0.68rem + 5.09vw, 3.125rem);
-    color: #4D4D4D
+    color: #4D4D4D;
+    transition: color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+    .footer__social-link-icon:hover {
+        color: #6e6b6b;
+    }
 }
 
 .footer__policy-link {
@@ -83,6 +74,13 @@
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
     color: var(--color-main);
+
+}
+
+@media (any-hover: hover) {
+    .footer__policy-link:hover {
+        text-decoration: none;
+    }
 }
 
 .footer__contacts-group {
@@ -112,6 +110,13 @@
     color: var(--color-main);
     /* 375px - 1240px */
     margin-bottom: clamp(1.4375rem, 1.03rem + 1.73vw, 2.375rem);
+    transition: color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+    .footer__contacts-phone:hover {
+        color: var(--color-secondary)
+    }
 }
 
 .footer__button-call {
@@ -120,4 +125,7 @@
     height: clamp(2.4375rem, 1.22rem + 5.19vw, 4.4375rem);
 }
 
-.footer__button-call-link {}
+.footer__button-call-link {
+    /* 375px - 1920px */
+    font-size: clamp(0.6875rem, 0.52rem + 0.71vw, 1.375rem);
+}

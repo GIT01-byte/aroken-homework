@@ -172,5 +172,5 @@
 
 .header__button-create-acc-link {
     /* 375px - 1920px */
-    font-size: clamp(0.625rem, 0.50rem + 0.52vw, 1.125rem);
+    font-size: clamp(0.4375rem, 0.27rem + 0.71vw, 1.125rem);
 }
