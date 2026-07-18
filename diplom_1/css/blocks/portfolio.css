@@ -19,15 +19,9 @@
     gap: clamp(2.5rem, 0.38rem + 9.06vw, 11.25rem);
 }
 
-@media (width >1370px) {
-    .portfolio__content-wrapper {
-        flex-direction: row-reverse;
-    }
-}
-
 @media (width <=1370px) {
     .portfolio__content-wrapper {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 }
 

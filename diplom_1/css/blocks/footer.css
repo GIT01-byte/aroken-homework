@@ -6,7 +6,8 @@
     background-color: #202020;
 }
 
-.footer__blur {
+.footer::before {
+    content: "";
     position: absolute;
     top: -2%;
     bottom: 0;
@@ -44,7 +45,7 @@
     height: clamp(1.5625rem, 0.99rem + 2.43vw, 2.875rem);
 }
 
-.footer__socials-group {
+.footer__socials-list {
     display: flex;
     gap: 9px;
     /* 375px - 1240px */

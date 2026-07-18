@@ -62,19 +62,19 @@
                 id="header__menu"
                 aria-label="Основная навигация"
             >
-                <div
-                    class="header__lang-switcher lang-switcher"
-                    aria-label="Выбор языка"
-                >
+                <div class="header__lang-switcher lang-switcher">
                     <details class="lang-switcher__control">
-                        <summary class="lang-switcher__current-lang">
+                        <summary
+                            class="lang-switcher__current-lang"
+                            aria-label="Выбор языка"
+                        >
                             <svg class="lang__svg">
                                 <use
                                     class="lang__ru-icon"
                                     href="./icons/header-sprite.svg#ru-icon"
                                 ></use>
                             </svg>
-                            <p class="lang-switcher__current-lang-text text-md">RU</p>
+                            <span class="lang-switcher__current-lang-text text-md">RU</span>
                             <svg
                                 class="lang-switcher__current-lang-icon"
                                 width="13"
@@ -143,94 +143,85 @@
                     ></use>
                 </svg>
             </button>
-            <div class="header__controls">
-                <div class="header__actions">
-                    <div class="header__button-login button button--bordered">
-                        <a
-                            href="#"
-                            class="header__button-login-link button__link"
-                            aria-label="Войти"
-                        >Войти</a>
-                    </div>
-                    <div class="header__button-create-acc button button--gradient">
-                        <a
-                            href="#"
-                            class="header__button-create-acc-link button__link text-lg-black"
-                            aria-label="Открыть счет"
-                        >Открыть счёт</a>
-                    </div>
-                </div>
+            <div class="header__actions">
+                <a
+                    href="#"
+                    class="header__button-login button button--bordered header__button-login-link button__link"
+                    aria-label="Войти"
+                >Войти</a>
+                <button
+                    class="header__button-create-acc button button--gradient header__button-create-acc-link button__link text-lg-black"
+                    aria-label="Открыть счет"
+                >Открыть счёт</button>
             </div>
         </div>
     </header>
     <main class="main">
-        <section class="promo">
-            <div class="container">
-                <div class="promo__container">
-                    <div class="promo__content-wrapper">
-                        <div class="promo__text-wrapper">
-                            <h2 class="promo__title">Станьте миллионером с Leader Classic</h2>
-                            <p class="promo__description">
-                                Откройте счет, инвестируйте в фонды Leader Classic и получите
-                                шанс выиграть один из <span>100 000 000 ₽</span>
-                            </p>
-                        </div>
-                        <picture>
-                            <source
-                                srcset="./images/gift.webp"
-                                type="image/webp"
-                            />
-                            <img
-                                class="promo__gift promo__content-gift"
-                                src="./images/gift.png"
-                                width="50"
-                                height="50"
-                                alt="Иконка подарка"
-                                loading="lazy"
-                            />
-                        </picture>
+        <aside class="promo container">
+            <div class="promo__container">
+                <div class="promo__content-wrapper">
+                    <div class="promo__text-wrapper">
+                        <h2 class="promo__title">Станьте миллионером с Leader Classic</h2>
+                        <p class="promo__description">
+                            Откройте счет, инвестируйте в фонды Leader Classic и получите
+                            шанс выиграть один из <span>100 000 000 ₽</span>
+                        </p>
                     </div>
-                    <div class="promo__timer">
-                        <div class="timer">
-                            <div class="timer__cell">
-                                <span class="timer__cell-number timer__day">00</span>
-                                <span class="timer__cell-text">д</span>
-                                <span class="timer__cell-sep">:</span>
-                            </div>
-                            <div class="timer__cell">
-                                <span class="timer__cell-number timer__hrs">00</span>
-                                <span class="timer__cell-text">ч</span>
-                                <span class="timer__cell-sep">:</span>
-                            </div>
-                            <div class="timer__cell">
-                                <span class="timer__cell-number timer__min">00</span>
-                                <span class="timer__cell-text">м</span>
-                                <span class="timer__cell-sep">:</span>
-                            </div>
-                            <div class="timer__cell">
-                                <span class="timer__cell-number timer__sec">00</span>
-                                <span class="timer__cell-text">с</span>
-                            </div>
+                    <picture>
+                        <source
+                            srcset="./images/gift.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="promo__gift promo__content-gift"
+                            src="./images/gift.png"
+                            width="50"
+                            height="50"
+                            alt="Иконка подарка"
+                            loading="lazy"
+                        />
+                    </picture>
+                </div>
+                <div class="promo__timer">
+                    <div class="timer">
+                        <div class="timer__cell">
+                            <span class="timer__cell-number timer__day">00</span>
+                            <span class="timer__cell-text">д</span>
+                            <span class="timer__cell-sep">:</span>
                         </div>
+                        <div class="timer__cell">
+                            <span class="timer__cell-number timer__hrs">00</span>
+                            <span class="timer__cell-text">ч</span>
+                            <span class="timer__cell-sep">:</span>
+                        </div>
+                        <div class="timer__cell">
+                            <span class="timer__cell-number timer__min">00</span>
+                            <span class="timer__cell-text">м</span>
+                            <span class="timer__cell-sep">:</span>
+                        </div>
+                        <div class="timer__cell">
+                            <span class="timer__cell-number timer__sec">00</span>
+                            <span class="timer__cell-text">с</span>
+                        </div>
+                    </div>
 
-                        <picture>
-                            <source
-                                srcset="./images/gift.webp"
-                                type="image/webp"
-                            />
-                            <img
-                                class="promo__gift promo__timer-gift"
-                                src="./images/gift.png"
-                                width="50"
-                                height="50"
-                                alt="Иконка подарка"
-                                loading="lazy"
-                            />
-                        </picture>
-                    </div>
+                    <picture>
+                        <source
+                            srcset="./images/gift.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="promo__gift promo__timer-gift"
+                            src="./images/gift.png"
+                            width="50"
+                            height="50"
+                            alt="Иконка подарка"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
             </div>
-        </section>
+        </aside>
         <section class="hero">
             <div class="container hero__container">
                 <h1 class="hero__title">
@@ -251,41 +242,34 @@
                         </li>
                     </ul>
                 </div>
-                <div class="hero__controls">
-                    <div class="hero__actions">
-                        <div class="hero__button-download button button--gradient">
-                            <a
-                                href="#"
-                                class="hero__button-download-link button__link text-lg-black"
-                                aria-label="Скачать ТОП-5 акций"
-                            >
-                                <span class="hero__button-download-link-text">Скачать ТОП-5 акций</span>
-                                <picture>
-                                    <source
-                                        srcset="./images/check-list.webp"
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        class="hero__button-download-img"
-                                        src="./images/check-list.png"
-                                        width="123"
-                                        height="118"
-                                        alt="Чек лист эффективности"
-                                        loading="lazy"
-                                    />
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="hero__button-create-acc button button--bordered">
-                            <a
-                                href="#"
-                                class="hero__button-create-acc-link button__link"
-                                aria-label="Открыть счёт"
-                            >
-                                Открыть счёт
-                            </a>
-                        </div>
-                    </div>
+                <div class="hero__actions">
+                    <a
+                        href="#"
+                        class="hero__button-download button button--gradient hero__button-download-link button__link text-lg-black"
+                        aria-label="Скачать ТОП-5 акций"
+                    >
+                        Скачать ТОП-5 акций
+                        <picture>
+                            <source
+                                srcset="./images/check-list.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                class="hero__button-download-img"
+                                src="./images/check-list.png"
+                                width="123"
+                                height="118"
+                                alt="Чек лист эффективности"
+                                loading="lazy"
+                            />
+                        </picture>
+                    </a>
+                    <button
+                        class="hero__button-create-acc button button--bordered hero__button-create-acc-link button__link"
+                        aria-label="Открыть счёт"
+                    >
+                        Открыть счёт
+                    </button>
                 </div>
                 <div class="hero__investor-stats">
                     <div class="hero__investor-stats-user-avatars">
@@ -355,10 +339,10 @@
                     <h2 class="cases__title title-large">
                         Ваши деньги способны на большее
                     </h2>
-                    <h3 class="cases__description text-desc">
+                    <p class="cases__description text-desc">
                         Сколько бы вы заработали, инвестируй
                         <strong class="text--bold">100 000 ₽</strong> год назад?
-                    </h3>
+                    </p>
                 </div>
                 <div class="nav__wrapper">
                     <button
@@ -391,9 +375,7 @@
                                     </picture>
                                 </div>
                                 <p class="company__percent">+83.97%</p>
-                                <div class="company__value">
-                                    <p class="company__value-text">+72.000₽</p>
-                                </div>
+                                <p class="company__value company__value-text">+72.000₽</p>
                             </div>
                         </div>
                         <div class="swiper-slide cases__companies-slide">
@@ -415,9 +397,7 @@
                                     </picture>
                                 </div>
                                 <p class="company__percent">+4.11%</p>
-                                <div class="company__value">
-                                    <p class="company__value-text">+72.000₽</p>
-                                </div>
+                                <p class="company__value company__value-text">+72.000₽</p>
                             </div>
                         </div>
                         <div class="swiper-slide cases__companies-slide">
@@ -439,9 +419,7 @@
                                     </picture>
                                 </div>
                                 <p class="company__percent">+26.36%</p>
-                                <div class="company__value">
-                                    <p class="company__value-text">+72.000₽</p>
-                                </div>
+                                <p class="company__value company__value-text">+72.000₽</p>
                             </div>
                         </div>
                         <div class="swiper-slide cases__companies-slide">
@@ -463,9 +441,7 @@
                                     </picture>
                                 </div>
                                 <p class="company__percent">+17.19%</p>
-                                <div class="company__value">
-                                    <p class="company__value-text">+72.000₽</p>
-                                </div>
+                                <p class="company__value company__value-text">+72.000₽</p>
                             </div>
                         </div>
                         <div class="swiper-slide cases__companies-slide">
@@ -487,9 +463,7 @@
                                     </picture>
                                 </div>
                                 <p class="company__percent">+31.32%</p>
-                                <div class="company__value">
-                                    <p class="company__value-text">+72.000₽</p>
-                                </div>
+                                <p class="company__value company__value-text">+72.000₽</p>
                             </div>
                         </div>
                         <div class="swiper-slide cases__companies-slide">
@@ -505,33 +479,30 @@
                                     >
                                 </div>
                                 <p class="company__percent">+38.99%</p>
-                                <div class="company__value">
-                                    <p class="company__value-text">+72.000₽</p>
-                                </div>
+                                <p class="company__value company__value-text">+72.000₽</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="cases__catalogue-wrapper">
-                    <div class="cases__catalogue-text text-desc">
-                        И еще более 10 000 других ценных бумаг доступно <strong class="text--bold">в каталоге</strong>
-                    </div>
-                    <div class="cases__catalogue-button button button--gradient">
-                        <a
-                            class="cases__catalogue-button-link button__link text-lg-black"
-                            href="#"
-                        >
-                            Получить
-                            каталог
-                        </a>
-                    </div>
+                    <p class="cases__catalogue-text text-desc">
+                        И еще более 10 000 других ценных бумаг доступно <strong class="text--bold">в
+                            каталоге</strong>
+                    </p>
+                    <a
+                        class="cases__catalogue-button button button--gradient cases__catalogue-button-link button__link text-lg-black"
+                        href="#"
+                    >
+                        Получить
+                        каталог
+                    </a>
                 </div>
             </div>
         </section>
         <section class="tools">
             <div class="container tools__container">
                 <h2 class="tools__title title-large">Большой выбор инструментов</h2>
-                <div class="tools__list">
+                <ul class="tools__list">
                     <article class="tools__card">
                         <svg
                             class="tools__card-icon"
@@ -605,7 +576,8 @@
                             Акции
                         </h3>
                         <p class="tools__card-description">
-                            Сотни публичных компаний из США, Великобритании, Франции и Германии доступны для торговли.
+                            Сотни публичных компаний из США, Великобритании, Франции и Германии доступны для
+                            торговли.
                         </p>
                     </article>
                     <article class="tools__card">
@@ -624,7 +596,7 @@
                             фьючерсных CFD на природный газ.
                         </p>
                     </article>
-                    <a
+                    <button
                         class="tools__support-link"
                         href="#"
                         aria-label="Служба поддержки"
@@ -638,7 +610,7 @@
                         >
                             <use href="./icons/other-sprite.svg#support-icon"></use>
                         </svg>
-                    </a>
+                    </button>
                     <a
                         class="tools__arrow-top-link"
                         href="#"
@@ -654,7 +626,7 @@
                             <use href="./icons/other-sprite.svg#arrow-top"></use>
                         </svg>
                     </a>
-                </div>
+                </ul>
             </div>
         </section>
         <section class="guide">
@@ -662,67 +634,69 @@
                 <h2 class="guide__title title-large">
                     Инвестиции доступные каждому
                 </h2>
-                <h3 class="guide__description text-desc">
+                <p class="guide__description text-desc">
                     Простой сервис с подсказками и поддержкой 24/7 на каждом этапе
-                </h3>
+                </p>
                 <ul class="guide__checklist">
                     <li class="step__wrapper">
                         <div class="step">
-                            <div class="step__background-number">
+                            <span class="step__background-number">
                                 1
-                            </div>
-                            <div class="step__number">
+                            </span>
+                            <p class="step__number">
                                 шаг 1
-                            </div>
-                            <div class="step__title">
+                            </p>
+                            <h3 class="step__title">
                                 Заполнить регистрационную анкету
-                            </div>
+                            </h3>
                         </div>
-                        <div class="step__after-description text-desc-sm">
+                        <p class="step__after-description text-desc-sm">
                             Нужно указать основные данные о себе: имя, номер телефона, e-mail и пароль для входа.
-                        </div>
+                        </p>
                     </li>
                     <li class="step__wrapper">
                         <div class="step">
-                            <div class="step__background-number">
+                            <span class="step__background-number">
                                 2
-                            </div>
-                            <div class="step__number">
+                            </span>
+                            <p class="step__number">
                                 шаг 2
-                            </div>
-                            <div class="step__title">
+                            </p>
+                            <h3 class="step__title">
                                 Внести деньги на счет
-                            </div>
+                            </h3>
                         </div>
-                        <div class="step__after-description text-desc-sm">
-                            Вы можете использовать несколько платежных систем для пополнения депозита, включая систему
+                        <p class="step__after-description text-desc-sm">
+                            Вы можете использовать несколько платежных систем для пополнения депозита, включая
+                            систему
                             MidexPay и кошелек Bitcoin.
-                        </div>
+                        </p>
                     </li>
                     <li class="step__wrapper">
                         <div class="step">
-                            <div class="step__background-number">
+                            <span class="step__background-number">
                                 3
-                            </div>
-                            <div class="step__number">
+                            </span>
+                            <p class="step__number">
                                 шаг 3
-                            </div>
-                            <div class="step__title">
+                            </p>
+                            <h3 class="step__title">
                                 Приступить
                                 к онлайн-трейдингу
-                            </div>
+                            </h3>
                         </div>
-                        <div class="step__after-description text-desc-sm">
-                            Сразу после пополнения депозита торговля через веб-терминал или мобильную платформу будет
+                        <p class="step__after-description text-desc-sm">
+                            Сразу после пополнения депозита торговля через веб-терминал или мобильную платформу
+                            будет
                             доступна.
-                        </div>
+                        </p>
                     </li>
                 </ul>
             </div>
         </section>
         <section class="bonus">
             <div class="container bonus__container">
-                <div class="bonus__background-image-left-position-wrapper">
+                <div class="bonus__background-image-left-wrapper">
                     <picture class="bonus__background-picture">
                         <source
                             srcset="./images/gifts-background-1.webp"
@@ -737,36 +711,28 @@
                             loading="lazy"
                         >
                     </picture>
-                    <div class="bonus__background-image-blur bonus__background-image-blur-left"></div>
                 </div>
                 <h2 class="bonus__title title-large">
                     Каждый достоин второго шанса
                 </h2>
-                <h3 class="bonus__description text-desc">
+                <p class="bonus__description text-desc">
                     Купите свои первые акции без риска, мы вернем
                     вам 100$ на счет в случае проигрыша
-                </h3>
-                <div class="bonus__controls">
-                    <div class="bonus__actions">
-                        <div class="bonus__button-get-bonus button button--gradient">
-                            <a
-                                href="#"
-                                class="bonus__button-get-bonus-link button__link text-lg-black"
-                            >
-                                Получить бонус
-                            </a>
-                        </div>
-                        <div class="bonus__button-create-demo button button--bordered">
-                            <a
-                                href="#"
-                                class="bonus__button-create-demo-link button__link"
-                            >
-                                Открыть демо-счёт
-                            </a>
-                        </div>
-                    </div>
+                </p>
+                <div class="bonus__actions">
+                    <a
+                        href="#"
+                        class="bonus__button-get-bonus button button--gradient bonus__button-get-bonus-link button__link text-lg-black"
+                    >
+                        Получить бонус
+                    </a>
+                    <button
+                        class="bonus__button-create-demo button button--bordered bonus__button-create-demo-link button__link"
+                    >
+                        Открыть демо-счёт
+                    </button>
                 </div>
-                <div class="bonus__background-image-right-position-wrapper">
+                <div class="bonus__background-image-right-wrapper">
                     <picture class="bonus__background-picture">
                         <source
                             srcset="./images/gifts-background-2.webp"
@@ -781,13 +747,14 @@
                             loading="lazy"
                         >
                     </picture>
-                    <div class="bonus__background-image-blur bonus__background-image-blur-right"></div>
                 </div>
             </div>
         </section>
         <section class="features">
             <div class="container features__container">
-                <h2 class="features__title title-large">100 000+ клиентов уже инвестируют с нами</h2>
+                <h2 class="features__title title-large">
+                    100 000+ клиентов уже инвестируют с нами
+                </h2>
                 <div class="features__list">
                     <article class="features__card">
                         <svg
@@ -885,7 +852,8 @@
                             <use href="icons/features-sprite.svg#6"></use>
                         </svg>
                         <h3 class="card__title">Счета в евро, рублях, долларах США</h3>
-                        <p class="card__desc text-desc-sm">Пополните свой счет и сэкономьте на сборах за конвертацию</p>
+                        <p class="card__desc text-desc-sm">Пополните свой счет и сэкономьте на сборах за конвертацию
+                        </p>
                         <div class="card__link-wrapper">
                             <a
                                 href="#"
@@ -933,23 +901,6 @@
         <section class="portfolio">
             <div class="container portfolio__container">
                 <div class="portfolio__content-wrapper">
-                    <div class="portfolio__content">
-                        <h2 class="portfolio__title">
-                            Подберите индивидуальный инвестиционный портфель
-                        </h2>
-                        <h3 class="portfolio__description text-desc">
-                            Покупайте российские и иностранные акции, облигации, валюту и другие продукты в простом и
-                            удобном мобильном приложении для iOS и Android
-                        </h3>
-                        <button class="portfolio__button-get-portfolio button button--gradient">
-                            <a
-                                href="#"
-                                class="portfolio__button-get-portfolio-link button__link text-lg-black"
-                            >
-                                Получить портфель
-                            </a>
-                        </button>
-                    </div>
                     <div class="portfolio__calculator">
                         <div class="calculator__container">
                             <div class="calculator__indicator">
@@ -1067,23 +1018,20 @@
                                         href="#arc-path"
                                     />
                                 </svg>
-
                                 <div class="calculator__content-wrapper">
                                     <p class="calculator__indicator-label">Доходность</p>
-                                    <div class="calculator__indicator-result">
+                                    <p class="calculator__indicator-result">
                                         <span class="calculator__indicator-result calculator__indicator-result-text">
                                             До
                                         </span>
                                         <span class="calculator__indicator-result calculator__indicator-result-value">
                                             5%
                                         </span>
-                                    </div>
-                                    <div class="calculator__indicator-badge-wrapper">
-                                        <p class="calculator__indicator-badge">
-                                            Низкий риск
-                                        </p>
-                                    </div>
-                                    <div class="calculator__range-group">
+                                    </p>
+                                    <p class="calculator__indicator-badge-wrapper calculator__indicator-badge">
+                                        Низкий риск
+                                    </p>
+                                    <form class="calculator__range-group">
                                         <label class="calculator__range-wrapper">
                                             <span class="visually-hidden">Выберите значение доходности</span>
                                             <input
@@ -1095,7 +1043,7 @@
                                                 value="25"
                                             >
                                         </label>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="calculator__radio-group">
@@ -1110,7 +1058,6 @@
                                         Управляю деньгами сам
                                     </span>
                                 </label>
-
                                 <label class="calculator__radio-wrapper">
                                     <input
                                         class="calculator__radio-checkbox"
@@ -1123,6 +1070,22 @@
                                 </label>
                             </div>
                         </div>
+                    </div>
+                    <div class="portfolio__content">
+                        <h2 class="portfolio__title">
+                            Подберите индивидуальный инвестиционный портфель
+                        </h2>
+                        <p class="portfolio__description text-desc">
+                            Покупайте российские и иностранные акции, облигации, валюту и другие продукты в простом
+                            и
+                            удобном мобильном приложении для iOS и Android
+                        </p>
+                        <a
+                            href="#"
+                            class="portfolio__button-get-portfolio button button--gradient portfolio__button-get-portfolio-link button__link text-lg-black"
+                        >
+                            Получить портфель
+                        </a>
                     </div>
                 </div>
                 <div class="portfolio__features">
@@ -1196,7 +1159,7 @@
                         </p>
                         <div class="mobile__card-btns-wrapper">
                             <a
-                                class="mobile__card-btn--ios mobile__card-btn"
+                                class="mobile__card-btn--ios mobile__card-btn mobile__card-btn-text"
                                 href="#"
                             >
                                 <svg
@@ -1206,12 +1169,10 @@
                                 >
                                     <use href="./icons/mobile-sprite.svg#1"></use>
                                 </svg>
-                                <p class="mobile__card-btn-text">
-                                    Скачать для IOS
-                                </p>
+                                Скачать для IOS
                             </a>
                             <a
-                                class="mobile__card-btn--android mobile__card-btn"
+                                class="mobile__card-btn--android mobile__card-btn mobile__card-btn-text"
                                 href="#"
                             >
                                 <svg
@@ -1221,9 +1182,7 @@
                                 >
                                     <use href="./icons/mobile-sprite.svg#2"></use>
                                 </svg>
-                                <p class="mobile__card-btn-text">
-                                    Скачать для Android
-                                </p>
+                                Скачать для Android
                             </a>
                         </div>
                     </div>
@@ -1249,34 +1208,32 @@
         <section class="faq">
             <div class="container">
                 <div class="faq__container">
-                    <div class="faq__content-wrapper">
-                        <div class="faq__content-text-wrapper">
-                            <h2 class="faq__content-text-title title-large">
+                    <div class="faq_left">
+                        <div class="faq__text-wrapper">
+                            <h2 class="faq__title title-large">
                                 Мне только спросить
                             </h2>
-                            <p class="faq__content-text-description text-desc-sm">
+                            <p class="faq__description text-desc-sm">
                                 Собрали в подсказках ответы на популярные вопросы
                                 об инвестициях и сервисе
                             </p>
                         </div>
-                        <div class="faq__content-button-get-cons button button--gradient">
-                            <a
-                                href="#"
-                                class="faq__content-button-get-cons-link button__link text-lg-black"
-                                aria-label="Получить консультацию"
-                            >
-                                <span class="faq__content-button-get-cons-link-text">Получить консультацию</span>
-                            </a>
-                        </div>
+                        <a
+                            href="#"
+                            class="faq__content-button-get-cons button button--gradient faq__content-button-get-cons-link button__link text-lg-black"
+                            aria-label="Получить консультацию"
+                        >
+                            Получить консультацию
+                        </a>
                     </div>
                     <div class="faq__info">
                         <details
                             name="faq"
                             class="faq__info-details"
                         >
-                            <summary class="faq__info-summary">
-                                <p class="faq__info-summary-text">
-                                    <span class="faq__info-summary-text-icon">?</span>
+                            <summary class="faq__info-question">
+                                <p class="faq__info-question-text">
+                                    <span class="faq__info-question-text-icon">?</span>
                                     Есть ли плата за обслуживание?
                                 </p>
                                 <div class="faq__info-marker">
@@ -1289,8 +1246,9 @@
                                     </svg>
                                 </div>
                             </summary>
-                            <p class="faq__info-text text-desc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad quo
+                            <p class="faq__info-answer-text text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad
+                                quo
                                 quis
                                 sunt explicabo sequi magni dignissimos saepe nulla enim sit dolorum, perferendis
                                 inventore
@@ -1301,9 +1259,9 @@
                             name="faq"
                             class="faq__info-details"
                         >
-                            <summary class="faq__info-summary">
-                                <p class="faq__info-summary-text">
-                                    <span class="faq__info-summary-text-icon">?</span>
+                            <summary class="faq__info-question">
+                                <p class="faq__info-question-text">
+                                    <span class="faq__info-question-text-icon">?</span>
                                     Как вывести деньги со счёта?
                                 </p>
                                 <div class="faq__info-marker">
@@ -1316,8 +1274,9 @@
                                     </svg>
                                 </div>
                             </summary>
-                            <p class="faq__info-text text-desc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad quo
+                            <p class="faq__info-answer-text text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad
+                                quo
                                 quis
                                 sunt explicabo sequi magni dignissimos saepe nulla enim sit dolorum, perferendis
                                 inventore
@@ -1329,9 +1288,9 @@
                             class="faq__info-details"
                             open
                         >
-                            <summary class="faq__info-summary">
-                                <p class="faq__info-summary-text">
-                                    <span class="faq__info-summary-text-icon">?</span>
+                            <summary class="faq__info-question">
+                                <p class="faq__info-question-text">
+                                    <span class="faq__info-question-text-icon">?</span>
                                     Какие налоги?
                                 </p>
                                 <div class="faq__info-marker">
@@ -1344,8 +1303,9 @@
                                     </svg>
                                 </div>
                             </summary>
-                            <p class="faq__info-text text-desc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad quo
+                            <p class="faq__info-answer-text text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad
+                                quo
                                 quis
                                 sunt explicabo sequi magni dignissimos saepe nulla enim sit dolorum, perferendis
                                 inventore
@@ -1356,9 +1316,9 @@
                             name="faq"
                             class="faq__info-details"
                         >
-                            <summary class="faq__info-summary">
-                                <p class="faq__info-summary-text">
-                                    <span class="faq__info-summary-text-icon">?</span>
+                            <summary class="faq__info-question">
+                                <p class="faq__info-question-text">
+                                    <span class="faq__info-question-text-icon">?</span>
                                     Где хранятся деньги?
                                 </p>
                                 <div class="faq__info-marker">
@@ -1371,8 +1331,9 @@
                                     </svg>
                                 </div>
                             </summary>
-                            <p class="faq__info-text text-desc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad quo
+                            <p class="faq__info-answer-text text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad
+                                quo
                                 quis
                                 sunt explicabo sequi magni dignissimos saepe nulla enim sit dolorum, perferendis
                                 inventore
@@ -1383,9 +1344,9 @@
                             name="faq"
                             class="faq__info-details"
                         >
-                            <summary class="faq__info-summary">
-                                <p class="faq__info-summary-text">
-                                    <span class="faq__info-summary-text-icon">?</span>
+                            <summary class="faq__info-question">
+                                <p class="faq__info-question-text">
+                                    <span class="faq__info-question-text-icon">?</span>
                                     Как открыть счёт?
                                 </p>
                                 <div class="faq__info-marker">
@@ -1398,8 +1359,9 @@
                                     </svg>
                                 </div>
                             </summary>
-                            <p class="faq__info-text text-desc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad quo
+                            <p class="faq__info-answer-text text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad
+                                quo
                                 quis
                                 sunt explicabo sequi magni dignissimos saepe nulla enim sit dolorum, perferendis
                                 inventore
@@ -1410,9 +1372,9 @@
                             name="faq"
                             class="faq__info-details"
                         >
-                            <summary class="faq__info-summary">
-                                <p class="faq__info-summary-text">
-                                    <span class="faq__info-summary-text-icon">?</span>
+                            <summary class="faq__info-question">
+                                <p class="faq__info-question-text">
+                                    <span class="faq__info-question-text-icon">?</span>
                                     Как пополнить счёт?
                                 </p>
                                 <div class="faq__info-marker">
@@ -1425,8 +1387,9 @@
                                     </svg>
                                 </div>
                             </summary>
-                            <p class="faq__info-text text-desc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad quo
+                            <p class="faq__info-answer-text text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad
+                                quo
                                 quis
                                 sunt explicabo sequi magni dignissimos saepe nulla enim sit dolorum, perferendis
                                 inventore
@@ -1437,9 +1400,9 @@
                             name="faq"
                             class="faq__info-details"
                         >
-                            <summary class="faq__info-summary">
-                                <p class="faq__info-summary-text">
-                                    <span class="faq__info-summary-text-icon">?</span>
+                            <summary class="faq__info-question">
+                                <p class="faq__info-question-text">
+                                    <span class="faq__info-question-text-icon">?</span>
                                     Что купить?
                                 </p>
                                 <div class="faq__info-marker">
@@ -1452,8 +1415,9 @@
                                     </svg>
                                 </div>
                             </summary>
-                            <p class="faq__info-text text-desc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad quo
+                            <p class="faq__info-answer-text text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad
+                                quo
                                 quis
                                 sunt explicabo sequi magni dignissimos saepe nulla enim sit dolorum, perferendis
                                 inventore
@@ -1481,12 +1445,12 @@
                                 <use href="./icons/other-sprite.svg#copy-tool"></use>
                             </svg>
                         </div>
-                        <div class="bid__card-title">
+                        <h3 class="bid__card-title">
                             Заполните заявку онлайн
-                        </div>
-                        <div class="bid__card-description text-desc-sm">
+                        </h3>
+                        <p class="bid__card-description text-desc-sm">
                             Необходимо: имя, номер телефона, e-mail и пароль для входа.
-                        </div>
+                        </p>
                     </article>
                     <article class="bid__card">
                         <div class="bid__card-icon-wrapper bid__card-icon-wrapper--green">
@@ -1499,13 +1463,14 @@
                                 <use href="./icons/features-sprite.svg#2"></use>
                             </svg>
                         </div>
-                        <div class="bid__card-title">
+                        <h3 class="bid__card-title">
                             Откроем счет за 5 минут
-                        </div>
-                        <div class="bid__card-description text-desc-sm">
-                            Вы можете использовать несколько платежных систем для пополнения депозита, включая систему
+                        </h3>
+                        <p class="bid__card-description text-desc-sm">
+                            Вы можете использовать несколько платежных систем для пополнения депозита, включая
+                            систему
                             MidexPay и кошелек Bitcoin.
-                        </div>
+                        </p>
                     </article>
                     <article class="bid__card">
                         <div class="bid__card-icon-wrapper bid__card-icon-wrapper--green">
@@ -1518,16 +1483,17 @@
                                 <use href="./icons/features-sprite.svg#6"></use>
                             </svg>
                         </div>
-                        <div class="bid__card-title">
+                        <h3 class="bid__card-title">
                             Пополните счёт и начните инвестировать
-                        </div>
-                        <div class="bid__card-description text-desc-sm">
+                        </h3>
+                        <p class="bid__card-description text-desc-sm">
                             Сразу после пополнения депозита будет доступна торговля через веб-терминал или мобильную
                             платформу.
-                        </div>
+                        </p>
                     </article>
                 </div>
                 <form class="bid__form">
+                    <legend class="visually-hidden">Личные данные пользователя</legend>
                     <fieldset class="bid__fieldset-group">
                         <label class="bid__label bid__label-name">
                             <input
@@ -1536,6 +1502,7 @@
                                 type="text"
                                 name="name"
                                 placeholder="Ваше имя:"
+                                required
                             >
                         </label>
                         <label class="bid__label bid__label-phone">
@@ -1545,6 +1512,7 @@
                                 type="tel"
                                 name="phone"
                                 placeholder="+7 --- --- -- --"
+                                required
                             >
                         </label>
                         <label class="bid__label bid__label-email">
@@ -1567,7 +1535,6 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__blur"></div>
         <div class="container footer__container">
             <div class="footer__brand-group">
                 <a
@@ -1589,68 +1556,76 @@
                         class="footer__logo-text-icon"
                     />
                 </a>
-                <div class="footer__socials-group">
-                    <a
-                        class="footer__social-link"
-                        href="#"
-                        aria-label="Ссылка на Facebook Leader Classik"
-                    >
-                        <svg
-                            class="footer__social-link-icon"
-                            width="39"
-                            height="50"
-                            aria-hidden="true"
-                            focusable="false"
+                <ul class="footer__socials-list">
+                    <li class="footer__social-item">
+                        <a
+                            class="footer__social-link"
+                            href="#"
+                            aria-label="Ссылка на Facebook Leader Classik"
                         >
-                            <use href="./icons/footer-sprite.svg#1"></use>
-                        </svg>
-                    </a>
-                    <a
-                        class="footer__social-link"
-                        href="#"
-                        aria-label="Ссылка на VK Leader Classik"
-                    >
-                        <svg
-                            class="footer__social-link-icon"
-                            width="39"
-                            height="50"
-                            aria-hidden="true"
-                            focusable="false"
+                            <svg
+                                class="footer__social-link-icon"
+                                width="39"
+                                height="50"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use href="./icons/footer-sprite.svg#1"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a
+                            class="footer__social-link"
+                            href="#"
+                            aria-label="Ссылка на VK Leader Classik"
                         >
-                            <use href="./icons/footer-sprite.svg#2"></use>
-                        </svg>
-                    </a>
-                    <a
-                        class="footer__social-link"
-                        href="#"
-                        aria-label="Ссылка на Instagramm Leader Classik"
-                    >
-                        <svg
-                            class="footer__social-link-icon"
-                            width="39"
-                            height="50"
-                            aria-hidden="true"
-                            focusable="false"
+                            <svg
+                                class="footer__social-link-icon"
+                                width="39"
+                                height="50"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use href="./icons/footer-sprite.svg#2"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a
+                            class="footer__social-link"
+                            href="#"
+                            aria-label="Ссылка на Instagramm Leader Classik"
                         >
-                            <use href="./icons/footer-sprite.svg#3"></use>
-                        </svg>
-                    </a>
-                    <a
-                        class="footer__social-link"
-                        href="#"
-                        aria-label="Ссылка на Youtube Leader Classik"
-                    >
-                        <svg
-                            class="footer__social-link-icon"
-                            width="39"
-                            height="50"
-                            aria-hidden="true"
-                            focusable="false"
+                            <svg
+                                class="footer__social-link-icon"
+                                width="39"
+                                height="50"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use href="./icons/footer-sprite.svg#3"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a
+                            class="footer__social-link"
+                            href="#"
+                            aria-label="Ссылка на Youtube Leader Classik"
                         >
-                            <use href="./icons/footer-sprite.svg#4"></use>
-                        </svg>
-                    </a>
-                </div>
+                            <svg
+                                class="footer__social-link-icon"
+                                width="39"
+                                height="50"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use href="./icons/footer-sprite.svg#4"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
                 <a
                     class="footer__policy-link"
                     href="#"
@@ -1659,22 +1634,19 @@
                 </a>
             </div>
             <div class="footer__contacts-group">
-                <p class="footer__contacts-label">
+                <h4 class="footer__contacts-label">
                     Звонок по России бесплатный
-                </p>
+                </h4>
                 <a
                     class="footer__contacts-phone"
-                    href="tel:84952121671"
+                    href="tel:+74952121671"
                 >
                     8 (495) 212-16-71
                 </a>
-                <div class="footer__button-call button button--gradient">
-                    <a
-                        href="#"
-                        class="footer__button-call-link button__link text-lg-black"
-                        aria-label="Перезвоните мне"
-                    >Перезвоните мне</a>
-                </div>
+                <button
+                    class="footer__button-call button button--gradient footer__button-call-link button__link text-lg-black"
+                    aria-label="Перезвоните мне"
+                >Перезвоните мне</button>
             </div>
         </div>
     </footer>

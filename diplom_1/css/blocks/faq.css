@@ -21,7 +21,7 @@
     }
 }
 
-.faq__content-wrapper {
+.faq_left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,12 +30,12 @@
 }
 
 @media (width <=1330px) {
-    .faq__content-wrapper {
+    .faq_left {
         align-items: center;
     }
 }
 
-.faq__content-text-wrapper {
+.faq__text-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,36 +43,36 @@
 }
 
 @media (width <=1330px) {
-    .faq__content-text-wrapper {
+    .faq__text-wrapper {
         align-items: center;
     }
 }
 
 @media (width >1330px) {
-    .faq__content-text-title {
+    .faq__title {
         text-align: left;
     }
 }
 
 @media (width <=1330px) {
-    .faq__content-text-title {
+    .faq__title {
         text-align: center;
     }
 }
 
-.faq__content-text-description {
+.faq__description {
     font-weight: 300;
     max-width: 70%;
 }
 
 @media (width >1330px) {
-    .faq__content-text-description {
+    .faq__description {
         text-align: left;
     }
 }
 
 @media (width <=1330px) {
-    .faq__content-text-description {
+    .faq__description {
         text-align: center;
         margin-bottom: 20px;
     }
@@ -91,7 +91,7 @@
     display: block;
 }
 
-.faq__info-summary {
+.faq__info-question {
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -99,7 +99,7 @@
 }
 
 @media (width <=1330px) {
-    .faq__info-summary {
+    .faq__info-question {
         /* 1330px - 1920px */
         gap: clamp(0rem, -27.05rem + 32.54vw, 12rem);
     }
@@ -122,7 +122,7 @@
 }
 
 @media (any-hover: hover) {
-    .faq__info-summary:hover .faq__info-marker {
+    .faq__info-question:hover .faq__info-marker {
         border-color: var(--color-gray);
     }
 }
@@ -136,16 +136,16 @@
 }
 
 @media (any-hover: hover) {
-    .faq__info-summary:hover .faq__info-marker-icon {
+    .faq__info-question:hover .faq__info-marker-icon {
         color: var(--color-gray);
     }
 }
 
-.faq__info-summary::webkit-details-marker {
+.faq__info-question::webkit-details-marker {
     display: none;
 }
 
-.faq__info-summary-text-icon {
+.faq__info-question-text-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,7 +164,7 @@
 }
 
 /* Создаем скрытый градиентный слой внутри */
-.faq__info-summary-text-icon::after {
+.faq__info-question-text-icon::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -175,12 +175,12 @@
 }
 
 @media (any-hover: hover) {
-    .faq__info-summary:hover .faq__info-summary-text-icon::after {
+    .faq__info-question:hover .faq__info-question-text-icon::after {
         opacity: 1;
     }
 }
 
-.faq__info-summary-text {
+.faq__info-question-text {
     display: flex;
     /* 1330px - 1920px */
     gap: clamp(1.5625rem, -6.33rem + 9.49vw, 5.0625rem);
@@ -193,7 +193,7 @@
     width: 100%;
 }
 
-.faq__info-text {
+.faq__info-answer-text {
     text-align: left;
     /* 1330px - 1920px */
     padding-top: clamp(0.75rem, 0.60rem + 0.63vw, 1.125rem);

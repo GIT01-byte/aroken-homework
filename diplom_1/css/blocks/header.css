@@ -122,15 +122,12 @@
     }
 }
 
-.header__controls {
-    margin-left: auto;
-}
-
 .header__actions {
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: var(--layer-3);
+    margin-left: auto;
 }
 
 @media (width >768px) {
@@ -154,12 +151,6 @@
 
 .header__button-login-link {
     /* 375px - 1920px */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    font-weight: 400;
     font-size: clamp(0.4375rem, 0.27rem + 0.71vw, 1.125rem);
     color: var(--color-main);
 }

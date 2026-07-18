@@ -12,25 +12,9 @@
     flex-direction: column;
 }
 
-.bonus__background-image-blur {
-    background-image: url("../../icons/blur/hero-blur.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    fill: linear-gradient(180deg, #98c269 0%, #9edfb6 100%);
-    -webkit-filter: blur(500px);
-    filter: blur(500px);
-    width: 413px;
-    height: 418px;
-}
+/* Левая сторона */
 
-@media (width <1380px) {
-    .bonus__background-image-blur {
-        display: none;
-    }
-}
-
-.bonus__background-image-left-position-wrapper {
+.bonus__background-image-left-wrapper {
     position: absolute;
     /* 1380px - 1920px */
     top: 128px;
@@ -38,11 +22,25 @@
     left: 0;
 }
 
-
 @media (width <1380px) {
-    .bonus__background-image-left-position-wrapper {
+    .bonus__background-image-left-wrapper {
         display: none;
     }
+}
+
+.bonus__background-image-left-wrapper::after {
+    content: "";
+    position: absolute;
+    /* 1380px - 1920px */
+    top: clamp(8.625rem, -23.32rem + 37.04vw, 21.125rem);
+    left: -21%;
+    z-index: var(--layer-negative-2);
+    border-radius: 100%;
+    background: linear-gradient(180deg, #98c269 0%, #9edfb6 100%);
+    -webkit-filter: blur(500px);
+    filter: blur(500px);
+    width: 413px;
+    height: 418px;
 }
 
 .bonus__background-image-left {
@@ -52,40 +50,40 @@
     transform: rotate(-7deg);
 }
 
-.bonus__background-image-blur-left {
-    position: absolute;
-    /* 1380px - 1920px */
-    top: clamp(8.625rem, -23.32rem + 37.04vw, 21.125rem);
-    left: -21%;
-    z-index: var(--layer-negative-2);
-}
+/* Правая сторона */
 
-.bonus__background-image-right-position-wrapper {
+.bonus__background-image-right-wrapper {
     position: absolute;
     top: 128px;
     bottom: 0;
     right: 0;
 }
 
-
 @media (width <1380px) {
-    .bonus__background-image-right-position-wrapper {
+    .bonus__background-image-right-wrapper {
         display: none;
     }
+}
+
+.bonus__background-image-right-wrapper::after {
+    content: "";
+    position: absolute;
+    /* 1380px - 1920px */
+    top: clamp(6rem, -42.24rem + 55.93vw, 24.875rem);
+    left: clamp(6.625rem, -25.80rem + 37.59vw, 19.3125rem);
+    z-index: var(--layer-negative-2);
+    border-radius: 100%;
+    background: linear-gradient(180deg, #98c269 0%, #9edfb6 100%);
+    -webkit-filter: blur(500px);
+    filter: blur(500px);
+    width: 413px;
+    height: 418px;
 }
 
 .bonus__background-image-right {
     /* 1380px - 1920px */
     width: clamp(24.3125rem, -10.35rem + 40.19vw, 37.875rem);
     height: clamp(46.875rem, -40.81rem + 101.67vw, 81.1875rem);
-}
-
-.bonus__background-image-blur-right {
-    position: absolute;
-    /* 1380px - 1920px */
-    top: clamp(6rem, -42.24rem + 55.93vw, 24.875rem);
-    left: clamp(6.625rem, -25.80rem + 37.59vw, 19.3125rem);
-    z-index: var(--layer-negative-2);
 }
 
 .bonus__title::before {
