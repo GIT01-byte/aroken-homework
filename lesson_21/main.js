@@ -63,9 +63,9 @@
 // console.log(access);
 
 // 4 задание
-const DELIVERY_TYPE_STANDARD = 'standard';
-const DELIVERY_TYPE_EXPRESS = 'express';
-const DELIVERY_TYPE_PREMIUM = 'premium';
+const DELIVERY_TYPE_STANDARD = 'Стандарт';
+const DELIVERY_TYPE_EXPRESS = 'Экспресс';
+const DELIVERY_TYPE_PREMIUM = 'Премиум';
 
 const weight = +prompt('4) Введите вес посылки', 0);
 const delivery_type = prompt('4) Введите тип доставки');
