@@ -15,8 +15,9 @@ for (let i = 1; i <= number; i++) {
     break;
   }
   result *= i;
-  console.log(result);
 }
+
+console.log(`2 задание - результат вычисления факториала: ${result}`);
 
 // 3 задание
 let line = '';
