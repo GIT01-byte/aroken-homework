@@ -1,95 +1,112 @@
 // 1 задание
-/**
- * Вычисляет скидку, затем прибавляет налог и возвращает итоговое значение
- * @param {number} basePrice - базовая цена товара.
- * @param {number} discount - Процент скидки.
- * @param {number} taxRate -Налоговая ставка (в долях единицы).
- * @returns {number} Итоговая цена товара
- */
-function calculateFinalPrice(basePrice, discount, taxRate) {
-  let discountAmount = basePrice * (discount / 100);
-  let priceAfterDiscount = basePrice - discountAmount;
-  let taxAmount = priceAfterDiscount * taxRate;
+console.log('1 задание');
 
-  return priceAfterDiscount + taxAmount;
+const SCKILLS = 'skills';
+const PROGRAMMING_SCKILLS = 'programmingSkills';
+
+const person = {
+  name: 'Timur',
+  lastName: 'Gaisin',
+  age: 16,
+  skills: {
+    programmingSkills: {
+      1: 'HTML',
+      2: 'CSS',
+      3: 'Python',
+      4: 'SQLAlchemy',
+      5: 'FastAPI',
+    },
+  },
+};
+
+for (let personKey in person) {
+  if (personKey === SCKILLS) {
+    for (let skillsKey in person[SCKILLS]) {
+      if (skillsKey === PROGRAMMING_SCKILLS) {
+        for (let programmingSkillKey in person[SCKILLS][skillsKey]) {
+          console.log(
+            `${programmingSkillKey}: ${person[SCKILLS][skillsKey][programmingSkillKey]}`,
+          );
+        }
+      } else {
+        console.log(`${skillsKey}: ${person[SCKILLS][skillsKey]}`);
+      }
+    }
+  } else {
+    console.log(`${personKey}: ${person[personKey]}`);
+  }
 }
 
-console.log(calculateFinalPrice(100, 10, 0.2));
-console.log(calculateFinalPrice(100, 10, 0));
+console.log('-'.repeat(20));
 
 // 2 задание
-const VALID_LOGIN = 'admin';
-const VALID_PASSWORD = '123456';
-/**
- * Сравнивает логин и пароль, и выдает "доступ разрешен" или "доступ запрещен"
- * @param {string} login - Логин пользователя.
- * @param {string} password - Пароль пользователя.
- * @returns {string} Статус доступа
- */
-function checkAccess(login, password) {
-  if (login === VALID_LOGIN && password === VALID_PASSWORD) {
-    return 'Доступ разрешен';
+console.log('2 задание');
+
+function isEmpty(object) {
+  for (let _ in object) {
+    return false;
   }
-  return 'Доступ запрещен';
+  return true;
 }
 
-console.log(checkAccess('Вася', '1234'));
-console.log(checkAccess('admin', '123456'));
+const emptyObject = {};
+const notEmptyObject = {
+  status: 'Я не пустой',
+};
+
+console.log(isEmpty(emptyObject));
+console.log(isEmpty(notEmptyObject));
+
+console.log('-'.repeat(20));
 
 // 3 задание
-const nightTimeStart = 0;
-const nightTimeEnd = 5;
+console.log('3 задание');
 
-const morningTimeStart = 6;
-const morningTimeEnd = 11;
+const task = {
+  title: 'Задача 1',
+  description: 'Описание задачи...',
+  isCompleted: true,
+};
 
-const dayTimeStart = 12;
-const dayTimeEnd = 17;
-
-const eveningTimeStart = 18;
-const eveningTimeEnd = 23;
-/**
- * Принимает текущее время и возвращает какая сейчас часть дня
- * @param {number} currentTime - Текущее время (число от 0 до 23).
- * @returns {string} Часть дня
- */
-function getTimeOfDay(currentTime) {
-  if (currentTime >= nightTimeStart && currentTime <= nightTimeEnd) {
-    return 'Ночь';
-  } else if (currentTime >= morningTimeStart && currentTime <= morningTimeEnd) {
-    return 'Утро';
-  } else if (currentTime >= dayTimeStart && currentTime <= dayTimeEnd) {
-    return 'День';
-  } else if (currentTime >= eveningTimeStart && currentTime <= eveningTimeEnd) {
-    return 'Вечер';
-  } else {
-    return 'Некорректное время';
-  }
+function cloneAndModify(object, modifications) {
+  const newObject = { ...object, ...modifications };
+  return newObject;
 }
 
-console.log(getTimeOfDay(15));
-console.log(getTimeOfDay(3));
-console.log(getTimeOfDay(7));
-console.log(getTimeOfDay(18));
-console.log(getTimeOfDay(-1));
-console.log(getTimeOfDay(24));
+const modificationsObject = {
+  key1: 'value1',
+  key2: 'value2',
+  key3: 'value3',
+};
+
+const newObj = cloneAndModify(task, modificationsObject);
+
+for (let objKey in newObj) {
+  console.log(`${objKey}: ${newObj[objKey]}`);
+}
+
+console.log('-'.repeat(20));
 
 // 4 задание
-/**
- * Принимает 2 числа start и end и находит первое четное число в указанном диапазоне
- * @param {number} start - Начало диапазона.
- * @param {number} end - Конец диапазона.
- * @returns {number|string} Первое четное число в указанном диапазоне иначе 'Чётных чисел нет'
- */
-function findFirstEven(start, end) {
-  for (let i = start; i <= end; i++) {
-    if (i % 2 === 0) {
-      return i;
+console.log('4 задание');
+
+function callAllMethods(obj) {
+  for (let objKey in obj) {
+    if (typeof obj[objKey] === 'function') {
+      obj[objKey]();
+    } else {
+      continue;
     }
   }
-  return 'Чётных чисел нет';
 }
 
-console.log(findFirstEven(1, 10));
-console.log(findFirstEven(9, 10));
-console.log(findFirstEven(9, 9));
+const myObject = {
+  method1() {
+    console.log('Метод 1 вызван');
+  },
+  method2() {
+    console.log('Метод 2 вызван');
+  },
+  property: 'Это не метод',
+};
+callAllMethods(myObject);
