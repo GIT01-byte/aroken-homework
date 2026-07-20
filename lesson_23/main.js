@@ -6,13 +6,13 @@
  * @param {number} taxRate -Налоговая ставка (в долях единицы).
  * @returns {number} Итоговая цена товара
  */
-function calculateFinalPrice(basePrice, discount, taxRate) {
+const calculateFinalPrice = (basePrice, discount, taxRate) => {
   let discountAmount = basePrice * (discount / 100);
   let priceAfterDiscount = basePrice - discountAmount;
   let taxAmount = priceAfterDiscount * taxRate;
 
   return priceAfterDiscount + taxAmount;
-}
+};
 
 console.log(calculateFinalPrice(100, 10, 0.2));
 console.log(calculateFinalPrice(100, 10, 0));
@@ -26,12 +26,12 @@ const VALID_PASSWORD = '123456';
  * @param {string} password - Пароль пользователя.
  * @returns {string} Статус доступа
  */
-function checkAccess(login, password) {
+const checkAccess = (login, password) => {
   if (login === VALID_LOGIN && password === VALID_PASSWORD) {
     return 'Доступ разрешен';
   }
   return 'Доступ запрещен';
-}
+};
 
 console.log(checkAccess('Вася', '1234'));
 console.log(checkAccess('admin', '123456'));
@@ -53,7 +53,7 @@ const eveningTimeEnd = 23;
  * @param {number} currentTime - Текущее время (число от 0 до 23).
  * @returns {string} Часть дня
  */
-function getTimeOfDay(currentTime) {
+const getTimeOfDay = (currentTime) => {
   if (currentTime >= nightTimeStart && currentTime <= nightTimeEnd) {
     return 'Ночь';
   } else if (currentTime >= morningTimeStart && currentTime <= morningTimeEnd) {
@@ -65,7 +65,7 @@ function getTimeOfDay(currentTime) {
   } else {
     return 'Некорректное время';
   }
-}
+};
 
 console.log(getTimeOfDay(15));
 console.log(getTimeOfDay(3));
@@ -81,14 +81,14 @@ console.log(getTimeOfDay(24));
  * @param {number} end - Конец диапазона.
  * @returns {number|string} Первое четное число в указанном диапазоне иначе 'Чётных чисел нет'
  */
-function findFirstEven(start, end) {
+const findFirstEven = (start, end) => {
   for (let i = start; i <= end; i++) {
     if (i % 2 === 0) {
       return i;
     }
   }
   return 'Чётных чисел нет';
-}
+};
 
 console.log(findFirstEven(1, 10));
 console.log(findFirstEven(9, 10));
