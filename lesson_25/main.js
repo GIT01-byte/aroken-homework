@@ -1,6 +1,8 @@
 'use strict';
 
 // 1 задание
+console.log('1 задание');
+
 const users = [
   { name: 'Alex', age: 24, isAdmin: false },
   { name: 'Bob', age: 13, isAdmin: false },
@@ -20,6 +22,8 @@ usersToAdd.forEach((user) => {
 console.log(users);
 
 // 2 задание
+console.log('2 задание');
+
 function getUserAverageAge(users) {
   let ageSum = 0;
   users.forEach((user) => {
@@ -34,6 +38,8 @@ let avgAgeSum = getUserAverageAge(users);
 console.log(avgAgeSum);
 
 // 3 задание
+console.log('3 задание');
+
 function getAllAdmins(users) {
   let usersAllAdmins = [];
   users.forEach((user) => {
@@ -49,6 +55,8 @@ let usersAllAdmins = getAllAdmins(users);
 console.log(usersAllAdmins);
 
 // 4 задание
+console.log('4 задание');
+
 function first(arr, n) {
   let newArr = [];
 
