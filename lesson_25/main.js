@@ -1,112 +1,69 @@
+'use strict';
+
 // 1 задание
-console.log('1 задание');
+const users = [
+  { name: 'Alex', age: 24, isAdmin: false },
+  { name: 'Bob', age: 13, isAdmin: false },
+  { name: 'John', age: 31, isAdmin: true },
+  { name: 'Jane', age: 20, isAdmin: false },
+];
 
-const SCKILLS = 'skills';
-const PROGRAMMING_SCKILLS = 'programmingSkills';
+const usersToAdd = [
+  { name: 'Ann', age: 19, isAdmin: false },
+  { name: 'Jack', age: 43, isAdmin: true },
+];
 
-const person = {
-  name: 'Timur',
-  lastName: 'Gaisin',
-  age: 16,
-  skills: {
-    programmingSkills: {
-      1: 'HTML',
-      2: 'CSS',
-      3: 'Python',
-      4: 'SQLAlchemy',
-      5: 'FastAPI',
-    },
-  },
-};
+usersToAdd.forEach((user) => {
+  users.push(user);
+});
 
-for (let personKey in person) {
-  if (personKey === SCKILLS) {
-    for (let skillsKey in person[SCKILLS]) {
-      if (skillsKey === PROGRAMMING_SCKILLS) {
-        for (let programmingSkillKey in person[SCKILLS][skillsKey]) {
-          console.log(
-            `${programmingSkillKey}: ${person[SCKILLS][skillsKey][programmingSkillKey]}`,
-          );
-        }
-      } else {
-        console.log(`${skillsKey}: ${person[SCKILLS][skillsKey]}`);
-      }
-    }
-  } else {
-    console.log(`${personKey}: ${person[personKey]}`);
-  }
-}
-
-console.log('-'.repeat(20));
+console.log(users);
 
 // 2 задание
-console.log('2 задание');
+function getUserAverageAge(users) {
+  let ageSum = 0;
+  users.forEach((user) => {
+    ageSum += user.age;
+  });
 
-function isEmpty(object) {
-  for (let _ in object) {
-    return false;
-  }
-  return true;
+  let avgAgeSum = ageSum / users.length;
+  return avgAgeSum;
 }
 
-const emptyObject = {};
-const notEmptyObject = {
-  status: 'Я не пустой',
-};
-
-console.log(isEmpty(emptyObject));
-console.log(isEmpty(notEmptyObject));
-
-console.log('-'.repeat(20));
+let avgAgeSum = getUserAverageAge(users);
+console.log(avgAgeSum);
 
 // 3 задание
-console.log('3 задание');
+function getAllAdmins(users) {
+  let usersAllAdmins = [];
+  users.forEach((user) => {
+    if (user.isAdmin === true) {
+      usersAllAdmins.push(user);
+    }
+  });
 
-const task = {
-  title: 'Задача 1',
-  description: 'Описание задачи...',
-  isCompleted: true,
-};
-
-function cloneAndModify(object, modifications) {
-  const newObject = { ...object, ...modifications };
-  return newObject;
+  return usersAllAdmins;
 }
 
-const modificationsObject = {
-  key1: 'value1',
-  key2: 'value2',
-  key3: 'value3',
-};
-
-const newObj = cloneAndModify(task, modificationsObject);
-
-for (let objKey in newObj) {
-  console.log(`${objKey}: ${newObj[objKey]}`);
-}
-
-console.log('-'.repeat(20));
+let usersAllAdmins = getAllAdmins(users);
+console.log(usersAllAdmins);
 
 // 4 задание
-console.log('4 задание');
+function first(arr, n) {
+  let newArr = [];
 
-function callAllMethods(obj) {
-  for (let objKey in obj) {
-    if (typeof obj[objKey] === 'function') {
-      obj[objKey]();
-    } else {
-      continue;
+  if (typeof n === 'undefined') {
+    newArr.push(arr.at(0));
+  } else {
+    for (let i = 0; i < n && i < arr.length; i++) {
+      newArr.push(arr[i]);
     }
   }
+
+  return newArr;
 }
 
-const myObject = {
-  method1() {
-    console.log('Метод 1 вызван');
-  },
-  method2() {
-    console.log('Метод 2 вызван');
-  },
-  property: 'Это не метод',
-};
-callAllMethods(myObject);
+const letters = ['a', 'b', 'c', 'd'];
+console.log(first(letters, 2));
+console.log(first(letters));
+console.log(first(letters, 5));
