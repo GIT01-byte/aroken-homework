@@ -1,0 +1,35 @@
+@media (width >768px) {
+  .burger {
+    display: none;
+  }
+}
+
+.burger__icon-menu {
+  stroke: var(--color-accent);
+}
+
+.burger__icon-cross {
+  stroke: var(--color-secondary);
+}
+
+@media (width <=768px) {
+  .burger {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    z-index: var(--layer-3);
+  }
+
+  .burger__icon-menu,
+  .burger--open .burger__icon-cross {
+    display: block;
+  }
+
+  .burger__icon-cross,
+  .burger--open .burger__icon-menu {
+    display: none;
+  }
+}
