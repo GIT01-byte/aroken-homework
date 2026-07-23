@@ -89,7 +89,8 @@ const handleFormTodosSubmit = (event) => {
   event.preventDefault();
 
   const formData = new FormData(todoDOMForm);
-  const text = formData.get(todoKeys.text);
+  const text = formData.get(todoKeys.text).trim();
+  if (!text) return;
 
   todoDOMForm.reset();
 
