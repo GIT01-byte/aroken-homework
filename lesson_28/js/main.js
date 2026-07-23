@@ -64,28 +64,27 @@ const todoDOMForm = document.querySelector('.form');
 const todoDOMInput = document.querySelector('.input');
 const todosDOMList = document.querySelector('.todos');
 
-const createTodoElement = (text) => {
-  todosDOMList.insertAdjacentHTML(
-    'afterbegin',
-    `
-    <li class="todo">
-        <div class="todo-text">${text}</div>
-        <div class="todo-actions">
-            <button class="button-complete button">&#10004;</button>
-            <button class="button-delete button">&#10006;</button>
-        </div>
-    </li>
-    `,
-  );
+const createTodoElement = (todo) => {
+  const todoElement = document.createElement('li');
+  todoElement.classList.add('todo');
+  todoElement.dataset.id = todo[todoKeys.id];
+  todoElement.innerHTML = `
+    <div class="todo-text">${todo[todoKeys.text]}</div>
+    <div class="todo-actions">
+        <button class="button-complete button">&#10004;</button>
+        <button class="button-delete button">&#10006;</button>
+    </div>
+  `;
+  return todoElement;
 };
 
 const handleCreateTodo = (todos, text) => {
-  createTodo(todos, text);
-  createTodoElement(text);
-  return;
+  const todo = createTodo(todos, text);
+  const todoElement = createTodoElement(todo);
+  todosDOMList.prepend(todoElement);
 };
 
-const handleFormTodosSubmit = (event) => {
+todoDOMForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
   const formData = new FormData(todoDOMForm);
@@ -95,6 +94,21 @@ const handleFormTodosSubmit = (event) => {
   todoDOMForm.reset();
 
   handleCreateTodo(todos, text);
-};
+});
 
-todoDOMForm.addEventListener('submit', handleFormTodosSubmit);
+todosDOMList.addEventListener('click', ({ target }) => {
+  const todo = target.closest('.todo');
+  if (!todo) return;
+
+  const todoId = Number(todo.dataset.id);
+
+  if (target.matches('.button-complete')) {
+    completeTodoById(todos, todoId);
+    todo.classList.toggle('completed');
+  }
+
+  if (target.matches('.button-delete')) {
+    deleteTodoById(todos, todoId);
+    todo.remove();
+  }
+});
