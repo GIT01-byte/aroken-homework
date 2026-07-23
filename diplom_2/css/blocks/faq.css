@@ -1,0 +1,201 @@
+.faq {
+    padding-bottom: 185px;
+}
+
+.faq__container {
+    display: flex;
+}
+
+@media (width >1330px) {
+    .faq__container {
+        /* 1330px - 1920px */
+        gap: clamp(0rem, -14.79rem + 17.80vw, 6.5625rem);
+    }
+}
+
+@media (width <=1330px) {
+    .faq__container {
+        flex-direction: column;
+        /* 1330px - 1920px */
+        gap: clamp(2rem, 0.09rem + 8.17vw, 6.875rem);
+    }
+}
+
+.faq_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 1330px - 1920px */
+    min-width: clamp(23.125rem, 14.67rem + 10.17vw, 26.875rem);
+}
+
+@media (width <=1330px) {
+    .faq_left {
+        align-items: center;
+    }
+}
+
+.faq__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 21px;
+}
+
+@media (width <=1330px) {
+    .faq__text-wrapper {
+        align-items: center;
+    }
+}
+
+@media (width >1330px) {
+    .faq__title {
+        text-align: left;
+    }
+}
+
+@media (width <=1330px) {
+    .faq__title {
+        text-align: center;
+    }
+}
+
+.faq__description {
+    font-weight: 300;
+    max-width: 70%;
+}
+
+@media (width >1330px) {
+    .faq__description {
+        text-align: left;
+    }
+}
+
+@media (width <=1330px) {
+    .faq__description {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.faq__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 1330px - 1920px  */
+    gap: clamp(2.5rem, 1.52rem + 4.19vw, 5rem);
+    width: 90%;
+}
+
+.faq__info-details {
+    display: block;
+}
+
+.faq__info-question {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    cursor: pointer;
+}
+
+@media (width <=1330px) {
+    .faq__info-question {
+        /* 1330px - 1920px */
+        gap: clamp(0rem, -27.05rem + 32.54vw, 12rem);
+    }
+}
+
+.faq__info-marker {
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    /* 1330px - 1920px */
+    width: clamp(1.5rem, 0.91rem + 2.51vw, 3rem);
+    height: clamp(1.5rem, 0.91rem + 2.51vw, 3rem);
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--color-dark-gray);
+    border-radius: 50%;
+    transition: border-color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+    .faq__info-question:hover .faq__info-marker {
+        border-color: var(--color-gray);
+    }
+}
+
+.faq__info-marker-icon {
+    /* 1330px - 1920xpx */
+    width: clamp(0.6875rem, 0.42rem + 1.15vw, 1.375rem);
+    height: clamp(0.375rem, 0.25rem + 0.52vw, 0.6875rem);
+    color: var(--color-dark-gray);
+    transition: color var(--transition-time)
+}
+
+@media (any-hover: hover) {
+    .faq__info-question:hover .faq__info-marker-icon {
+        color: var(--color-gray);
+    }
+}
+
+.faq__info-question::webkit-details-marker {
+    display: none;
+}
+
+.faq__info-question-text-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    /* 1330px - 1920xpx */
+    width: clamp(1.5rem, 0.91rem + 2.51vw, 3rem);
+    height: clamp(1.5rem, 0.91rem + 2.51vw, 3rem);
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: clamp(1.1875rem, 0.79rem + 1.68vw, 2.1875rem);
+    color: var(--color-main);
+    background-color: var(--color-dark-gray);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Создаем скрытый градиентный слой внутри */
+.faq__info-question-text-icon::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(140deg, #6ba758 0%, #23503d 100%);
+    opacity: 0;
+    transition: opacity var(--transition-time);
+    z-index: -1;
+}
+
+@media (any-hover: hover) {
+    .faq__info-question:hover .faq__info-question-text-icon::after {
+        opacity: 1;
+    }
+}
+
+.faq__info-question-text {
+    display: flex;
+    /* 1330px - 1920px */
+    gap: clamp(1.5625rem, -6.33rem + 9.49vw, 5.0625rem);
+    font-weight: 300;
+    /* 1330px - 1920px */
+    font-size: clamp(1.25rem, 0.76rem + 2.09vw, 2.5rem);
+    line-height: 117%;
+    color: var(--color-main);
+    text-align: left;
+    width: 100%;
+}
+
+.faq__info-answer-text {
+    text-align: left;
+    /* 1330px - 1920px */
+    padding-top: clamp(0.75rem, 0.60rem + 0.63vw, 1.125rem);
+    padding-inline: calc(clamp(1.5625rem, -6.33rem + 9.49vw, 5.0625rem) + clamp(1.5rem, 0.91rem + 2.51vw, 3rem));
+}

@@ -1,26 +1,32 @@
-@media (width >768px) {
+@media (width >1120px) {
   .burger {
     display: none;
   }
 }
 
+.burger__svg {
+  width: clamp(1.5rem, 1.28rem + 0.94vw, 1.9375rem);
+  height: clamp(1.5rem, 1.28rem + 0.94vw, 1.9375rem);
+}
+
 .burger__icon-menu {
-  stroke: var(--color-accent);
+  stroke: var(--color-main);
 }
 
 .burger__icon-cross {
-  stroke: var(--color-secondary);
+  stroke: var(--color-main);
 }
 
-@media (width <=768px) {
+@media (width <=1120px) {
   .burger {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 24px;
-    height: 24px;
+    width: 31px;
+    height: 31px;
     z-index: var(--layer-3);
+    order: -1;
   }
 
   .burger__icon-menu,

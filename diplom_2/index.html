@@ -10,32 +10,32 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     />
+    <meta
+        name="description"
+        content="Leader Classic — безупречное качество, проверенное временем. Официальный сайт компании. Ознакомьтесь с каталогом продукции и нашими услугами."
+    >
     <link
-        rel="stylesheet"
-        href="./css/index.css"
+        rel="shortcut icon"
+        href="./icons/logo.svg"
+        type="image/x-icon"
     />
     <link
         rel="stylesheet"
         href="./css/swiper/swiper-bundle.min.css"
     />
     <link
-        rel="shortcut icon"
-        href="./icons/favicon.ico"
-        type="image/x-icon"
+        rel="stylesheet"
+        href="./css/index.css"
     />
     <script
         src="./js/swiper-bundle.min.js"
         defer
     ></script>
     <script
-        src="./js/fslightbox.js"
-        type="module"
-    ></script>
-    <script
         src="./js/index.js"
         type="module"
     ></script>
-    <title>Nike Air Mag</title>
+    <title>Leader Classic</title>
 </head>
 
 <body class="page__body">
@@ -47,1109 +47,1609 @@
             >
                 <img
                     src="./icons/logo.svg"
-                    alt="Логотип Nike"
+                    width="52"
+                    height="66"
+                    alt="Логотип Leader Classic"
                     class="logo__img"
                 />
+                <div class="logo__text-wrapper">
+                    <p class="logo__text logo__text-top">Leader</p>
+                    <p class="logo__text logo__text-bottom">Classic</p>
+                </div>
             </a>
             <nav
-                class="menu header__menu"
+                class="header__menu menu"
                 id="header__menu"
-                aria-label="Главное меню"
+                aria-label="Основная навигация"
             >
+                <div class="header__lang-switcher lang-switcher">
+                    <details class="lang-switcher__control">
+                        <summary
+                            class="lang-switcher__current-lang"
+                            aria-label="Выбор языка"
+                        >
+                            <svg class="lang__svg">
+                                <use
+                                    class="lang__ru-icon"
+                                    href="./icons/header-sprite.svg#ru-icon"
+                                ></use>
+                            </svg>
+                            <span class="lang-switcher__current-lang-text text-md">RU</span>
+                            <svg
+                                class="lang-switcher__current-lang-icon"
+                                width="13"
+                                height="7"
+                            >
+                                <use href="./icons/other-sprite.svg#angle-small-down"></use>
+                            </svg>
+                        </summary>
+                        <ul class="lang-swithcer__list">
+                            <li class="lang-swithcer__item">
+                                <a
+                                    href="/en"
+                                    class="lang-switcher__link text-md"
+                                >EN</a>
+                            </li>
+                            <li class="lang-swithcer__item">
+                                <a
+                                    href="/kz"
+                                    class="lang-switcher__link text-md"
+                                >KZ</a>
+                            </li>
+                        </ul>
+                    </details>
+                </div>
                 <ul class="menu__list">
                     <li class="menu__item">
                         <a
-                            href="#air-mag"
-                            class="menu__link"
-                            lang="en"
-                        >Air Mag</a>
+                            href="#"
+                            class="menu__link text-md"
+                        >Тарифы</a>
                     </li>
                     <li class="menu__item">
                         <a
-                            href="#sizes"
-                            class="menu__link"
-                        >Размеры</a>
+                            href="#"
+                            class="menu__link text-md"
+                        >Бонус</a>
                     </li>
                     <li class="menu__item">
                         <a
-                            href="#features"
-                            class="menu__link"
-                        >Характеристики</a>
+                            href="#"
+                            class="menu__link text-md"
+                        >Реферальная</a>
                     </li>
                     <li class="menu__item">
                         <a
-                            href="#top-models"
-                            class="menu__link"
-                        >Другие ТОП модели</a>
+                            href="#"
+                            class="menu__link text-md"
+                        >Контакты</a>
                     </li>
                 </ul>
             </nav>
-            <div class="header__controls">
+            <button
+                class="header__burger burger"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+                aria-controls="header__menu"
+            >
+                <svg class="burger__svg">
+                    <use
+                        class="burger__icon-menu"
+                        href="./icons/header-sprite.svg#burger-menu"
+                    ></use>
+                    <use
+                        class="burger__icon-cross"
+                        href="./icons/header-sprite.svg#cross"
+                    ></use>
+                </svg>
+            </button>
+            <div class="header__actions">
                 <a
                     href="#"
-                    class="header__order"
-                    data-modal-button="buy"
-                    data-modal-speed="200ms"
-                >Сделать заказ</a>
-                <div class="header__actions">
-                    <button
-                        class="header__actions-button"
-                        title="Поиск"
-                        aria-label="Поиск"
-                    >
-                        <svg
-                            width="24"
-                            height="24"
-                        >
-                            <use
-                                class="header__actions-icon"
-                                href="./icons/sprite.svg#search"
-                            ></use>
-                        </svg>
-                    </button>
-                    <button
-                        class="header__actions-button"
-                        title="Корзина"
-                        aria-label="Корзина"
-                        data-modal-button="cart"
-                        data-modal-speed="500ms"
-                    >
-                        <svg
-                            width="24"
-                            height="24"
-                        >
-                            <use
-                                class="header__actions-icon"
-                                href="./icons/sprite.svg#cart"
-                            ></use>
-                        </svg>
-                    </button>
-                    <button
-                        class="header__burger burger"
-                        aria-label="Открыть меню"
-                        aria-expanded="false"
-                        aria-controls="header__menu"
-                    >
-                        <svg
-                            width="24"
-                            height="24"
-                        >
-                            <use
-                                class="burger__icon-menu"
-                                href="./icons/sprite.svg#burger-menu"
-                            ></use>
-                            <use
-                                class="burger__icon-cross"
-                                href="./icons/sprite.svg#cross"
-                            ></use>
-                        </svg>
-                    </button>
-                </div>
+                    class="header__button-login button button--bordered header__button-login-link button__link"
+                    aria-label="Войти"
+                >Войти</a>
+                <button
+                    class="header__button-create-acc button button--gradient header__button-create-acc-link button__link text-lg-black"
+                    aria-label="Открыть счет"
+                >Открыть счёт</button>
             </div>
         </div>
     </header>
     <main class="main">
+        <aside class="promo container">
+            <div class="promo__container">
+                <div class="promo__content-wrapper">
+                    <div class="promo__text-wrapper">
+                        <h2 class="promo__title">Станьте миллионером с Leader Classic</h2>
+                        <p class="promo__description">
+                            Откройте счет, инвестируйте в фонды Leader Classic и получите
+                            шанс выиграть один из <span>100 000 000 ₽</span>
+                        </p>
+                    </div>
+                    <picture>
+                        <source
+                            srcset="./images/gift.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="promo__gift promo__content-gift"
+                            src="./images/gift.png"
+                            width="50"
+                            height="50"
+                            alt="Иконка подарка"
+                            loading="lazy"
+                        />
+                    </picture>
+                </div>
+                <div class="promo__timer">
+                    <div class="timer">
+                        <div class="timer__cell">
+                            <span class="timer__cell-number timer__day">00</span>
+                            <span class="timer__cell-text">д</span>
+                            <span class="timer__cell-sep">:</span>
+                        </div>
+                        <div class="timer__cell">
+                            <span class="timer__cell-number timer__hrs">00</span>
+                            <span class="timer__cell-text">ч</span>
+                            <span class="timer__cell-sep">:</span>
+                        </div>
+                        <div class="timer__cell">
+                            <span class="timer__cell-number timer__min">00</span>
+                            <span class="timer__cell-text">м</span>
+                            <span class="timer__cell-sep">:</span>
+                        </div>
+                        <div class="timer__cell">
+                            <span class="timer__cell-number timer__sec">00</span>
+                            <span class="timer__cell-text">с</span>
+                        </div>
+                    </div>
+
+                    <picture>
+                        <source
+                            srcset="./images/gift.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="promo__gift promo__timer-gift"
+                            src="./images/gift.png"
+                            width="50"
+                            height="50"
+                            alt="Иконка подарка"
+                            loading="lazy"
+                        />
+                    </picture>
+                </div>
+            </div>
+        </aside>
         <section class="hero">
             <div class="container hero__container">
-                <header class="hero__header">
+                <h1 class="hero__title">
+                    <span class="hero__title-line">ТОП-5 акций</span>
+                    <span class="hero__title-line">с доходностью до 10-30%</span>
+                    <span class="hero__title-line">уже в 2022 году</span>
+                </h1>
+                <div class="hero__benefits-wrapper">
                     <ul class="hero__benefits-list">
-                        <li class="hero__benefits-item">стиль</li>
-                        <li class="hero__benefits-item">скорость</li>
+                        <li class="hero__benefits-item">
+                            Открытие брокерского счета за 5 минут без визита в офис
+                        </li>
+                        <li class="hero__benefits-item">
+                            Доступ к ценным бумагам с любого устройства
+                        </li>
+                        <li class="hero__benefits-item">
+                            Поддержка в чате 24/7
+                        </li>
                     </ul>
-                    <h1 class="hero__title">
-                        Nike <span class="text-stroke--accent">air</span> mag
-                    </h1>
-                </header>
-                <picture>
-                    <source
-                        srcset="./images/nike-air-mag-1.webp"
-                        type="image/webp"
-                    />
-                    <img
-                        src="./images/nike-air-mag-1.png"
-                        width="846"
-                        height="713"
-                        alt="Кроссовок Nike Air Mag с желтым кольцом под подошвой"
-                        class="hero__img"
-                        loading="lazy"
-                    />
-                </picture>
-                <footer class="hero__footer">
+                </div>
+                <div class="hero__actions">
                     <a
                         href="#"
-                        class="hero__details"
+                        class="hero__button-download button button--gradient hero__button-download-link button__link text-lg-black"
+                        aria-label="Скачать ТОП-5 акций"
                     >
-                        Подробнее
-                        <svg
-                            width="24"
-                            height="24"
-                        >
-                            <use
-                                class="hero__details-icon"
-                                href="./icons/main-sprite.svg#arrow-right"
-                            ></use>
-                        </svg>
+                        Скачать ТОП-5 акций
+                        <picture>
+                            <source
+                                srcset="./images/check-list.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                class="hero__button-download-img"
+                                src="./images/check-list.png"
+                                width="123"
+                                height="118"
+                                alt="Чек лист эффективности"
+                                loading="lazy"
+                            />
+                        </picture>
                     </a>
-                </footer>
-            </div>
-        </section>
-        <section
-            id="air-mag"
-            class="air-mag"
-        >
-            <div class="container">
-                <h2 class="air-mag__title title-md">Air Mag</h2>
-                <p class="air-mag__description text-regular">
-                    Это не просто кроссовки — это шаг в будущее. С уникальным дизайном и
-                    передовыми технологиями, эти кроссовки вдохновлены легендарной
-                    киноделией и готовы сопровождать вас в любых приключениях.
-                </p>
-                <div class="air-mag__info-wrapper text-light">
+                    <button
+                        class="hero__button-create-acc button button--bordered hero__button-create-acc-link button__link"
+                        aria-label="Открыть счёт"
+                    >
+                        Открыть счёт
+                    </button>
+                </div>
+                <div class="hero__investor-stats">
+                    <div class="hero__investor-stats-user-avatars">
+                        <picture>
+                            <source
+                                srcset="./images/avatar-user-1.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                class="user-avatar-icon"
+                                src="./images/avatar-user-1.png"
+                                alt="Аватар пользователя"
+                                loading="lazy"
+                            />
+                        </picture>
+                        <picture>
+                            <source
+                                srcset="./images/avatar-user-2.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                class="user-avatar-icon"
+                                src="./images/avatar-user-2.png"
+                                alt="Аватар пользователя"
+                                loading="lazy"
+                            />
+                        </picture>
+                        <picture>
+                            <source
+                                srcset="./images/avatar-user-3.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                class="user-avatar-icon"
+                                src="./images/avatar-user-3.png"
+                                alt="Аватар пользователя"
+                                loading="lazy"
+                            />
+                        </picture>
+                    </div>
+                    <div class="hero__investor-stats-text">
+                        <span class="hero__investor-stats-text-line">Сейчас инвестируют</span>
+                        <span class="hero__investor-stats-text-line">100 000+ пользователей</span>
+                    </div>
+                </div>
+                <div class="hero__img-wrapper">
                     <picture>
                         <source
-                            srcset="./images/nike-air-mag-2.webp"
+                            srcset="./images/hero-1.webp"
                             type="image/webp"
                         />
                         <img
-                            class="air-mag__img"
-                            src="./images/nike-air-mag-2.png"
-                            width="911"
-                            height="635"
-                            alt="Кроссовки Nike Air Mag с желтым кольцом вокруг"
-                            loading="lazy"
+                            class="hero__img"
+                            src="./images/hero-1.png"
+                            width="1204"
+                            height="987"
+                            alt="Деревянная рука держит телефон, на котором открыто приложение для инвестиций"
+                            loading="eager"
                         />
                     </picture>
-                    <ul class="air-mag__info-list">
-                        <li class="air-mag__info-item">
-                            инновационная технология амортизации, которая обеспечивает
-                            непревзойденную поддержу суставов
-                        </li>
-                        <li class="air-mag__info-item">
-                            высококачественные синтетические материалы для долговечности
-                            и комфорта
-                        </li>
-                    </ul>
                 </div>
             </div>
         </section>
-        <section
-            id="sizes"
-            class="sizes section"
-        >
-            <div class="container">
-                <h2 class="sizes__title title-md section-title">Размеры</h2>
-                <section class="product">
-                    <div class="product__slider-wrapper">
-                        <button
-                            class="product__slider-button product__slider-button--prev"
-                            aria-label="Предыдущий слайд"
-                        >
-                            <svg
-                                width="40"
-                                height="40"
-                            >
-                                <use
-                                    class="product__slider-button-icon"
-                                    href="./icons/main-sprite.svg#double-arrow"
-                                >
-                                </use>
-                            </svg>
-                        </button>
-                        <div class="swiper product__slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="product__slide-inner">
-                                        <picture>
-                                            <source
-                                                srcset="./images/product-slide/product-slide-1.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                class="product__slide-img"
-                                                src="./images/product-slide/product-slide-1.png"
-                                                width="357"
-                                                height="375"
-                                                alt="Кроссовки Nike Air Mag, вид спереди"
-                                            />
-                                        </picture>
-                                    </div>
+        <section class="cases">
+            <div class="container cases__container">
+                <div class="cases__text-wrapper">
+                    <h2 class="cases__title title-large">
+                        Ваши деньги способны на большее
+                    </h2>
+                    <p class="cases__description text-desc">
+                        Сколько бы вы заработали, инвестируй
+                        <strong class="text--bold">100 000 ₽</strong> год назад?
+                    </p>
+                </div>
+                <div class="nav__wrapper">
+                    <button
+                        class="cases__slider-button cases__slider-button--next"
+                        aria-label="Следующий слайд"
+                    ></button>
+                    <button
+                        class="cases__slider-button cases__slider-button--prev"
+                        aria-label="Предыдущий слайд"
+                    ></button>
+                </div>
+                <div class="swiper cases__companies-slider">
+                    <div class="swiper-wrapper cases__companies-slider-wrapper">
+                        <div class="swiper-slide cases__companies-slide">
+                            <div class="cases__company">
+                                <div class="company__logo-box">
+                                    <picture>
+                                        <source
+                                            srcset="./images/tesla.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            class="company__logo"
+                                            src="./images/tesla.png"
+                                            width="125"
+                                            height="41"
+                                            alt="Логотип компании Tesla"
+                                            loading="lazy"
+                                        />
+                                    </picture>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="product__slide-inner">
-                                        <picture>
-                                            <source
-                                                srcset="./images/product-slide/product-slide-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                class="product__slide-img"
-                                                src="./images/product-slide/product-slide-2.png"
-                                                width="408"
-                                                height="375"
-                                                alt="Кроссовки Nike Air Mag, вид сзади"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="product__slide-inner">
-                                        <picture>
-                                            <source
-                                                srcset="./images/product-slide/product-slide-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                class="product__slide-img"
-                                                src="./images/product-slide/product-slide-3.png"
-                                                width="442"
-                                                height="375"
-                                                alt="Кроссовки Nike Air Mag, вид сбоку"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
+                                <p class="company__percent">+83.97%</p>
+                                <p class="company__value company__value-text">+72.000₽</p>
                             </div>
                         </div>
-                        <button
-                            class="product__slider-button product__slider-button--next"
-                            aria-label="Следующий слайд"
-                        >
-                            <svg
-                                width="40"
-                                height="40"
-                            >
-                                <use
-                                    class="product__slider-button-icon"
-                                    href="./icons/main-sprite.svg#double-arrow"
-                                >
-                                </use>
-                            </svg>
-                        </button>
-                    </div>
-                    <h3 class="product__title title-sm">
-                        Кроссовки <strong class="text--accent">Nike Air Mag</strong> Back
-                        To Future
-                    </h3>
-                    <p class="product__description text-light">
-                        Nike Air Mag — это кусочек киноистории и технологического
-                        прогресса. Если вы ищете уникальную пару кроссовок, которая станет
-                        не только стильным аксессуаром, но и ценным дополнением вашей
-                        коллекции, Nike Air Mag — идеальный выбор.
-                    </p>
-                    <p class="product__price title-sm">36 490 ₽</p>
-                    <div class="product__sizes-wrapper">
-                        <section class="product__sizes">
-                            <h4 class="product__sizes-title product__sizes-title--in-stock">
-                                Размеры в наличии
-                            </h4>
-                            <div
-                                class="product__sizes-list"
-                                data-sizes="list"
-                            >
-                                <button
-                                    class="product__sizes-button"
-                                    aria-label="Выбрать размер"
-                                    title="Выбрать размер"
-                                    data-sizes="button"
-                                >
-                                    38
-                                </button>
-                                <button
-                                    class="product__sizes-button"
-                                    aria-label="Выбрать размер"
-                                    title="Выбрать размер"
-                                    data-sizes="button"
-                                >
-                                    40
-                                </button>
-                                <button
-                                    class="product__sizes-button"
-                                    aria-label="Выбрать размер"
-                                    title="Выбрать размер"
-                                    data-sizes="button"
-                                >
-                                    41
-                                </button>
-                                <button
-                                    class="product__sizes-button product__sizes-button--active"
-                                    aria-label="Выбрать размер"
-                                    title="Выбрать размер"
-                                    data-sizes="button"
-                                >
-                                    42
-                                </button>
-                                <button
-                                    class="product__sizes-button"
-                                    aria-label="Выбрать размер"
-                                    title="Выбрать размер"
-                                    data-sizes="button"
-                                >
-                                    44
-                                </button>
-                                <button
-                                    class="product__sizes-button"
-                                    aria-label="Выбрать размер"
-                                    title="Выбрать размер"
-                                    data-sizes="button"
-                                >
-                                    45
-                                </button>
+                        <div class="swiper-slide cases__companies-slide">
+                            <div class="cases__company">
+                                <div class="company__logo-box">
+                                    <picture>
+                                        <source
+                                            srcset="./images/amazon.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            class="company__logo"
+                                            src="./images/amazon.png"
+                                            width="92"
+                                            height="69"
+                                            alt="Логотип компании Amazon"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+                                <p class="company__percent">+4.11%</p>
+                                <p class="company__value company__value-text">+72.000₽</p>
                             </div>
-                            <div class="product__sizes-buy-wrapper">
-                                <button
-                                    class="product__sizes-buy-button"
-                                    data-modal-button="buy"
-                                    data-modal-speed="200ms"
-                                >
-                                    Купить в 1 клик
-                                </button>
-                                <button
-                                    class="product__sizes-cart-button"
-                                    aria-label="Добавить в корзину"
-                                    title="Добавить в корзину"
-                                    data-modal-button="cart"
-                                    data-modal-speed="500ms"
-                                >
+                        </div>
+                        <div class="swiper-slide cases__companies-slide">
+                            <div class="cases__company">
+                                <div class="company__logo-box">
+                                    <picture>
+                                        <source
+                                            srcset="./images/apple.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            class="company__logo"
+                                            src="./images/apple.png"
+                                            width="61"
+                                            height="61"
+                                            alt="Логотип компании Apple"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+                                <p class="company__percent">+26.36%</p>
+                                <p class="company__value company__value-text">+72.000₽</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide cases__companies-slide">
+                            <div class="cases__company">
+                                <div class="company__logo-box">
+                                    <picture>
+                                        <source
+                                            srcset="./images/yandex.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            class="company__logo"
+                                            src="./images/yandex.png"
+                                            width="93"
+                                            height="36"
+                                            alt="Логотип компании Yandex"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+                                <p class="company__percent">+17.19%</p>
+                                <p class="company__value company__value-text">+72.000₽</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide cases__companies-slide">
+                            <div class="cases__company">
+                                <div class="company__logo-box">
+                                    <picture>
+                                        <source
+                                            srcset="./images/facebook.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            class="company__logo"
+                                            src="./images/facebook.png"
+                                            width="123"
+                                            height="67"
+                                            alt="Логотип компании Facebook"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+                                <p class="company__percent">+31.32%</p>
+                                <p class="company__value company__value-text">+72.000₽</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide cases__companies-slide">
+                            <div class="cases__company">
+                                <div class="company__logo-box">
                                     <img
-                                        src="./icons/cart-icon.svg"
-                                        width="23"
-                                        height="23"
-                                        alt="Корзина"
-                                        class="product__sizes-cart-button-icon"
+                                        src="./images/microsoft.png"
+                                        width="122"
+                                        height="28"
+                                        alt="Логотип компании Microsoft"
+                                        class="company__logo"
                                         loading="lazy"
-                                    />
-                                </button>
+                                    >
+                                </div>
+                                <p class="company__percent">+38.99%</p>
+                                <p class="company__value company__value-text">+72.000₽</p>
                             </div>
-                        </section>
-                        <section class="product__sizes">
-                            <h4 class="product__sizes-title product__sizes-title--to-order">
-                                Размеры под заказ
-                            </h4>
-                            <div class="product__sizes-list">
-                                <button
-                                    class="product__sizes-button"
-                                    aria-label="Выбрать размер"
-                                    title="Выбрать размер"
-                                    disabled
-                                >
-                                    36
-                                </button>
-                                <button
-                                    class="product__sizes-button"
-                                    aria-label="Выбрать размер"
-                                    title="Выбрать размер"
-                                    disabled
-                                >
-                                    37
-                                </button>
-                                <button
-                                    class="product__sizes-button"
-                                    aria-label="Выбрать размер"
-                                    title="Выбрать размер"
-                                    disabled
-                                >
-                                    43
-                                </button>
-                                <button
-                                    class="product__sizes-button"
-                                    aria-label="Выбрать размер"
-                                    title="Выбрать размер"
-                                    disabled
-                                >
-                                    46
-                                </button>
-                                <button
-                                    class="product__sizes-button"
-                                    aria-label="Выбрать размер"
-                                    title="Выбрать размер"
-                                    disabled
-                                >
-                                    47
-                                </button>
-                            </div>
-                            <a
-                                href="#"
-                                class="product__sizes-order-link"
-                            >Заказать размер</a>
-                        </section>
+                        </div>
                     </div>
-                </section>
-            </div>
-        </section>
-        <section
-            id="features"
-            class="section features"
-        >
-            <div class="container">
-                <h2 class="features__title title-md section-title">Характеристики</h2>
-                <div class="features__video">
-                    <picture>
-                        <source
-                            srcset="./images/features-video-preview.webp"
-                            type="image/webp"
-                        />
-                        <img
-                            class="features__video-preview"
-                            src="./images/features-video-preview.jpg"
-                            width="1240"
-                            height="600"
-                            alt="Кроссовки Nike Air Mage лежат на желтой коробке"
-                            loading="lazy"
-                        />
-                    </picture>
+                </div>
+                <div class="cases__catalogue-wrapper">
+                    <p class="cases__catalogue-text text-desc">
+                        И еще более 10 000 других ценных бумаг доступно <strong class="text--bold">в
+                            каталоге</strong>
+                    </p>
                     <a
-                        data-fslightbox
-                        class="features-video-play-link"
-                        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj48GrXCa4EhWjjtPvks1CbUfcFg0tsdtV8oFuanpVyw&s=10"
-                        title="Запустить видео"
+                        class="cases__catalogue-button button button--gradient cases__catalogue-button-link button__link text-lg-black"
+                        href="#"
                     >
-                        <img
-                            class="features-video-play-icon"
-                            src="./icons/play-icon.svg"
-                            alt="Запустить видео"
-                        />
+                        Получить
+                        каталог
                     </a>
                 </div>
+            </div>
+        </section>
+        <section class="tools">
+            <div class="container tools__container">
+                <h2 class="tools__title title-large">Большой выбор инструментов</h2>
+                <div class="tools__list">
+                    <article class="tools__card">
+                        <svg
+                            class="tools__card-icon"
+                            width="119"
+                            height="119"
+                        >
+                            <use href="./icons/tools-sprite.svg#1"></use>
+                        </svg>
+                        <h3 class="tools__card-title">
+                            Форекс
+                        </h3>
+                        <p class="tools__card-description">
+                            Торгуйте 70 основными, второстепенными и экзотическими валютными парами на конкурентных
+                            торговых условиях.
+                        </p>
+                    </article>
+                    <article class="tools__card">
+                        <svg
+                            class="tools__card-icon"
+                            width="119"
+                            height="119"
+                        >
+                            <use href="./icons/tools-sprite.svg#2"></use>
+                        </svg>
+                        <h3 class="tools__card-title">
+                            Металлы
+                        </h3>
+                        <p class="tools__card-description">
+                            Торгуйте металлами, такими как золото, серебро и платина.
+                        </p>
+                    </article>
+                    <article class="tools__card">
+                        <svg
+                            class="tools__card-icon"
+                            width="119"
+                            height="119"
+                        >
+                            <use href="./icons/tools-sprite.svg#3"></use>
+                        </svg>
+                        <h3 class="tools__card-title">
+                            Индексы
+                        </h3>
+                        <p class="tools__card-description">
+                            Торгуйте CFD на основные и второстепенные индексы (спот и фьючерсы) со всего мира.
+                        </p>
+                    </article>
+                    <article class="tools__card">
+                        <svg
+                            class="tools__card-icon"
+                            width="119"
+                            height="119"
+                        >
+                            <use href="./icons/tools-sprite.svg#4"></use>
+                        </svg>
+                        <h3 class="tools__card-title">
+                            Криптовалюты
+                        </h3>
+                        <p class="tools__card-description">
+                            Торгуйте CFD на Bitcoin, Ether, Doge и другие криптовалюты и альткоины.
+                        </p>
+                    </article>
+                    <article class="tools__card">
+                        <svg
+                            class="tools__card-icon"
+                            width="119"
+                            height="119"
+                        >
+                            <use href="./icons/tools-sprite.svg#5"></use>
+                        </svg>
+                        <h3 class="tools__card-title">
+                            Акции
+                        </h3>
+                        <p class="tools__card-description">
+                            Сотни публичных компаний из США, Великобритании, Франции и Германии доступны для
+                            торговли.
+                        </p>
+                    </article>
+                    <article class="tools__card">
+                        <svg
+                            class="tools__card-icon"
+                            width="119"
+                            height="119"
+                        >
+                            <use href="./icons/tools-sprite.svg#6"></use>
+                        </svg>
+                        <h3 class="tools__card-title">
+                            Энергетика
+                        </h3>
+                        <p class="tools__card-description">
+                            Откройте для себя возможности на британской и американской нефти, а также на спотовых и
+                            фьючерсных CFD на природный газ.
+                        </p>
+                    </article>
+                    <button
+                        class="tools__support-link"
+                        aria-label="Служба поддержки"
+                    >
+                        <svg
+                            class="tools__support-icon"
+                            width="100"
+                            height="100"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <use href="./icons/other-sprite.svg#support-icon"></use>
+                        </svg>
+                    </button>
+                    <a
+                        class="tools__arrow-top-link"
+                        href="#"
+                        aria-label="Проскролить вверх"
+                    >
+                        <svg
+                            class="tools__arrow-top-icon"
+                            width="49"
+                            height="49"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <use href="./icons/other-sprite.svg#arrow-top"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="guide">
+            <div class="container guide__container">
+                <h2 class="guide__title title-large">
+                    Инвестиции доступные каждому
+                </h2>
+                <p class="guide__description text-desc">
+                    Простой сервис с подсказками и поддержкой 24/7 на каждом этапе
+                </p>
+                <ul class="guide__checklist">
+                    <li class="step__wrapper">
+                        <div class="step">
+                            <span class="step__background-number">
+                                1
+                            </span>
+                            <p class="step__number">
+                                шаг 1
+                            </p>
+                            <h3 class="step__title">
+                                Заполнить регистрационную анкету
+                            </h3>
+                        </div>
+                        <p class="step__after-description text-desc-sm">
+                            Нужно указать основные данные о себе: имя, номер телефона, e-mail и пароль для входа.
+                        </p>
+                    </li>
+                    <li class="step__wrapper">
+                        <div class="step">
+                            <span class="step__background-number">
+                                2
+                            </span>
+                            <p class="step__number">
+                                шаг 2
+                            </p>
+                            <h3 class="step__title">
+                                Внести деньги на счет
+                            </h3>
+                        </div>
+                        <p class="step__after-description text-desc-sm">
+                            Вы можете использовать несколько платежных систем для пополнения депозита, включая
+                            систему
+                            MidexPay и кошелек Bitcoin.
+                        </p>
+                    </li>
+                    <li class="step__wrapper">
+                        <div class="step">
+                            <span class="step__background-number">
+                                3
+                            </span>
+                            <p class="step__number">
+                                шаг 3
+                            </p>
+                            <h3 class="step__title">
+                                Приступить
+                                к онлайн-трейдингу
+                            </h3>
+                        </div>
+                        <p class="step__after-description text-desc-sm">
+                            Сразу после пополнения депозита торговля через веб-терминал или мобильную платформу
+                            будет
+                            доступна.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="bonus">
+            <div class="container bonus__container">
+                <div class="bonus__background-image-left-wrapper">
+                    <picture class="bonus__background-picture">
+                        <source
+                            srcset="./images/gifts-background-1.webp"
+                            type="image/webp"
+                        >
+                        <img
+                            class="bonus__background-image bonus__background-image-left"
+                            src="./images/gifts-background-1.png"
+                            width="700"
+                            height="994"
+                            alt="Изображения подарков на заднем фоне"
+                            loading="lazy"
+                        >
+                    </picture>
+                </div>
+                <h2 class="bonus__title title-large">
+                    Каждый достоин второго шанса
+                </h2>
+                <p class="bonus__description text-desc">
+                    Купите свои первые акции без риска, мы вернем
+                    вам 100$ на счет в случае проигрыша
+                </p>
+                <div class="bonus__actions">
+                    <a
+                        href="#"
+                        class="bonus__button-get-bonus button button--gradient bonus__button-get-bonus-link button__link text-lg-black"
+                    >
+                        Получить бонус
+                    </a>
+                    <button
+                        class="bonus__button-create-demo button button--bordered bonus__button-create-demo-link button__link"
+                    >
+                        Открыть демо-счёт
+                    </button>
+                </div>
+                <div class="bonus__background-image-right-wrapper">
+                    <picture class="bonus__background-picture">
+                        <source
+                            srcset="./images/gifts-background-2.webp"
+                            type="image/webp"
+                        >
+                        <img
+                            class="bonus__background-image bonus__background-image-right"
+                            src="./images/gifts-background-2.png"
+                            width="1767"
+                            height="1299"
+                            alt="Изображения подарков на заднем фоне"
+                            loading="lazy"
+                        >
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="features">
+            <div class="container features__container">
+                <h2 class="features__title title-large">
+                    100 000+ клиентов уже инвестируют с нами
+                </h2>
                 <div class="features__list">
                     <article class="features__card">
                         <svg
-                            width="56"
-                            height="56"
-                            class="features__card-icon"
+                            width="48"
+                            height="48"
+                            class="card__icon"
                         >
-                            <use href="./icons/features-sprite.svg#planet"></use>
+                            <use href="icons/features-sprite.svg#1"></use>
                         </svg>
-                        <h3 class="features__card-title title-xs">
-                            Футуристический дизайн
-                        </h3>
-                        <p class="features__card-text text-light">
-                            Nike Air Mag выделяются своим уникальным и оригинальным
-                            дизайном, который сразу же привлекает внимание. Эта модель
-                            создана для тех, кто ценит стиль, вдохновленный наукой и
-                            фантастикой
+                        <h3 class="card__title">Представительство компании в Европе</h3>
+                        <p class="card__desc text-desc-sm">В разных странах мира компания открывает собсвенные
+                            представительства.
                         </p>
+                        <div class="card__link-wrapper">
+                            <a
+                                href="#"
+                                class="card__link"
+                            >Подробнее&nbsp;</a>
+                        </div>
                     </article>
                     <article class="features__card">
                         <svg
-                            width="56"
-                            height="56"
-                            class="features__card-icon"
+                            width="48"
+                            height="48"
+                            class="card__icon"
                         >
-                            <use href="./icons/features-sprite.svg#laces"></use>
+                            <use href="icons/features-sprite.svg#2"></use>
                         </svg>
-                        <h3 class="features__card-title title-xs">
-                            Автоматическая шнуровка
-                        </h3>
-                        <p class="features__card-text text-light">
-                            Инновационная система автоматической шнуровки обеспечивает
-                            идеальную фиксацию обуви на ноге без необходимости вручную
-                            завязывать шнурки, что значительно повышает комфорт
-                        </p>
+                        <h3 class="card__title">Мгновенный ввод и вывод средств</h3>
+                        <p class="card__desc text-desc-sm">0% комиссия с депозита</p>
+                        <div class="card__link-wrapper">
+                            <a
+                                href="#"
+                                class="card__link"
+                            >Подробнее&nbsp;</a>
+                        </div>
                     </article>
                     <article class="features__card">
                         <svg
-                            width="56"
-                            height="56"
-                            class="features__card-icon"
+                            width="47"
+                            height="47"
+                            class="card__icon"
                         >
-                            <use href="./icons/features-sprite.svg#limitation"></use>
+                            <use href="icons/features-sprite.svg#3"></use>
                         </svg>
-                        <h3 class="features__card-title title-xs">Ограниченный выпуск</h3>
-                        <p class="features__card-text text-light">
-                            Nike Air Mag были выпущены в ограниченном количестве, что делает
-                            каждую пару желанным объектом для коллекционеров и любителей
-                            уникальных кроссовок
-                        </p>
+                        <h3 class="card__title">Кредитное плечо до 1:1000</h3>
+                        <p class="card__desc text-desc-sm"></p>
+                        <div class="card__link-wrapper">
+                            <a
+                                href="#"
+                                class="card__link"
+                            >Подробнее&nbsp;</a>
+                        </div>
                     </article>
                     <article class="features__card">
                         <svg
-                            width="56"
-                            height="56"
-                            class="features__card-icon"
+                            width="44"
+                            height="44"
+                            class="card__icon"
                         >
-                            <use href="./icons/features-sprite.svg#light"></use>
+                            <use href="icons/features-sprite.svg#4"></use>
                         </svg>
-                        <h3 class="features__card-title title-xs">
-                            Встроенная подсветка
-                        </h3>
-                        <p class="features__card-text text-light">
-                            Благодаря светодиодной подсветке, кроссовки выглядят эффектно в
-                            темное время суток. Это придает им еще больше оригинальности и
-                            уникальности
-                        </p>
+                        <h3 class="card__title">Время выполнения заказа - 30 мс</h3>
+                        <p class="card__desc text-desc-sm">Средний показатель по отрасли - 500 мс</p>
+                        <div class="card__link-wrapper">
+                            <a
+                                href="#"
+                                class="card__link"
+                            >Подробнее&nbsp;</a>
+                        </div>
                     </article>
                     <article class="features__card">
                         <svg
-                            width="56"
-                            height="56"
-                            class="features__card-icon"
+                            width="39"
+                            height="39"
+                            class="card__icon"
                         >
-                            <use href="./icons/features-sprite.svg#shoes"></use>
+                            <use href="icons/features-sprite.svg#5"></use>
                         </svg>
-                        <h3 class="features__card-title title-xs">Комфорт и поддержка</h3>
-                        <p class="features__card-text text-light">
-                            Модель предлагает высокий уровень комфорта благодаря
-                            качественной амортизации и поддержке стопы, что делает их
-                            идеальными для длительного ношения
-                        </p>
+                        <h3 class="card__title">250 торговых инструментов</h3>
+                        <p class="card__desc text-desc-sm">Валютные пары, акции, металлы, индексы, облигации</p>
+                        <div class="card__link-wrapper">
+                            <a
+                                href="#"
+                                class="card__link"
+                            >Подробнее&nbsp;</a>
+                        </div>
                     </article>
                     <article class="features__card">
                         <svg
-                            width="56"
-                            height="56"
-                            class="features__card-icon"
+                            width="40"
+                            height="40"
+                            class="card__icon"
                         >
-                            <use href="./icons/features-sprite.svg#materials"></use>
+                            <use href="icons/features-sprite.svg#6"></use>
                         </svg>
-                        <h3 class="features__card-title title-xs">
-                            Современные материалы
-                        </h3>
-                        <p class="features__card-text text-light">
-                            Nike Air Mag изготовлены из высококачественных синтетических
-                            материалов, которые обеспечивают долговечность, устойчивость к
-                            износу и легкость в уходе
+                        <h3 class="card__title">Счета в евро, рублях, долларах США</h3>
+                        <p class="card__desc text-desc-sm">Пополните свой счет и сэкономьте на сборах за конвертацию
                         </p>
+                        <div class="card__link-wrapper">
+                            <a
+                                href="#"
+                                class="card__link"
+                            >Подробнее&nbsp;</a>
+                        </div>
                     </article>
                     <article class="features__card">
                         <svg
-                            width="56"
-                            height="56"
-                            class="features__card-icon"
+                            width="40"
+                            height="40"
+                            class="card__icon"
                         >
-                            <use href="./icons/features-sprite.svg#runner"></use>
+                            <use href="icons/features-sprite.svg#7"></use>
                         </svg>
-                        <h3 class="features__card-title title-xs">
-                            Хорошая сцепляемость
-                        </h3>
-                        <p class="features__card-text text-light">
-                            Подошва кроссовок обладает отличным сцеплением с различными
-                            поверхностями, что обеспечивает надежность при ходьбе и беге
-                        </p>
+                        <h3 class="card__title">15% бонус на первый депозит</h3>
+                        <p class="card__desc text-desc-sm">Может использоваться в торговле и во время просадки</p>
+                        <div class="card__link-wrapper">
+                            <a
+                                href="#"
+                                class="card__link"
+                            >Подробнее&nbsp;</a>
+                        </div>
                     </article>
                     <article class="features__card">
                         <svg
-                            width="56"
-                            height="56"
-                            class="features__card-icon"
+                            width="40"
+                            height="40"
+                            class="card__icon"
                         >
-                            <use href="./icons/features-sprite.svg#diamond"></use>
+                            <use href="icons/features-sprite.svg#8"></use>
                         </svg>
-                        <h3 class="features__card-title title-xs">Культовый статус</h3>
-                        <p class="features__card-text text-light">
-                            Nike Air Mag стали культовыми благодаря своему появлению в кино
-                            "Назад в будущее 2", что подчеркивает их историческую и
-                            культурную значимость
-                        </p>
-                    </article>
-                    <article class="features__card">
-                        <svg
-                            width="56"
-                            height="56"
-                            class="features__card-icon"
-                        >
-                            <use href="./icons/features-sprite.svg#brightness"></use>
-                        </svg>
-                        <h3 class="features__card-title title-xs">
-                            Яркое дополнение к любому образу
-                        </h3>
-                        <p class="features__card-text text-light">
-                            Кроссовки легко вписываются в различные стили одежды, позволяя
-                            создавать уникальные образы. Они могут дополнить как спортивный,
-                            так и повседневный стиль
-                        </p>
+                        <h3 class="card__title">Инновационная торговая платформа МТ5</h3>
+                        <p class="card__desc text-desc-sm">Доступно на IOS и Android</p>
+                        <div class="card__link-wrapper">
+                            <a
+                                href="#"
+                                class="card__link"
+                            >Подробнее&nbsp;</a>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
-        <section
-            id="top-models"
-            class="top-models section"
-        >
+        <section class="portfolio">
+            <div class="container portfolio__container">
+                <div class="portfolio__content-wrapper">
+                    <div class="portfolio__calculator">
+                        <div class="calculator__container">
+                            <div class="calculator__indicator">
+                                <svg
+                                    class="calculator__indicator-icon"
+                                    width="100%"
+                                    height="100%"
+                                    viewBox="0 0 900 450"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <defs>
+                                        <!-- Нейтральный градиент -->
+                                        <linearGradient
+                                            id="null-gradient"
+                                            x1="50.267822"
+                                            y1="296.889"
+                                            x2="228.768"
+                                            y2="21.31"
+                                            gradientUnits="userSpaceOnUse"
+                                        >
+                                            <stop stop-color="#6f7e8c" />
+                                            <stop
+                                                offset="1"
+                                                stop-color="#405548"
+                                            />
+                                        </linearGradient>
+
+                                        <!-- Зеленый градиент -->
+                                        <linearGradient
+                                            id="accent-gradient"
+                                            x1="50.267822"
+                                            y1="296.889"
+                                            x2="228.768"
+                                            y2="21.31"
+                                            gradientUnits="userSpaceOnUse"
+                                        >
+                                            <stop stop-color="#405548" />
+                                            <stop
+                                                offset="1"
+                                                stop-color="#6ADB83"
+                                            />
+                                        </linearGradient>
+
+                                        <!-- Желтый градиент -->
+                                        <linearGradient
+                                            id="yellow-gradient"
+                                            x1="50.267822"
+                                            y1="296.889"
+                                            x2="228.768"
+                                            y2="21.31"
+                                            gradientUnits="userSpaceOnUse"
+                                        >
+                                            <stop stop-color="#555140" />
+                                            <stop
+                                                offset="1"
+                                                stop-color="#DCD06A"
+                                            />
+                                        </linearGradient>
+
+                                        <!-- Красный градиент -->
+                                        <linearGradient
+                                            id="red-gradient"
+                                            x1="50.267822"
+                                            y1="296.889"
+                                            x2="228.768"
+                                            y2="21.31"
+                                            gradientUnits="userSpaceOnUse"
+                                        >
+                                            <stop stop-color="#554040" />
+                                            <stop
+                                                offset="1"
+                                                stop-color="#DB6A6A"
+                                            />
+                                        </linearGradient>
+
+                                        <!-- Фильтр размытия -->
+                                        <filter
+                                            id="glow-filter"
+                                            x="-50%"
+                                            y="-50%"
+                                            width="200%"
+                                            height="200%"
+                                        >
+                                            <feGaussianBlur stdDeviation="15" />
+                                        </filter>
+
+                                        <!-- Единый шаблон дуги (Сдвинут на +50px по X и +25px по Y для центровки) -->
+                                        <path
+                                            id="arc-path"
+                                            class="indicator-arc-path"
+                                            d="M 118,391 A 332,332 0 0,1 782,391"
+                                            fill="none"
+                                            stroke-width="26"
+                                            stroke-linecap="round"
+                                        />
+                                    </defs>
+
+                                    <!-- СЛОЙ 1: Фоновый серый полукруг -->
+                                    <use
+                                        class="indicator-background-line"
+                                        href="#arc-path"
+                                        stroke="#303030"
+                                    />
+
+                                    <!-- СЛОЙ 2: Свечение -->
+                                    <use
+                                        class="indicator-progress-line-glow"
+                                        href="#arc-path"
+                                        filter="url(#glow-filter)"
+                                    />
+
+                                    <!-- СЛОЙ 3: Зеленый индикатор прогресса -->
+                                    <use
+                                        class="indicator-progress-line"
+                                        href="#arc-path"
+                                    />
+                                </svg>
+                                <div class="calculator__content-wrapper">
+                                    <p class="calculator__indicator-label">Доходность</p>
+                                    <p class="calculator__indicator-result">
+                                        <span class="calculator__indicator-result calculator__indicator-result-text">
+                                            До
+                                        </span>
+                                        <span class="calculator__indicator-result calculator__indicator-result-value">
+                                            5%
+                                        </span>
+                                    </p>
+                                    <p class="calculator__indicator-badge-wrapper calculator__indicator-badge">
+                                        Низкий риск
+                                    </p>
+                                    <form class="calculator__range-group">
+                                        <label class="calculator__range-wrapper">
+                                            <span class="visually-hidden">Выберите значение доходности</span>
+                                            <input
+                                                type="range"
+                                                class="calculator__range-slider"
+                                                name="calculator__range-slider"
+                                                min="0"
+                                                max="100"
+                                                value="25"
+                                            >
+                                        </label>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="calculator__radio-group">
+                                <label class="calculator__radio-wrapper">
+                                    <input
+                                        class="calculator__radio-checkbox"
+                                        type="radio"
+                                        name="calculator__radio-checkbox"
+                                        checked
+                                    >
+                                    <span class="calculator__radio-text">
+                                        Управляю деньгами сам
+                                    </span>
+                                </label>
+                                <label class="calculator__radio-wrapper">
+                                    <input
+                                        class="calculator__radio-checkbox"
+                                        type="radio"
+                                        name="calculator__radio-checkbox"
+                                    >
+                                    <span class="calculator__radio-text">
+                                        Доверяю управление
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio__content">
+                        <h2 class="portfolio__title">
+                            Подберите индивидуальный инвестиционный портфель
+                        </h2>
+                        <p class="portfolio__description text-desc">
+                            Покупайте российские и иностранные акции, облигации, валюту и другие продукты в простом
+                            и
+                            удобном мобильном приложении для iOS и Android
+                        </p>
+                        <a
+                            href="#"
+                            class="portfolio__button-get-portfolio button button--gradient portfolio__button-get-portfolio-link button__link text-lg-black"
+                        >
+                            Получить портфель
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio__features">
+                    <div class="portfolio__features-list">
+                        <article class="portfolio__card">
+                            <h3 class="portfolio__card-title title-large">
+                                60 000
+                            </h3>
+                            <p class="portfolio__card-description">
+                                Активных инвесторов
+                            </p>
+                        </article>
+                        <article class="portfolio__card">
+                            <h3 class="portfolio__card-title title-large">
+                                150+
+                            </h3>
+                            <p class="portfolio__card-description">
+                                Торговых инструментов
+                            </p>
+                        </article>
+                        <article class="portfolio__card">
+                            <h3 class="portfolio__card-title title-large">
+                                183 000 USD
+                            </h3>
+                            <p class="portfolio__card-description">
+                                Финансовый результат одного из инвесторов
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mobile">
+            <div class="container mobile__container">
+                <div class="mobile__card">
+                    <div class="mobile__card-content">
+                        <h2 class="mobile__card-title title-large">
+                            Инвестируйте с телефона
+                        </h2>
+                        <p class="mobile__card-description text-desc">
+                            Покупайте российские и иностранные акции, облигации,
+                            валюту и другие продукты в простом и удобном мобильном приложении для iOS
+                            и Android.
+                        </p>
+                    </div>
+                    <div class="mobile__card-img-wrapper">
+                        <picture>
+                            <source
+                                srcset="./images/all-devices-investing.webp"
+                                type="image/webp"
+                            >
+                            <img
+                                class="mobile__card-img"
+                                src="./images/all-devices-investing.png"
+                                width="1052"
+                                height="689"
+                                alt="Интерфейс мобильного приложения и десктопной версии торговой платформы на экране ноутбука и смартфона"
+                                loading="lazy"
+                            >
+                        </picture>
+                    </div>
+                </div>
+                <div class="mobile__card mobile__card--secondary">
+                    <div class="mobile__card-content">
+                        <h2 class="mobile__card-title title-large">
+                            Инвестируйте с телефона
+                        </h2>
+                        <p class="mobile__card-description text-desc">
+                            Покупайте российские и иностранные акции, облигации,
+                            валюту и другие продукты в простом и удобном мобильном приложении для iOS
+                            и Android.
+                        </p>
+                        <div class="mobile__card-btns-wrapper">
+                            <a
+                                class="mobile__card-btn--ios mobile__card-btn mobile__card-btn-text"
+                                href="#"
+                            >
+                                <svg
+                                    class="mobile__card-btn-icon"
+                                    width="18"
+                                    height="19"
+                                >
+                                    <use href="./icons/mobile-sprite.svg#1"></use>
+                                </svg>
+                                Скачать для IOS
+                            </a>
+                            <a
+                                class="mobile__card-btn--android mobile__card-btn mobile__card-btn-text"
+                                href="#"
+                            >
+                                <svg
+                                    class="mobile__card-btn-icon"
+                                    width="18"
+                                    height="19"
+                                >
+                                    <use href="./icons/mobile-sprite.svg#2"></use>
+                                </svg>
+                                Скачать для Android
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mobile__card-img-wrapper">
+                        <picture>
+                            <source
+                                srcset="./images/iphones-invesing.webp"
+                                type="image/webp"
+                            >
+                            <img
+                                class="mobile__card-img"
+                                src="./images/iphones-invesing.png"
+                                width="1052"
+                                height="511"
+                                alt="Два смартфона с открытым мобильным приложением для инвестиций и торговли акциями"
+                                loading="lazy"
+                            >
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq">
             <div class="container">
-                <h2 class="top-models title-md section-title">
-                    Другие <span class="text--accent">Топ</span>
-                    модели от Nike
+                <div class="faq__container">
+                    <div class="faq_left">
+                        <div class="faq__text-wrapper">
+                            <h2 class="faq__title title-large">
+                                Мне только спросить
+                            </h2>
+                            <p class="faq__description text-desc-sm">
+                                Собрали в подсказках ответы на популярные вопросы
+                                об инвестициях и сервисе
+                            </p>
+                        </div>
+                        <a
+                            href="#"
+                            class="faq__content-button-get-cons button button--gradient faq__content-button-get-cons-link button__link text-lg-black"
+                            aria-label="Получить консультацию"
+                        >
+                            Получить консультацию
+                        </a>
+                    </div>
+                    <div class="faq__info">
+                        <details
+                            name="faq"
+                            class="faq__info-details"
+                        >
+                            <summary class="faq__info-question">
+                                <span class="faq__info-question-text">
+                                    <span class="faq__info-question-text-icon">?</span>
+                                    Есть ли плата за обслуживание?
+                                </span>
+                                <span class="faq__info-marker">
+                                    <svg
+                                        class="faq__info-marker-icon"
+                                        width="22"
+                                        height="11"
+                                    >
+                                        <use href="./icons/other-sprite.svg#angle-small-down"></use>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="faq__info-answer-text text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad
+                                quo
+                                quis
+                                sunt explicabo sequi magni dignissimos saepe nulla enim sit dolorum, perferendis
+                                inventore
+                                reprehenderit id placeat alias.
+                            </p>
+                        </details>
+                        <details
+                            name="faq"
+                            class="faq__info-details"
+                        >
+                            <summary class="faq__info-question">
+                                <span class="faq__info-question-text">
+                                    <span class="faq__info-question-text-icon">?</span>
+                                    Как вывести деньги со счёта?
+                                </span>
+                                <span class="faq__info-marker">
+                                    <svg
+                                        class="faq__info-marker-icon"
+                                        width="22"
+                                        height="11"
+                                    >
+                                        <use href="./icons/other-sprite.svg#angle-small-down"></use>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="faq__info-answer-text text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad
+                                quo
+                                quis
+                                sunt explicabo sequi magni dignissimos saepe nulla enim sit dolorum, perferendis
+                                inventore
+                                reprehenderit id placeat alias.
+                            </p>
+                        </details>
+                        <details
+                            name="faq"
+                            class="faq__info-details"
+                            open
+                        >
+                            <summary class="faq__info-question">
+                                <span class="faq__info-question-text">
+                                    <span class="faq__info-question-text-icon">?</span>
+                                    Какие налоги?
+                                </span>
+                                <span class="faq__info-marker">
+                                    <svg
+                                        class="faq__info-marker-icon"
+                                        width="22"
+                                        height="11"
+                                    >
+                                        <use href="./icons/other-sprite.svg#angle-small-down"></use>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="faq__info-answer-text text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad
+                                quo
+                                quis
+                                sunt explicabo sequi magni dignissimos saepe nulla enim sit dolorum, perferendis
+                                inventore
+                                reprehenderit id placeat alias.
+                            </p>
+                        </details>
+                        <details
+                            name="faq"
+                            class="faq__info-details"
+                        >
+                            <summary class="faq__info-question">
+                                <span class="faq__info-question-text">
+                                    <span class="faq__info-question-text-icon">?</span>
+                                    Где хранятся деньги?
+                                </span>
+                                <span class="faq__info-marker">
+                                    <svg
+                                        class="faq__info-marker-icon"
+                                        width="22"
+                                        height="11"
+                                    >
+                                        <use href="./icons/other-sprite.svg#angle-small-down"></use>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="faq__info-answer-text text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad
+                                quo
+                                quis
+                                sunt explicabo sequi magni dignissimos saepe nulla enim sit dolorum, perferendis
+                                inventore
+                                reprehenderit id placeat alias.
+                            </p>
+                        </details>
+                        <details
+                            name="faq"
+                            class="faq__info-details"
+                        >
+                            <summary class="faq__info-question">
+                                <span class="faq__info-question-text">
+                                    <span class="faq__info-question-text-icon">?</span>
+                                    Как открыть счёт?
+                                </span>
+                                <span class="faq__info-marker">
+                                    <svg
+                                        class="faq__info-marker-icon"
+                                        width="22"
+                                        height="11"
+                                    >
+                                        <use href="./icons/other-sprite.svg#angle-small-down"></use>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="faq__info-answer-text text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad
+                                quo
+                                quis
+                                sunt explicabo sequi magni dignissimos saepe nulla enim sit dolorum, perferendis
+                                inventore
+                                reprehenderit id placeat alias.
+                            </p>
+                        </details>
+                        <details
+                            name="faq"
+                            class="faq__info-details"
+                        >
+                            <summary class="faq__info-question">
+                                <span class="faq__info-question-text">
+                                    <span class="faq__info-question-text-icon">?</span>
+                                    Как пополнить счёт?
+                                </span>
+                                <span class="faq__info-marker">
+                                    <svg
+                                        class="faq__info-marker-icon"
+                                        width="22"
+                                        height="11"
+                                    >
+                                        <use href="./icons/other-sprite.svg#angle-small-down"></use>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="faq__info-answer-text text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad
+                                quo
+                                quis
+                                sunt explicabo sequi magni dignissimos saepe nulla enim sit dolorum, perferendis
+                                inventore
+                                reprehenderit id placeat alias.
+                            </p>
+                        </details>
+                        <details
+                            name="faq"
+                            class="faq__info-details"
+                        >
+                            <summary class="faq__info-question">
+                                <span class="faq__info-question-text">
+                                    <span class="faq__info-question-text-icon">?</span>
+                                    Что купить?
+                                </span>
+                                <span class="faq__info-marker">
+                                    <svg
+                                        class="faq__info-marker-icon"
+                                        width="22"
+                                        height="11"
+                                    >
+                                        <use href="./icons/other-sprite.svg#angle-small-down"></use>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="faq__info-answer-text text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis, error ad
+                                quo
+                                quis
+                                sunt explicabo sequi magni dignissimos saepe nulla enim sit dolorum, perferendis
+                                inventore
+                                reprehenderit id placeat alias.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bid">
+            <div class="container bid__container">
+                <h2 class="bid__title title-large">
+                    Оставьте заявку на открытие счёта
                 </h2>
-                <div class="top-models__products">
-                    <article class="top-models__product">
-                        <a
-                            href="#"
-                            class="top-models__product-link"
-                        >
-                            <div class="top-models__product-content">
-                                <h3 class="top-models__product-title title-xs">
-                                    Nike Air Yeezy 2 "Red October"
-                                </h3>
-                                <svg
-                                    width="24"
-                                    height="24"
-                                >
-                                    <use
-                                        class="top-models__product-icon"
-                                        href="./icons/sprite.svg#arrow-right"
-                                    ></use>
-                                </svg>
-                            </div>
-                            <picture class="top-models__product-wrapper">
-                                <source
-                                    src="./images/top-models/top-models-01.webp"
-                                    type="image/webp"
-                                />
-                                <img
-                                    class="top-models__product-img"
-                                    src="./images/top-models/top-models-01.png"
-                                    width="190"
-                                    height="143"
-                                    alt="Кроссовки Nike Air Yeezy 2 'Red October'"
-                                    loading="lazy"
-                                />
-                            </picture>
-                        </a>
+                <div class="bid__list">
+                    <article class="bid__card">
+                        <div class="bid__card-icon-wrapper bid__card-icon-wrapper--dark-blue">
+                            <span class="bid__card-icon-number">1</span>
+                            <svg
+                                class="bid__card-icon"
+                                width="44"
+                                height="44"
+                            >
+                                <use href="./icons/other-sprite.svg#copy-tool"></use>
+                            </svg>
+                        </div>
+                        <h3 class="bid__card-title">
+                            Заполните заявку онлайн
+                        </h3>
+                        <p class="bid__card-description text-desc-sm">
+                            Необходимо: имя, номер телефона, e-mail и пароль для входа.
+                        </p>
                     </article>
-                    <article class="top-models__product">
-                        <a
-                            href="#"
-                            class="top-models__product-link"
-                        >
-                            <div class="top-models__product-content">
-                                <h3 class="top-models__product-title title-xs">
-                                    Wings x Air Jordan 1
-                                </h3>
-                                <svg
-                                    width="24"
-                                    height="24"
-                                >
-                                    <use
-                                        class="top-models__product-icon"
-                                        href="./icons/sprite.svg#arrow-right"
-                                    ></use>
-                                </svg>
-                            </div>
-                            <picture class="top-models__product-wrapper">
-                                <source
-                                    src="./images/top-models/top-models-02.webp"
-                                    type="image/webp"
-                                />
-                                <img
-                                    class="top-models__product-img"
-                                    src="./images/top-models/top-models-02.png"
-                                    width="190"
-                                    height="120"
-                                    alt="Кроссовки Wings x Air Jordan 1"
-                                    loading="lazy"
-                                />
-                            </picture>
-                        </a>
+                    <article class="bid__card">
+                        <div class="bid__card-icon-wrapper bid__card-icon-wrapper--green">
+                            <span class="bid__card-icon-number">2</span>
+                            <svg
+                                class="bid__card-icon"
+                                width="48"
+                                height="48"
+                            >
+                                <use href="./icons/features-sprite.svg#2"></use>
+                            </svg>
+                        </div>
+                        <h3 class="bid__card-title">
+                            Откроем счет за 5 минут
+                        </h3>
+                        <p class="bid__card-description text-desc-sm">
+                            Вы можете использовать несколько платежных систем для пополнения депозита, включая
+                            систему
+                            MidexPay и кошелек Bitcoin.
+                        </p>
                     </article>
-                    <article class="top-models__product">
-                        <a
-                            href="#"
-                            class="top-models__product-link"
-                        >
-                            <div class="top-models__product-content">
-                                <h3 class="top-models__product-title title-xs">
-                                    Nike Dunk SB Low Yellow Lobster
-                                </h3>
-                                <svg
-                                    width="24"
-                                    height="24"
-                                >
-                                    <use
-                                        class="top-models__product-icon"
-                                        href="./icons/sprite.svg#arrow-right"
-                                    ></use>
-                                </svg>
-                            </div>
-                            <picture class="top-models__product-wrapper">
-                                <source
-                                    src="./images/top-models/top-models-03.webp"
-                                    type="image/webp"
-                                />
-                                <img
-                                    class="top-models__product-img"
-                                    src="./images/top-models/top-models-03.png"
-                                    width="190"
-                                    height="88"
-                                    alt="Кроссовки Nike Dunk SB Low Yellow Lobster"
-                                    loading="lazy"
-                                />
-                            </picture>
-                        </a>
-                    </article>
-                    <article class="top-models__product">
-                        <a
-                            href="#"
-                            class="top-models__product-link"
-                        >
-                            <div class="top-models__product-content">
-                                <h3 class="top-models__product-title title-xs">
-                                    DJ Khaled x Air Jordan 3 “Grateful”
-                                </h3>
-                                <svg
-                                    width="24"
-                                    height="24"
-                                >
-                                    <use
-                                        class="top-models__product-icon"
-                                        href="./icons/sprite.svg#arrow-right"
-                                    ></use>
-                                </svg>
-                            </div>
-                            <picture class="top-models__product-wrapper">
-                                <source
-                                    src="./images/top-models/top-models-04.webp"
-                                    type="image/webp"
-                                />
-                                <img
-                                    class="top-models__product-img"
-                                    src="./images/top-models/top-models-04.png"
-                                    width="190"
-                                    height="136"
-                                    alt="Кроссовки DJ Khaled x Air Jordan 3 'Grateful'"
-                                    loading="lazy"
-                                />
-                            </picture>
-                        </a>
-                    </article>
-                    <article class="top-models__product">
-                        <a
-                            href="#"
-                            class="top-models__product-link"
-                        >
-                            <div class="top-models__product-content">
-                                <h3 class="top-models__product-title title-xs">
-                                    Nike SB Dunk Low Freddy Krueger
-                                </h3>
-                                <svg
-                                    width="24"
-                                    height="24"
-                                >
-                                    <use
-                                        class="top-models__product-icon"
-                                        href="./icons/sprite.svg#arrow-right"
-                                    ></use>
-                                </svg>
-                            </div>
-                            <picture class="top-models__product-wrapper">
-                                <source
-                                    src="./images/top-models/top-models-05.webp"
-                                    type="image/webp"
-                                />
-                                <img
-                                    class="top-models__product-img"
-                                    src="./images/top-models/top-models-05.png"
-                                    width="190"
-                                    height="94"
-                                    alt="Кроссовки Nike SB Dunk Low Freddy Krueger"
-                                    loading="lazy"
-                                />
-                            </picture>
-                        </a>
-                    </article>
-                    <article class="top-models__product">
-                        <a
-                            href="#"
-                            class="top-models__product-link"
-                        >
-                            <div class="top-models__product-content">
-                                <h3 class="top-models__product-title title-xs">
-                                    Air Jordan 10 x OVO
-                                </h3>
-                                <svg
-                                    width="24"
-                                    height="24"
-                                >
-                                    <use
-                                        class="top-models__product-icon"
-                                        href="./icons/sprite.svg#arrow-right"
-                                    ></use>
-                                </svg>
-                            </div>
-                            <picture class="top-models__product-wrapper">
-                                <source
-                                    src="./images/top-models/top-models-06.webp"
-                                    type="image/webp"
-                                />
-                                <img
-                                    class="top-models__product-img"
-                                    src="./images/top-models/top-models-06.png"
-                                    width="190"
-                                    height="97"
-                                    alt="Кроссовки Air Jordan 10 x OVO"
-                                    loading="lazy"
-                                />
-                            </picture>
-                        </a>
-                    </article>
-                    <article class="top-models__product">
-                        <a
-                            href="#"
-                            class="top-models__product-link"
-                        >
-                            <div class="top-models__product-content">
-                                <h3 class="top-models__product-title title-xs">
-                                    Air Jordan 12 Flu-Game
-                                </h3>
-                                <svg
-                                    width="24"
-                                    height="24"
-                                >
-                                    <use
-                                        class="top-models__product-icon"
-                                        href="./icons/sprite.svg#arrow-right"
-                                    ></use>
-                                </svg>
-                            </div>
-                            <picture class="top-models__product-wrapper">
-                                <source
-                                    src="./images/top-models/top-models-07.webp"
-                                    type="image/webp"
-                                />
-                                <img
-                                    class="top-models__product-img"
-                                    src="./images/top-models/top-models-07.png"
-                                    width="190"
-                                    height="111"
-                                    alt="Кроссовки Air Jordan 12 Flu-Game"
-                                    loading="lazy"
-                                />
-                            </picture>
-                        </a>
-                    </article>
-                    <article class="top-models__product">
-                        <a
-                            href="#"
-                            class="top-models__product-link"
-                        >
-                            <div class="top-models__product-content">
-                                <h3 class="top-models__product-title title-xs">
-                                    Air Jordan 1 “Shattered Backboard” 1985
-                                </h3>
-                                <svg
-                                    width="24"
-                                    height="24"
-                                >
-                                    <use
-                                        class="top-models__product-icon"
-                                        href="./icons/sprite.svg#arrow-right"
-                                    ></use>
-                                </svg>
-                            </div>
-                            <picture class="top-models__product-wrapper">
-                                <source
-                                    src="./images/top-models/top-models-08.webp"
-                                    type="image/webp"
-                                />
-                                <img
-                                    class="top-models__product-img"
-                                    src="./images/top-models/top-models-08.png"
-                                    width="236"
-                                    height="118"
-                                    alt="Кроссовки Air Jordan 1 'Shattered Backboard' 1985"
-                                    loading="lazy"
-                                />
-                            </picture>
-                        </a>
-                    </article>
-                    <article class="top-models__product">
-                        <a
-                            href="#"
-                            class="top-models__product-link"
-                        >
-                            <div class="top-models__product-content">
-                                <h3 class="top-models__product-title title-xs">
-                                    Kanye West Nike Air Yeezy 1 “Prototype”
-                                </h3>
-                                <svg
-                                    width="24"
-                                    height="24"
-                                >
-                                    <use
-                                        class="top-models__product-icon"
-                                        href="./icons/sprite.svg#arrow-right"
-                                    ></use>
-                                </svg>
-                            </div>
-                            <picture class="top-models__product-wrapper">
-                                <source
-                                    src="./images/top-models/top-models-09.webp"
-                                    type="image/webp"
-                                />
-                                <img
-                                    class="top-models__product-img"
-                                    src="./images/top-models/top-models-09.png"
-                                    width="190"
-                                    height="147"
-                                    alt="Кроссовки Kanye West Nike Air Yeezy 1 'Prototype'"
-                                    loading="lazy"
-                                />
-                            </picture>
-                        </a>
+                    <article class="bid__card">
+                        <div class="bid__card-icon-wrapper bid__card-icon-wrapper--green">
+                            <span class="bid__card-icon-number">3</span>
+                            <svg
+                                class="bid__card-icon"
+                                width="40"
+                                height="40"
+                            >
+                                <use href="./icons/features-sprite.svg#6"></use>
+                            </svg>
+                        </div>
+                        <h3 class="bid__card-title">
+                            Пополните счёт и начните инвестировать
+                        </h3>
+                        <p class="bid__card-description text-desc-sm">
+                            Сразу после пополнения депозита будет доступна торговля через веб-терминал или мобильную
+                            платформу.
+                        </p>
                     </article>
                 </div>
+                <form class="bid__form">
+                    <fieldset class="bid__fieldset-group">
+                        <legend class="visually-hidden">Личные данные пользователя</legend>
+                        <label class="bid__label bid__label-name">
+                            <input
+                                class="bid__input"
+                                id="bid-name-input"
+                                type="text"
+                                name="name"
+                                placeholder="Ваше имя:"
+                                required
+                            >
+                        </label>
+                        <label class="bid__label bid__label-phone">
+                            <input
+                                class="bid__input"
+                                id="bid-phone-input"
+                                type="tel"
+                                name="phone"
+                                placeholder="+7 --- --- -- --"
+                                required
+                            >
+                        </label>
+                        <label class="bid__label bid__label-email">
+                            <input
+                                class="bid__input"
+                                id="bid-email-input"
+                                type="email"
+                                name="email"
+                                placeholder="Email:"
+                            >
+                        </label>
+                    </fieldset>
+                    <button class="bid__submit-bth button button--gradient">
+                        <span class="bid__submit-bth-text button__link text-lg-black">
+                            Оставить заявку
+                        </span>
+                    </button>
+                </form>
             </div>
         </section>
     </main>
     <footer class="footer">
         <div class="container footer__container">
-            <a
-                href="/"
-                class="logo footer__logo"
-            >
-                <img
-                    src="./icons/logo.svg"
-                    alt="Логотип Nike"
-                    class="logo__img"
-                />
-            </a>
-            <nav
-                class="menu footer__menu"
-                aria-label="Главное меню"
-            >
-                <ul class="menu__list">
-                    <li class="menu__item">
+            <div class="footer__brand-group">
+                <a
+                    href="/"
+                    class="logo footer__logo"
+                >
+                    <img
+                        src="./icons/logo.svg"
+                        width="52"
+                        height="66"
+                        alt="Логотип Leader Classic"
+                        class="logo__img"
+                    />
+                    <img
+                        src="./icons/footer-logo-text.svg"
+                        width="108"
+                        height="46"
+                        alt="Текст логотипа Leader Classic"
+                        class="footer__logo-text-icon"
+                    />
+                </a>
+                <ul class="footer__socials-list">
+                    <li class="footer__social-item">
                         <a
-                            href="#air-mag"
-                            class="menu__link"
-                            lang="en"
-                        >Air Mag</a>
+                            class="footer__social-link"
+                            href="#"
+                            aria-label="Ссылка на Facebook Leader Classik"
+                        >
+                            <svg
+                                class="footer__social-link-icon"
+                                width="39"
+                                height="50"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use href="./icons/footer-sprite.svg#1"></use>
+                            </svg>
+                        </a>
                     </li>
-                    <li class="menu__item">
+                    <li class="footer__social-item">
                         <a
-                            href="#sizes"
-                            class="menu__link"
-                        >Размеры</a>
+                            class="footer__social-link"
+                            href="#"
+                            aria-label="Ссылка на VK Leader Classik"
+                        >
+                            <svg
+                                class="footer__social-link-icon"
+                                width="39"
+                                height="50"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use href="./icons/footer-sprite.svg#2"></use>
+                            </svg>
+                        </a>
                     </li>
-                    <li class="menu__item">
+                    <li class="footer__social-item">
                         <a
-                            href="#features"
-                            class="menu__link"
-                        >Характеристики</a>
+                            class="footer__social-link"
+                            href="#"
+                            aria-label="Ссылка на Instagramm Leader Classik"
+                        >
+                            <svg
+                                class="footer__social-link-icon"
+                                width="39"
+                                height="50"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use href="./icons/footer-sprite.svg#3"></use>
+                            </svg>
+                        </a>
                     </li>
-                    <li class="menu__item">
+                    <li class="footer__social-item">
                         <a
-                            href="#top-models"
-                            class="menu__link"
-                        >Другие ТОП модели</a>
+                            class="footer__social-link"
+                            href="#"
+                            aria-label="Ссылка на Youtube Leader Classik"
+                        >
+                            <svg
+                                class="footer__social-link-icon"
+                                width="39"
+                                height="50"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use href="./icons/footer-sprite.svg#4"></use>
+                            </svg>
+                        </a>
                     </li>
                 </ul>
-            </nav>
-            <a
-                href="tel:+79292992929"
-                class="footer__tel-link"
-            >+7 (929) 299-29-29</a>
+                <a
+                    class="footer__policy-link"
+                    href="#"
+                >
+                    Политика передачи данных
+                </a>
+            </div>
+            <div class="footer__contacts-group">
+                <h4 class="footer__contacts-label">
+                    Звонок по России бесплатный
+                </h4>
+                <a
+                    class="footer__contacts-phone"
+                    href="tel:+74952121671"
+                >
+                    8 (495) 212-16-71
+                </a>
+                <button
+                    class="footer__button-call button button--gradient footer__button-call-link button__link text-lg-black"
+                    aria-label="Перезвоните мне"
+                >Перезвоните мне</button>
+            </div>
         </div>
     </footer>
-    <div class="modal">
-        <div
-            class="modal__window modal-buy"
-            data-modal-window="buy"
-        >
-            <button
-                class="modal__close"
-                aria-label="Закрыть"
-                title="Закрыть"
-                data-modal-close
-            >
-                <svg
-                    width="24"
-                    height="24"
-                >
-                    <use
-                        class="modal__close-icon"
-                        href="./icons/sprite.svg#cross"
-                    ></use>
-                </svg>
-            </button>
-            <div class="modal__content modal-buy__content">
-                <h3 class="modal-buy__title title-sm">Заявка на заказ</h3>
-                <form class="modal-buy__form">
-                    <label class="modal-buy__label">
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Ваше имя"
-                            required
-                            class="modal-buy__input"
-                        />
-                    </label>
-                    <label class="modal-buy__label">
-                        <input
-                            type="text"
-                            name="tel"
-                            placeholder="Номер телефона"
-                            required
-                            class="modal-buy__input"
-                        />
-                    </label>
-                    <label class="modal-buy__label">
-                        <input
-                            type="text"
-                            name="email"
-                            placeholder="E-mail"
-                            required
-                            class="modal-buy__input"
-                        />
-                    </label>
-                    <button class="modal-buy__submit">Отправить</button>
-                </form>
-            </div>
-        </div>
-        <div
-            class="modal__window modal-buy"
-            data-modal-window="cart"
-        >
-            <button
-                class="modal__close"
-                aria-label="Закрыть"
-                title="Закрыть"
-                data-modal-close
-            >
-                <svg
-                    width="24"
-                    height="24"
-                >
-                    <use
-                        class="modal__close-icon"
-                        href="./icons/sprite.svg#cross"
-                    ></use>
-                </svg>
-            </button>
-            <div class="modal__content modal-buy__content">
-                <h3 class="modal-buy__title title-sm">Заявка на заказ</h3>
-                <form class="modal-buy__form">
-                    <label class="modal-buy__label">
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Ваше имя"
-                            required
-                            class="modal-buy__input"
-                        />
-                    </label>
-                    <label class="modal-buy__label">
-                        <input
-                            type="text"
-                            name="tel"
-                            placeholder="Номер телефона"
-                            required
-                            class="modal-buy__input"
-                        />
-                    </label>
-                    <label class="modal-buy__label">
-                        <input
-                            type="text"
-                            name="email"
-                            placeholder="E-mail"
-                            required
-                            class="modal-buy__input"
-                        />
-                    </label>
-                    <button class="modal-buy__submit">Отправить</button>
-                </form>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>

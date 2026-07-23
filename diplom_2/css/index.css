@@ -6,14 +6,20 @@
 
 /* Blocks */
 @import url("./blocks/header.css");
+@import url("./blocks/lang-switcher.css");
 @import url("./blocks/menu.css");
 @import url("./blocks/burger.css");
+@import url("./blocks/timer.css");
+@import url("./blocks/promo.css");
 @import url("./blocks/hero.css");
-@import url("./blocks/air-mag.css");
-@import url("./blocks/product.css");
-@import url("./blocks/sizes.css");
+@import url("./blocks/cases.css");
+@import url("./blocks/tools.css");
+@import url("./blocks/guide.css");
+@import url("./blocks/bonus.css");
 @import url("./blocks/features.css");
-@import url("./blocks/top-models.css");
+@import url("./blocks/portfolio.css");
+@import url("./blocks/calculator.css");
+@import url("./blocks/mobile.css");
+@import url("./blocks/faq.css");
+@import url("./blocks/bid.css");
 @import url("./blocks/footer.css");
-@import url("./blocks/modal.css");
-@import url("./blocks/modal-buy.css");

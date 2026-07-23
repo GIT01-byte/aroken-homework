@@ -1,0 +1,111 @@
+.portfolio {
+    padding-bottom: clamp(11.25rem, 10.26rem + 4.21vw, 15.3125rem);
+}
+
+.portfolio__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 375px - 1920px */
+    gap: clamp(3.125rem, 0.67rem + 10.49vw, 13.25rem);
+}
+
+.portfolio__content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 375px - 1920px */
+    gap: clamp(2.5rem, 0.38rem + 9.06vw, 11.25rem);
+}
+
+@media (width <=1370px) {
+    .portfolio__content-wrapper {
+        flex-direction: column-reverse;
+    }
+}
+
+.portfolio__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (width <=1370px) {
+    .portfolio__content {
+        align-items: center;
+    }
+}
+
+.portfolio__title {
+    /* 375px - 1920px */
+    font-weight: 500;
+    font-size: clamp(1.5rem, 0.34rem + 4.97vw, 4.0625rem);
+    line-height: 117%;
+    color: var(--color-main);
+    margin-bottom: clamp(0.5625rem, 0.43rem + 0.58vw, 1.125rem);
+}
+
+@media (width <=1370px) {
+    .portfolio__title {
+        text-align: center;
+    }
+}
+
+.portfolio__description {
+    /* 375px - 1920px */
+    font-weight: 400;
+    font-size: clamp(1rem, 0.60rem + 1.70vw, 1.875rem);
+    line-height: 158%;
+    color: var(--color-main);
+    margin-bottom: clamp(1.5625rem, 1.18rem + 1.62vw, 3.125rem);
+}
+
+@media (width >1370px) {
+    .portfolio__description {
+        text-align: left;
+        max-width: 86%;
+    }
+}
+
+@media (width <=1370px) {
+    .portfolio__description {
+        text-align: center;
+    }
+}
+
+.portfolio__features-list {
+    display: flex;
+    gap: clamp(1.25rem, -1.94rem + 13.59vw, 14.375rem);
+}
+
+@media (width <=768px) {
+    .portfolio__features-list {
+        flex-direction: column;
+    }
+}
+
+.portfolio__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.25rem, 0.01rem + 1.04vw, 1.25rem);
+}
+
+.portfolio__card-title {
+    text-wrap: nowrap;
+    background: linear-gradient(165deg, #66ce7d 0%, #4d7e5a 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.portfolio__card-description {
+    font-weight: 500;
+    font-size: clamp(1rem, 0.85rem + 0.65vw, 1.625rem);
+    line-height: 125%;
+    text-align: center;
+    color: #e7e7e7;
+    max-width: clamp(15rem, 12.74rem + 9.64vw, 24.3125rem);
+}

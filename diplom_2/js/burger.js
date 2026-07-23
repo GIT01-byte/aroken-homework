@@ -134,17 +134,17 @@ export default class BurgerMenu {
   handleTouchMove(event) {
     if (!this.isBurgerMenuOpen()) return;
     const currentX = event.changedTouches[0].screenX;
-    const translateX = Math.max(0, currentX - this.touchStartX);
-    this.burgerMenu.style.right = `-${translateX}px`;
+    const translateX = Math.max(0, this.touchStartX - currentX);
+    this.burgerMenu.style.left = `-${translateX}px`;
   }
 
   handleTouchEnd(event) {
     if (!this.isBurgerMenuOpen()) return;
     const touchEndX = event.changedTouches[0].screenX;
-    const swipeDistance = touchEndX - this.touchStartX;
+    const swipeDistance = this.touchStartX - touchEndX;
 
     this.burgerMenu.style.transition = "";
-    this.burgerMenu.style.right = "";
+    this.burgerMenu.style.left = "";
 
     if (swipeDistance > 70) {
       this.hideBurgerMenu();
