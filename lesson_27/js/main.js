@@ -1,5 +1,6 @@
 'use strict';
 
+// Функционал списка задач
 const todoKeys = {
   id: 'ID',
   text: 'text',
@@ -57,3 +58,42 @@ const deleteTodoById = (todos, todoId) => {
   todos.splice(todoIndex, 1);
   return todos;
 };
+
+// DOM манипуляции
+const todoDOMForm = document.querySelector('.form');
+const todoDOMInput = document.querySelector('.input');
+const todosDOMList = document.querySelector('.todos');
+
+const createTodoElement = (text) => {
+  todosDOMList.insertAdjacentHTML(
+    'afterbegin',
+    `
+    <li class="todo">
+        <div class="todo-text">${text}</div>
+        <div class="todo-actions">
+            <button class="button-complete button">&#10004;</button>
+            <button class="button-delete button">&#10006;</button>
+        </div>
+    </li>
+    `,
+  );
+};
+
+const handleCreateTodo = (todos, text) => {
+  createTodo(todos, text);
+  createTodoElement(text);
+  return;
+};
+
+const handleFormTodosSubmit = (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(todoDOMForm);
+  const text = formData.get(todoKeys.text);
+
+  todoDOMForm.reset();
+
+  handleCreateTodo(todos, text);
+};
+
+todoDOMForm.addEventListener('submit', handleFormTodosSubmit);
