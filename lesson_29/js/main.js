@@ -1,0 +1,114 @@
+'use strict';
+
+// Функционал списка задач
+const todoKeys = {
+  id: 'ID',
+  text: 'text',
+  date: 'date',
+  is_completed: 'is_completed',
+};
+
+const errTodoNotFound = (todoId) => `Todo with id ${todoId} not found`;
+
+const todos = [];
+
+const getNewTodoId = (todos) => {
+  return (
+    todos.reduce((maxId, todo) => Math.max(maxId, todo[todoKeys.id]), 0) + 1
+  );
+};
+
+const createTodo = (todos, text) => {
+  const newTodo = {
+    [todoKeys.id]: getNewTodoId(todos),
+    [todoKeys.text]: text,
+    [todoKeys.date]: new Date().toLocaleTimeString(),
+    [todoKeys.is_completed]: false,
+  };
+  todos.push(newTodo);
+  return newTodo;
+};
+
+const completeTodoById = (todos, todoId) => {
+  const todo = todos.find((todo) => todo[todoKeys.id] === todoId);
+  if (todo) {
+    todo[todoKeys.is_completed] = !todo[todoKeys.is_completed];
+    return todo;
+  }
+  console.error(errTodoNotFound(todoId));
+  return null;
+};
+
+const editTodoTextById = (todos, todoId, todoText) => {
+  const todo = todos.find((todo) => todo[todoKeys.id] === todoId);
+  if (todo) {
+    todo[todoKeys.text] = todoText;
+    return todo;
+  }
+  console.error(errTodoNotFound(todoId));
+  return null;
+};
+
+const deleteTodoById = (todos, todoId) => {
+  const todoIndex = todos.findIndex((todo) => todo[todoKeys.id] === todoId);
+  if (todoIndex === -1) {
+    console.error(errTodoNotFound(todoId));
+    return null;
+  }
+  todos.splice(todoIndex, 1);
+  return todos;
+};
+
+// DOM манипуляции
+const todoDOMForm = document.querySelector('.form');
+const todoDOMInput = document.querySelector('.input');
+const todosDOMList = document.querySelector('.todos');
+
+const createTodoElement = (todo) => {
+  const todoElement = document.createElement('li');
+  todoElement.classList.add('todo');
+  todoElement.dataset.id = todo[todoKeys.id];
+  todoElement.innerHTML = `
+    <div class="todo-text">${todo[todoKeys.text]}</div>
+    <div class="todo-actions">
+        <button class="button-complete button">&#10004;</button>
+        <button class="button-delete button">&#10006;</button>
+    </div>
+  `;
+  return todoElement;
+};
+
+const handleCreateTodo = (todos, text) => {
+  const todo = createTodo(todos, text);
+  const todoElement = createTodoElement(todo);
+  todosDOMList.prepend(todoElement);
+};
+
+todoDOMForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(todoDOMForm);
+  const text = formData.get(todoKeys.text).trim();
+  if (!text) return;
+
+  todoDOMForm.reset();
+
+  handleCreateTodo(todos, text);
+});
+
+todosDOMList.addEventListener('click', ({ target }) => {
+  const todo = target.closest('.todo');
+  if (!todo) return;
+
+  const todoId = Number(todo.dataset.id);
+
+  if (target.matches('.button-complete')) {
+    completeTodoById(todos, todoId);
+    todo.classList.toggle('completed');
+  }
+
+  if (target.matches('.button-delete')) {
+    deleteTodoById(todos, todoId);
+    todo.remove();
+  }
+});
