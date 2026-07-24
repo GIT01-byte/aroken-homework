@@ -27,15 +27,16 @@
 }
 
 .indicator-progress-line-glow {
-    stroke: url(#null-gradient);
-    stroke-dasharray: 0 1043;
     transition: stroke-dasharray var(--transition-time), stroke var(--transition-time)
 }
 
 .indicator-progress-line {
+    transition: stroke-dasharray var(--transition-time), stroke var(--transition-time);
+}
+
+.indicator-progress-line--null {
     stroke: url(#null-gradient);
     stroke-dasharray: 0 1043;
-    transition: stroke-dasharray var(--transition-time), stroke var(--transition-time);
 }
 
 .indicator-progress-line--low {
@@ -99,10 +100,14 @@
     line-height: 126%;
     text-align: center;
     color: #c5c5c5;
+    transition: background var(--transition-time);
+}
+
+/* Модификатор: Нулевой риск (Нейтральный) */
+.calculator__indicator-badge-wrapper--null {
     background: linear-gradient(120deg,
             rgba(58, 67, 77, 0.4) 0%,
             rgba(111, 126, 140, 0.22) 100%);
-    transition: background var(--transition-time);
 }
 
 /* Модификатор: Низкий риск (Зеленый) */
@@ -147,7 +152,24 @@
     outline: none;
     cursor: pointer;
 
-    --slider-color: #6f7e8c;
+    --slider-default-color: #6f7e8c;
+    --slider-color: var(--slider-default-color);
+}
+
+.calculator__range-slider--null {
+    --slider-color: var(--slider-default-color);
+}
+
+.calculator__range-slider--low {
+    --slider-color: #61BB75
+}
+
+.calculator__range-slider--medium {
+    --slider-color: #dcd06a
+}
+
+.calculator__range-slider--high {
+    --slider-color: #db6a6a
 }
 
 .calculator__range-slider::-webkit-slider-thumb {
@@ -197,7 +219,24 @@
     cursor: pointer;
     outline: none;
     transition: background-image var(--transition-time), border-width var(--transition-time);
-    --radio-gradient: linear-gradient(#0e0e12, #0e0e12), linear-gradient(133deg, #3a434d 0%, #6f7e8c 100%);
+    --radio-gradient-default: linear-gradient(#0e0e12, #0e0e12), linear-gradient(133deg, #6f7e8c 0%, #405548 100%);
+    --radio-gradient: var(--radio-gradient-default);
+}
+
+.calculator__radio-checkbox--null {
+    --radio-gradient: var(--radio-gradient-default);
+}
+
+.calculator__radio-checkbox--low {
+    --radio-gradient: linear-gradient(#0e0e12, #0e0e12), linear-gradient(133deg, #41594a 0%, #6adb83 100%);
+}
+
+.calculator__radio-checkbox--medium {
+    --radio-gradient: linear-gradient(#0e0e12, #0e0e12), linear-gradient(133deg, #555140 0%, #dcd06a 100%);
+}
+
+.calculator__radio-checkbox--high {
+    --radio-gradient: linear-gradient(#0e0e12, #0e0e12), linear-gradient(133deg, #554040 0%, #db6a6a 100%);
 }
 
 .calculator__radio-checkbox::after {

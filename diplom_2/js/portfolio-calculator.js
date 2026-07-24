@@ -13,148 +13,154 @@ export default class PortfolioCalculator {
       `.${this.config.INDICATOR_PROGRESS_LINE_GLOW}`,
     );
 
-    this.indicatorProgressLineLowGradient = `${this.config.INDICATOR_PROGRESS_LINE_LOW_GRADIENT}`;
-    this.indicatorProgressLineMediumGradient = `${this.config.INDICATOR_PROGRESS_LINE_MEDIUM_GRADIENT}`;
-    this.indicatorProgressLineHighGradient = `${this.config.INDICATOR_PROGRESS_LINE_HIGH_GRADIENT}`;
-
     this.badgeWrapper = document.querySelector(`.${this.config.BADGE_WRAPPER}`);
     this.badgeText = document.querySelector(`.${this.config.BADGE_TEXT}`);
 
-    this.indicatorBadgeWrapperLowGradient = `${this.config.INDICATOR_BADGE_WRAPPER_LOW_GRADIENT}`;
-    this.indicatorBadgeWrapperMediumGradient = `${this.config.INDICATOR_BADGE_WRAPPER_MEDIUM_GRADIENT}`;
-    this.indicatorBadgeWrapperHighGradient = `${this.config.INDICATOR_BADGE_WRAPPER_HIGH_GRADIENT}`;
-
-    this.radioInputs = document.querySelectorAll(
-      `.${this.config.RADIO_INPUTs}`,
-    );
+    this.radioInputs = document.querySelectorAll(`.${this.config.RADIO_INPUT}`);
 
     this.resultValue = document.querySelector(`.${this.config.RESULT_VALUE}`);
 
-    this.manageRangeSlider();
+    this.stateMap = [
+      {
+        name: 'null',
+        text: 'Нулевой риск',
+        max: 0,
+      },
+      {
+        name: 'low',
+        text: 'Низкий риск',
+        max: 33,
+      },
+      {
+        name: 'medium',
+        text: 'Средний риск',
+        max: 66,
+      },
+      {
+        name: 'high',
+        text: 'Высокий риск',
+        max: 100,
+      },
+    ];
+    this.classesToRemove = {
+      line: this.stateMap.map(
+        (state) => `${this.config.INDICATOR_PROGRESS_LINE}--${state.name}`,
+      ),
+      lineGlow: this.stateMap.map(
+        (state) => `${this.config.INDICATOR_PROGRESS_LINE_GLOW}--${state.name}`,
+      ),
+      badgeWrapper: this.stateMap.map(
+        (state) => `${this.config.BADGE_WRAPPER}--${state.name}`,
+      ),
+      rangeSlider: this.stateMap.map(
+        (state) => `${this.config.RANGE_SLIDER}--${state.name}`,
+      ),
+      radioInput: this.stateMap.map(
+        (state) => `${this.config.RADIO_INPUT}--${state.name}`,
+      ),
+    };
+    this.currentState = null;
+
+    this.checkValue = this.checkValue.bind(this);
+    this.changeState = this.changeState.bind(this);
+    this.clearStateClasses = this.clearStateClasses.bind(this);
+    this.updateIndicators = this.updateIndicators.bind(this);
+    this.UpdateDOM = this.UpdateDOM.bind(this);
+
+    this.initEvents();
   }
 
-  manageRangeSlider() {
+  initEvents() {
     if (!this.rangeSlider) return;
 
-    // Первоначально обновляем UI
+    // Первоначально обновляем состояние
     const currentValue = Number(this.rangeSlider.value);
-    this.UpdateUI(currentValue);
+    this.checkValue(currentValue);
 
-    // Подключаем событием и обновляем UI
+    // Подключаем событие
     this.rangeSlider.addEventListener('input', (event) => {
       const currentValue = Number(event.target.value);
-      this.UpdateUI(currentValue);
+      this.checkValue(currentValue);
     });
   }
 
-  RemoveColors() {
-    const lines = [this.indicatorProgressLine, this.indicatorProgressLineGlow];
-    lines.forEach((line) => {
-      if (line) {
-        line.classList.remove(
-          this.indicatorProgressLineLowGradient,
-          this.indicatorProgressLineMediumGradient,
-          this.indicatorProgressLineHighGradient,
-        );
-      }
-    });
+  checkValue(value) {
+    // Обновляем индикаторы, которые напрямую зависят от значения
+    this.updateIndicators(value);
 
-    if (this.badgeWrapper) {
-      this.badgeWrapper.classList.remove(
-        this.indicatorBadgeWrapperLowGradient,
-        this.indicatorBadgeWrapperMediumGradient,
-        this.indicatorBadgeWrapperHighGradient,
+    const newState = this.stateMap.find((state) => value <= state.max);
+
+    if (
+      this.currentState === null ||
+      newState.name !== this.currentState.name
+    ) {
+      this.changeState(newState);
+    }
+  }
+
+  changeState(state) {
+    this.clearStateClasses();
+    this.currentState = state;
+    this.UpdateDOM();
+  }
+
+  clearStateClasses() {
+    if (this.indicatorProgressLine) {
+      this.indicatorProgressLine.classList.remove(...this.classesToRemove.line);
+    }
+
+    if (this.indicatorProgressLineGlow) {
+      this.indicatorProgressLineGlow.classList.remove(
+        ...this.classesToRemove.lineGlow,
       );
     }
 
+    if (this.badgeWrapper) {
+      this.badgeWrapper.classList.remove(...this.classesToRemove.badgeWrapper);
+    }
+
     if (this.rangeSlider) {
-      this.rangeSlider.style.removeProperty('--slider-color');
+      this.rangeSlider.classList.remove(...this.classesToRemove.rangeSlider);
     }
 
     this.radioInputs.forEach((label) => {
-      label.style.removeProperty('--radio-gradient');
+      if (label) {
+        label.classList.remove(...this.classesToRemove.radioInput);
+      }
     });
   }
 
-  UpdateUI(value) {
-    this.RemoveColors();
-
+  updateIndicators(value) {
+    // Обновляем процент доходности
     if (this.resultValue) {
       this.resultValue.textContent = `${value / 5}%`;
     }
-
+    // Обновляем градиент слайдера
     if (this.rangeSlider) {
       this.rangeSlider.style.background = `linear-gradient(to right, var(--slider-color) 0%, var(--slider-color) ${value}%, #252525 ${value}%, #252525 100%)`;
     }
+  }
 
-    if (value === 0) {
-      this.badgeText.textContent = 'Нулевой риск';
+  UpdateDOM() {
+    this.indicatorProgressLine.classList.add(
+      `${this.config.INDICATOR_PROGRESS_LINE}--${this.currentState.name}`,
+    );
+    this.indicatorProgressLineGlow.classList.add(
+      `${this.config.INDICATOR_PROGRESS_LINE_GLOW}--${this.currentState.name}`,
+    );
 
-      this.rangeSlider.style.setProperty('--slider-color', '#6f7e8c');
-      this.radioInputs.forEach((label) => {
-        label.style.setProperty(
-          '--radio-gradient',
-          'linear-gradient(#0e0e12, #0e0e12), linear-gradient(133deg, #6f7e8c 0%, #405548 100%)',
-        );
-      });
-    } else if (value > 0 && value <= 33) {
-      this.indicatorProgressLine.classList.add(
-        this.indicatorProgressLineLowGradient,
+    this.badgeWrapper.classList.add(
+      `${this.config.BADGE_WRAPPER}--${this.currentState.name}`,
+    );
+    this.badgeText.textContent = `${this.currentState.text}`;
+
+    this.rangeSlider.classList.add(
+      `${this.config.RANGE_SLIDER}--${this.currentState.name}`,
+    );
+    this.radioInputs.forEach((label) => {
+      label.classList.add(
+        `${this.config.RADIO_INPUT}--${this.currentState.name}`,
       );
-      this.indicatorProgressLineGlow.classList.add(
-        this.indicatorProgressLineLowGradient,
-      );
-
-      this.badgeWrapper.classList.add(this.indicatorBadgeWrapperLowGradient);
-      this.badgeText.textContent = 'Низкий риск';
-
-      this.rangeSlider.style.setProperty('--slider-color', '#61BB75');
-      this.radioInputs.forEach((label) => {
-        label.style.setProperty(
-          '--radio-gradient',
-          'linear-gradient(#0e0e12, #0e0e12), linear-gradient(133deg, #41594a 0%, #6adb83 100%)',
-        );
-      });
-    } else if (value > 33 && value <= 66) {
-      this.indicatorProgressLine.classList.add(
-        this.indicatorProgressLineMediumGradient,
-      );
-      this.indicatorProgressLineGlow.classList.add(
-        this.indicatorProgressLineMediumGradient,
-      );
-
-      this.badgeWrapper.classList.add(this.indicatorBadgeWrapperMediumGradient);
-      this.badgeText.textContent = 'Средний риск';
-
-      this.rangeSlider.style.setProperty('--slider-color', '#dcd06a');
-      this.radioInputs.forEach((label) => {
-        label.style.setProperty(
-          '--radio-gradient',
-          'linear-gradient(#0e0e12, #0e0e12), linear-gradient(133deg, #555140 0%, #dcd06a 100%)',
-        );
-      });
-    } else if (value > 66 && value <= 100) {
-      this.indicatorProgressLine.classList.add(
-        this.indicatorProgressLineHighGradient,
-      );
-      this.indicatorProgressLineGlow.classList.add(
-        this.indicatorProgressLineHighGradient,
-      );
-
-      this.badgeWrapper.classList.add(this.indicatorBadgeWrapperHighGradient);
-      this.badgeText.textContent = 'Высокий риск';
-
-      this.rangeSlider.style.setProperty('--slider-color', '#db6a6a');
-      this.radioInputs.forEach((label) => {
-        label.style.setProperty(
-          '--radio-gradient',
-          'linear-gradient(#0e0e12, #0e0e12), linear-gradient(133deg, #554040 0%, #db6a6a 100%)',
-        );
-      });
-    } else {
-      console.log(`Неверное значение ${value}`);
-      this.RemoveColors();
-      this.badgeText.textContent = 'Неверное значение';
-    }
+    });
   }
 }
