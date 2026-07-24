@@ -2,7 +2,7 @@ export default class BurgerMenu {
   constructor(config) {
     this.config = config;
     this.burgerMenu = document.querySelector(`.${this.config.BURGER}`);
-    this.burgerOpen = `${this.config.BURGER_OPEN}`;
+    this.burgerMenuOpen = `${this.config.BURGER_OPEN}`;
 
     this.headerMenu = document.querySelector(`.${this.config.HEADER_MENU}`);
     this.headerMenuOpen = `${this.config.HEADER_MENU_OPEN}`;
@@ -16,7 +16,6 @@ export default class BurgerMenu {
     this.breakpoint = `${this.config.BREAKPOINT}`;
 
     this.onBodyClick = this.onBodyClick.bind(this);
-
     this.onBurgerClick = this.onBurgerClick.bind(this);
 
     this.initEvents();
@@ -28,7 +27,7 @@ export default class BurgerMenu {
   }
 
   onBurgerClick() {
-    const isOpen = this.burgerMenu.classList.toggle(this.burgerOpen);
+    const isOpen = this.burgerMenu.classList.toggle(this.burgerMenuOpen);
 
     this.burgerMenu.ariaLabel = isOpen
       ? ((this.burgerMenu.ariaLabel = this.labelClose),
@@ -42,7 +41,7 @@ export default class BurgerMenu {
   }
 
   hideBurgerMenu() {
-    this.burgerMenu.classList.remove(this.burgerOpen);
+    this.burgerMenu.classList.remove(this.burgerMenuOpen);
 
     this.burgerMenu.ariaLabel = this.labelOpen;
     this.burgerMenu.ariaExpanded = false;
@@ -59,14 +58,14 @@ export default class BurgerMenu {
   onBodyClick(event) {
     const target = event.target;
     const isLinkInMenu = target.classList.contains(this.config.MENU_LINK);
-    const isBurgerOpen = this.isBurgerOpen();
+    const isBurgerMenuOpen = this.isBurgerOpen();
     const isClickOutsideMenu =
       !target.closest(`.${this.config.HEADER_MENU}`) &&
       !target.closest(`.${this.config.BURGER}`);
 
     if (
       (isLinkInMenu && window.innerWidth <= this.config.BREAKPOINT) ||
-      (isBurgerOpen && isClickOutsideMenu)
+      (isBurgerMenuOpen && isClickOutsideMenu)
     ) {
       this.hideBurgerMenu();
     }
