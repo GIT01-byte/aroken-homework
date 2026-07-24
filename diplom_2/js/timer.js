@@ -1,5 +1,6 @@
 // Считате сколько времени прошло от 1 июля 2026 года GMT+3 до 1 сентября 2026 года (60 дней)
 // Когда таймер дойдет до нуля стили таймера обновлятся (красный цвет и прочее) и время покажет нулевым
+// Скрипт делал по гайду: https://youtu.be/vVxKtBYNZIo
 export default class CountdownTimer {
   constructor(config) {
     this.config = config;
@@ -26,17 +27,17 @@ export default class CountdownTimer {
     const m = Math.floor((gap / 1000 / 60) % 60);
     const s = Math.floor((gap / 1000) % 60);
 
-    this.day.innerHTML = d < 10 ? "0" + d : d;
-    this.hrs.innerHTML = h < 10 ? "0" + h : h;
-    this.min.innerHTML = m < 10 ? "0" + m : m;
-    this.sec.innerHTML = s < 10 ? "0" + s : s;
+    this.day.innerHTML = d < 10 ? '0' + d : d;
+    this.hrs.innerHTML = h < 10 ? '0' + h : h;
+    this.min.innerHTML = m < 10 ? '0' + m : m;
+    this.sec.innerHTML = s < 10 ? '0' + s : s;
   }
 
   clearTimer() {
-    this.day.innerHTML = "00";
-    this.hrs.innerHTML = "00";
-    this.min.innerHTML = "00";
-    this.sec.innerHTML = "00";
+    this.day.innerHTML = '00';
+    this.hrs.innerHTML = '00';
+    this.min.innerHTML = '00';
+    this.sec.innerHTML = '00';
 
     return;
   }
